@@ -1,0 +1,130 @@
+{
+  "id": 497,
+  "title": "La Ligne verte",
+  "original_title": "The Green Mile",
+  "year": "1999",
+  "genres": [
+    {
+      "id": 14,
+      "name": "Fantastique"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "overview": "Paul Edgecomb, pensionnaire centenaire d’une maison de retraite, est hanté par ses souvenirs. Gardien-chef du pénitencier de Cold Mountain en 1935, il était chargé de veiller au bon déroulement des exécutions des peines capitales, en s’efforçant d’adoucir les derniers moments des condamnés. Parmi eux, se trouvait un colosse du nom de John Coffey, accusé du viol et du meurtre de deux fillettes. Intrigué par cet homme candide et timide, aux dons magiques, Edgecomb va tisser avec lui des liens très forts.",
+  "tagline": "Il ne croyait pas aux miracles. Jusqu’à l’arrivée de ce prisonnier.",
+  "vote": 8.508,
+  "popularity": 65.277,
+  "actors": [
+    {
+      "id": 31,
+      "gender": 2,
+      "name": "Tom Hanks",
+      "character": "Paul Edgecomb",
+      "order": 0
+    },
+    {
+      "id": 61981,
+      "gender": 2,
+      "name": "Michael Clarke Duncan",
+      "character": "John Coffey",
+      "order": 1
+    },
+    {
+      "id": 52,
+      "gender": 2,
+      "name": "David Morse",
+      "character": "Brutus \"Brutal\" Howell",
+      "order": 2
+    },
+    {
+      "id": 5149,
+      "gender": 1,
+      "name": "Bonnie Hunt",
+      "character": "Jan Edgecomb",
+      "order": 3
+    },
+    {
+      "id": 2169,
+      "gender": 2,
+      "name": "Michael Jeter",
+      "character": "Eduard Delacroix",
+      "order": 4
+    },
+    {
+      "id": 6806,
+      "gender": 2,
+      "name": "Doug Hutchison",
+      "character": "Percy Wetmore",
+      "order": 5
+    },
+    {
+      "id": 6807,
+      "gender": 2,
+      "name": "Sam Rockwell",
+      "character": "'Wild Bill' Wharton",
+      "order": 6
+    },
+    {
+      "id": 2505,
+      "gender": 2,
+      "name": "James Cromwell",
+      "character": "Warden Hal Moores",
+      "order": 7
+    },
+    {
+      "id": 12834,
+      "gender": 2,
+      "name": "Barry Pepper",
+      "character": "Dean Stanton",
+      "order": 8
+    },
+    {
+      "id": 6804,
+      "gender": 2,
+      "name": "Graham Greene",
+      "character": "Arlen Bitterbuck",
+      "order": 9
+    },
+    {
+      "id": 12645,
+      "gender": 2,
+      "name": "Jeffrey DeMunn",
+      "character": "Harry Terwilliger",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 4027,
+      "gender": 2,
+      "name": "Frank Darabont",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 3027,
+      "gender": 2,
+      "name": "Stephen King",
+      "department": "Writing",
+      "job": "Novel"
+    },
+    {
+      "id": 4027,
+      "gender": 2,
+      "name": "Frank Darabont",
+      "department": "Writing",
+      "job": "Screenplay"
+    }
+  ],
+  "backdrop": "/497-backdrop.avif",
+  "poster": "/497-poster.avif"
+}

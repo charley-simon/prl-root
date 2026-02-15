@@ -1,0 +1,155 @@
+{
+  "id": 155,
+  "title": "The Dark Knight : Le Chevalier noir",
+  "original_title": "The Dark Knight",
+  "year": "2008",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "overview": "Batman aborde une phase décisive de sa guerre contre le crime à Gotham City. Avec l'aide du lieutenant de police Jim Gordon et du nouveau procureur Harvey Dent, il entreprend de démanteler les dernières organisations criminelles qui infestent les rues de la ville. L'association s'avère efficace, mais le trio se heurte bientôt à un nouveau génie du crime qui répand la terreur et le chaos dans Gotham : le Joker. On ne sait pas d'où il vient ni qui il est. Ce criminel possède une intelligence redoutable doublé d'un humour sordide et n'hésite pas à s'attaquer à la pègre locale dans le seul but de semer le chaos.",
+  "tagline": "",
+  "vote": 8.515,
+  "popularity": 88.115,
+  "actors": [
+    {
+      "id": 3894,
+      "gender": 2,
+      "name": "Christian Bale",
+      "character": "Bruce Wayne / Batman",
+      "order": 0
+    },
+    {
+      "id": 1810,
+      "gender": 2,
+      "name": "Heath Ledger",
+      "character": "Joker",
+      "order": 1
+    },
+    {
+      "id": 3895,
+      "gender": 2,
+      "name": "Michael Caine",
+      "character": "Alfred Pennyworth",
+      "order": 2
+    },
+    {
+      "id": 64,
+      "gender": 2,
+      "name": "Gary Oldman",
+      "character": "James Gordon",
+      "order": 3
+    },
+    {
+      "id": 6383,
+      "gender": 2,
+      "name": "Aaron Eckhart",
+      "character": "Harvey Dent / Two-Face",
+      "order": 4
+    },
+    {
+      "id": 1579,
+      "gender": 1,
+      "name": "Maggie Gyllenhaal",
+      "character": "Rachel Dawes",
+      "order": 5
+    },
+    {
+      "id": 192,
+      "gender": 2,
+      "name": "Morgan Freeman",
+      "character": "Lucius Fox",
+      "order": 6
+    },
+    {
+      "id": 21316,
+      "gender": 2,
+      "name": "Nestor Carbonell",
+      "character": "Anthony Garcia",
+      "order": 7
+    },
+    {
+      "id": 53651,
+      "gender": 1,
+      "name": "Monique Gabriela Curnen",
+      "character": "Anna Ramirez",
+      "order": 8
+    },
+    {
+      "id": 57597,
+      "gender": 2,
+      "name": "Ron Dean",
+      "character": "Michael Wuertz",
+      "order": 9
+    },
+    {
+      "id": 101015,
+      "gender": 2,
+      "name": "Chin Han",
+      "character": "Lau",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 525,
+      "gender": 2,
+      "name": "Christopher Nolan",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 525,
+      "gender": 2,
+      "name": "Christopher Nolan",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 525,
+      "gender": 2,
+      "name": "Christopher Nolan",
+      "department": "Writing",
+      "job": "Story"
+    },
+    {
+      "id": 527,
+      "gender": 2,
+      "name": "Jonathan Nolan",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 3893,
+      "gender": 2,
+      "name": "David S. Goyer",
+      "department": "Writing",
+      "job": "Story"
+    },
+    {
+      "id": 3794,
+      "gender": 2,
+      "name": "Bob Kane",
+      "department": "Writing",
+      "job": "Characters"
+    }
+  ],
+  "backdrop": "/155-backdrop.avif",
+  "poster": "/155-poster.avif"
+}

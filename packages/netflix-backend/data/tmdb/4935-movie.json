@@ -1,0 +1,130 @@
+{
+  "id": 4935,
+  "title": "Le Château ambulant",
+  "original_title": "ハウルの動く城",
+  "year": "2004",
+  "genres": [
+    {
+      "id": 14,
+      "name": "Fantastique"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 12,
+      "name": "Aventure"
+    }
+  ],
+  "overview": "La jeune Sophie, âgée de 18 ans, travaille sans relâche dans la boutique de chapelier que tenait son père avant de mourir. Lors de l’une de ses rares sorties en ville, elle fait la connaissance de Hauru le Magicien. Celui‐ci est extrêmement séduisant, mais n’a pas beaucoup de caractère… Se méprenant sur leur relation, une sorcière jette un épouvantable sort sur Sophie et la transforme en vieille femme de 90 ans. Accablée, Sophie s’enfuit et erre dans les terres désolées. Par hasard, elle pénètre dans le Château Ambulant de Hauru et, cachant sa véritable identité, s’y fait engager comme femme de ménage. Cette « vieille dame » aussi mystérieuse que dynamique va bientôt redonner une nouvelle vie à l’ancienne demeure. Plus énergique que jamais, Sophie accomplit des miracles. Quel fabuleux destin l’attend  ? Et si son histoire avec Hauru n’en était qu’à son véritable commencement  ?",
+  "tagline": "Ils y vivaient tous les deux.",
+  "vote": 8.386,
+  "popularity": 11.3962,
+  "actors": [
+    {
+      "id": 533325,
+      "gender": 1,
+      "name": "Chieko Baisho",
+      "character": "Sophie (voice)",
+      "order": 0
+    },
+    {
+      "id": 12670,
+      "gender": 2,
+      "name": "Takuya Kimura",
+      "character": "Howl (voice)",
+      "order": 1
+    },
+    {
+      "id": 20338,
+      "gender": 2,
+      "name": "Akihiro Miwa",
+      "character": "Witch of the Waste (voice)",
+      "order": 2
+    },
+    {
+      "id": 19592,
+      "gender": 2,
+      "name": "Tatsuya Gashûin",
+      "character": "Calcifer (voice)",
+      "order": 3
+    },
+    {
+      "id": 225730,
+      "gender": 2,
+      "name": "Ryunosuke Kamiki",
+      "character": "Markl (voice)",
+      "order": 4
+    },
+    {
+      "id": 40449,
+      "gender": 2,
+      "name": "Mitsunori Isaki",
+      "character": "Kosho (voice)",
+      "order": 5
+    },
+    {
+      "id": 40450,
+      "gender": 2,
+      "name": "Yo Oizumi",
+      "character": "Prince Justin / Turnip Head (voice)",
+      "order": 6
+    },
+    {
+      "id": 40451,
+      "gender": 2,
+      "name": "Akio Otsuka",
+      "character": "King of Ingary (voice)",
+      "order": 7
+    },
+    {
+      "id": 40452,
+      "gender": 2,
+      "name": "Daijirō Harada",
+      "character": "Heen (voice)",
+      "order": 8
+    },
+    {
+      "id": 40453,
+      "gender": 1,
+      "name": "Haruko Katō",
+      "character": "Madame Suliman (voice)",
+      "order": 9
+    },
+    {
+      "id": 1251324,
+      "gender": 2,
+      "name": "Makoto Yasumura",
+      "character": "(voice)",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 608,
+      "gender": 2,
+      "name": "Hayao Miyazaki",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 40222,
+      "gender": 1,
+      "name": "Diana Wynne Jones",
+      "department": "Writing",
+      "job": "Novel"
+    },
+    {
+      "id": 608,
+      "gender": 2,
+      "name": "Hayao Miyazaki",
+      "department": "Writing",
+      "job": "Screenplay"
+    }
+  ],
+  "backdrop": "./public/images/4935-backdrop.avif",
+  "poster": "./public/images/4935-poster.avif"
+}

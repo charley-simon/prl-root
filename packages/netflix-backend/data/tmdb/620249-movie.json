@@ -1,0 +1,109 @@
+{
+  "id": 620249,
+  "title": "L'histoire de Luo Xiaohei",
+  "original_title": "罗小黑战记",
+  "year": "2019",
+  "genres": [
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 14,
+      "name": "Fantastique"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "overview": "L'histoire raconte l'histoire d'un démon chat qui a été ramené à sa forme d'origine par son gardien Zhen Ting parce qu'il a volé la perle de Tianming à l'immortel Laojun. Quand il vivait dans la rue, il a été ramassé par la fille Luo Xiaobai comme chat errant. Lorsque Xiao Hei vivait avec Luo Xiaobai et son frère Agen dans la maison de son grand-père à la campagne, il vécut de merveilleuses aventures et se lia d'amitié.",
+  "tagline": "",
+  "vote": 8.319,
+  "popularity": 4.5012,
+  "actors": [
+    {
+      "id": 1907244,
+      "gender": 1,
+      "name": "Shan Xin",
+      "character": "Luo Xiaohei / Nezha (voice)",
+      "order": 0
+    },
+    {
+      "id": 2156556,
+      "gender": 2,
+      "name": "Liu Mingyue",
+      "character": "Wuxian (voice)",
+      "order": 1
+    },
+    {
+      "id": 2207399,
+      "gender": 2,
+      "name": "Hao Xianghai",
+      "character": "Fengxi (voice)",
+      "order": 2
+    },
+    {
+      "id": 2196313,
+      "gender": 2,
+      "name": "Ding Dang",
+      "character": "Luozhu (voice)",
+      "order": 3
+    },
+    {
+      "id": 2339317,
+      "gender": 2,
+      "name": "Yuntu Cao",
+      "character": "Xuhuai (voice)",
+      "order": 4
+    },
+    {
+      "id": 1853547,
+      "gender": 2,
+      "name": "Sheng Feng",
+      "character": "Tianhu (voice)",
+      "order": 5
+    },
+    {
+      "id": 3824793,
+      "gender": 2,
+      "name": "Chen Siyu",
+      "character": "Jiulao (voice)",
+      "order": 6
+    }
+  ],
+  "directors": [
+    {
+      "id": 2377386,
+      "gender": 2,
+      "name": "MTJJ",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 2377386,
+      "gender": 2,
+      "name": "MTJJ",
+      "department": "Writing",
+      "job": "Writer"
+    },
+    {
+      "id": 2732749,
+      "gender": 1,
+      "name": "Kexin Peng",
+      "department": "Writing",
+      "job": "Writer"
+    },
+    {
+      "id": 5537565,
+      "gender": 1,
+      "name": "Fengxishenlei",
+      "department": "Writing",
+      "job": "Writer"
+    }
+  ],
+  "backdrop": "./public/images/620249-backdrop.avif",
+  "poster": "./public/images/620249-poster.avif"
+}

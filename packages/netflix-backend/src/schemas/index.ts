@@ -1,0 +1,7 @@
+export * from './references/department.schema'
+export * from './references/job.schema'
+export * from './references/category.schema'
+export * from './people/people-index.schema'
+export * from './people/person-short.schema'
+export * from './people/person-detail.schema'
+export * from './people/person-list.schema'

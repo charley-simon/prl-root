@@ -1,0 +1,16 @@
+{
+  "id": 488,
+  "gender": 2,
+  "name": "Steven Spielberg",
+  "tmdbId": 488,
+  "imdbID": "nm0000229",
+  "biography": "Steven Spielberg est un réalisateur, scénariste et producteur de cinéma américain, né le 18 décembre 1946 à Cincinnati (Ohio).\n\nIssu de la deuxième génération du Nouvel Hollywood dans les années 1970, il réalise le premier blockbuster de l'histoire du cinéma : Les Dents de la mer. Il enchaîne les succès (E.T. l'extra-terrestre, série Indiana Jones, Jurassic Park) tout en développant ses activités de gestionnaire. Fondateur de la société de production Amblin et cofondateur du studio DreamWorks SKG, il produit de nombreux films à succès (Poltergeist, Gremlins, Retour vers le futur, Qui veut la peau de Roger Rabbit ou encore la trilogie Men in Black et Transformers). Il a également financé et distribué des œuvres plus exigeantes ou moins grand public telles que Lettres d'Iwo Jima de Clint Eastwood, American Beauty de Sam Mendes et Hollywood Ending de Woody Allen.",
+  "deathDay": null,
+  "birthDay": "1946-12-18",
+  "birthPlace": "Cincinnati, Ohio, USA",
+  "homepage": "https://amblin.com/steven-spielberg",
+  "popularity": 7.203,
+  "imdbId": "nm0000229",
+  "wikidataId": "Q8877",
+  "wikiDescription": "réalisateur, scénariste et producteur de cinéma américain"
+}

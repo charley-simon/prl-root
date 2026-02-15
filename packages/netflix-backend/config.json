@@ -1,0 +1,18 @@
+{
+  "env": {
+    "TMDB_API_KEY": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZjkxZmJmMjVmOGY5MzM2MWU5Yjc0MDVmYTU0NDE1NyIsInN1YiI6IjY1YTAyM2Q5MjdkYjYxMDEyNzk4NjYxNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.rpBFncQaW9m6HLPWLPktN206csv8VzosROwEncwzcIM"
+  },
+  "paths": {
+    "videoImport": "./video-import",
+    "movieData": "./data/movies",
+    "peopleData": "./data/people",
+    "assets": "./data/assets/movies"
+  },
+  "worker": {
+    "maxConcurrentDownloads": 3,
+    "lazyEnrichment": true
+  },
+  "monitoring": {
+    "intervalMs": 2000
+  }
+}

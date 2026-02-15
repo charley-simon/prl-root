@@ -1,0 +1,130 @@
+{
+  "id": 424,
+  "title": "La Liste de Schindler",
+  "original_title": "Schindler's List",
+  "year": "1993",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 36,
+      "name": "Histoire"
+    },
+    {
+      "id": 10752,
+      "name": "Guerre"
+    }
+  ],
+  "overview": "Évocation des années de guerre d’Oskar Schindler, fils d’industriel d’origine autrichienne rentré à Cracovie en 1939 avec les troupes allemandes. Il va, tout au long de la guerre, protéger des juifs en les faisant travailler dans sa fabrique et en 1944 sauver 800 hommes et 300 femmes du camp d’extermination d’Auschwitz‐Birkenau.",
+  "tagline": "Celui qui sauve une vie, sauve le monde.",
+  "vote": 8.565,
+  "popularity": 61.905,
+  "actors": [
+    {
+      "id": 3896,
+      "gender": 2,
+      "name": "Liam Neeson",
+      "character": "Oskar Schindler",
+      "order": 0
+    },
+    {
+      "id": 2282,
+      "gender": 2,
+      "name": "Ben Kingsley",
+      "character": "Itzhak Stern",
+      "order": 1
+    },
+    {
+      "id": 5469,
+      "gender": 2,
+      "name": "Ralph Fiennes",
+      "character": "Amon Goeth",
+      "order": 2
+    },
+    {
+      "id": 6692,
+      "gender": 1,
+      "name": "Caroline Goodall",
+      "character": "Emilie Schindler",
+      "order": 3
+    },
+    {
+      "id": 6693,
+      "gender": 2,
+      "name": "Jonathan Sagall",
+      "character": "Poldek Pfefferberg",
+      "order": 4
+    },
+    {
+      "id": 6368,
+      "gender": 1,
+      "name": "Embeth Davidtz",
+      "character": "Helen Hirsch",
+      "order": 5
+    },
+    {
+      "id": 6694,
+      "gender": 1,
+      "name": "Malgorzata Gebel",
+      "character": "Viktoria Klonowska",
+      "order": 6
+    },
+    {
+      "id": 6695,
+      "gender": 2,
+      "name": "Shmuel Levy",
+      "character": "Wilek Chilowicz",
+      "order": 7
+    },
+    {
+      "id": 6696,
+      "gender": 2,
+      "name": "Mark Ivanir",
+      "character": "Marcel Goldberg",
+      "order": 8
+    },
+    {
+      "id": 6697,
+      "gender": 1,
+      "name": "Béatrice Macola",
+      "character": "Ingrid",
+      "order": 9
+    },
+    {
+      "id": 2829,
+      "gender": 2,
+      "name": "Andrzej Seweryn",
+      "character": "Julian Scherner",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 488,
+      "gender": 2,
+      "name": "Steven Spielberg",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 2260,
+      "gender": 2,
+      "name": "Steven Zaillian",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 6685,
+      "gender": 2,
+      "name": "Thomas Keneally",
+      "department": "Writing",
+      "job": "Novel"
+    }
+  ],
+  "backdrop": "/424-backdrop.avif",
+  "poster": "/424-poster.avif"
+}

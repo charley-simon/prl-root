@@ -1,0 +1,140 @@
+{
+  "id": 637,
+  "title": "La vie est belle",
+  "original_title": "La vita è bella",
+  "year": "1997",
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comédie"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    }
+  ],
+  "overview": "En 1938, Guido, jeune homme plein de gaieté, rêve d'ouvrir une librairie, malgré les tracasseries de l'administration fasciste. Il tombe amoureux de Dora, institutrice étouffée par le conformisme familial et l'enlève le jour de ses fiançailles avec un bureaucrate du régime. Cinq ans plus tard, Guido et Dora ont un fils : Giosue. Mais les lois raciales sont entrées en vigueur et Guido est juif. Il est alors déporté avec son fils. Par amour pour eux, Dora monte de son plein gré dans le train qui les emmène aux camps de la mort où Guido va tout faire pour éviter l'horreur à son fils…",
+  "tagline": "Une fable inoubliable qui prouve que l'amour, la famille et l'imagination peuvent tout vaincre.",
+  "vote": 8.44,
+  "popularity": 8.3612,
+  "actors": [
+    {
+      "id": 4818,
+      "gender": 2,
+      "name": "Roberto Benigni",
+      "character": "Guido",
+      "order": 0
+    },
+    {
+      "id": 9235,
+      "gender": 1,
+      "name": "Nicoletta Braschi",
+      "character": "Dora",
+      "order": 1
+    },
+    {
+      "id": 9236,
+      "gender": 2,
+      "name": "Giorgio Cantarini",
+      "character": "Giosué",
+      "order": 2
+    },
+    {
+      "id": 9237,
+      "gender": 2,
+      "name": "Giustino Durano",
+      "character": "Zio",
+      "order": 3
+    },
+    {
+      "id": 9239,
+      "gender": 2,
+      "name": "Sergio Bini Bustric",
+      "character": "Ferruccio",
+      "order": 4
+    },
+    {
+      "id": 954,
+      "gender": 1,
+      "name": "Marisa Paredes",
+      "character": "Dora's Mother",
+      "order": 5
+    },
+    {
+      "id": 5789,
+      "gender": 2,
+      "name": "Horst Buchholz",
+      "character": "Doctor Lessing",
+      "order": 6
+    },
+    {
+      "id": 9240,
+      "gender": 1,
+      "name": "Lidia Alfonsi",
+      "character": "Mrs. Guicciardini",
+      "order": 7
+    },
+    {
+      "id": 9242,
+      "gender": 1,
+      "name": "Giuliana Lojodice",
+      "character": "School Principal",
+      "order": 8
+    },
+    {
+      "id": 9238,
+      "gender": 2,
+      "name": "Amerigo Fontani",
+      "character": "Rodolfo",
+      "order": 9
+    },
+    {
+      "id": 9241,
+      "gender": 2,
+      "name": "Pietro De Silva",
+      "character": "Bartolomeo",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 4818,
+      "gender": 2,
+      "name": "Roberto Benigni",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 4818,
+      "gender": 2,
+      "name": "Roberto Benigni",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 9234,
+      "gender": 2,
+      "name": "Vincenzo Cerami",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 9234,
+      "gender": 2,
+      "name": "Vincenzo Cerami",
+      "department": "Writing",
+      "job": "Story"
+    },
+    {
+      "id": 4818,
+      "gender": 2,
+      "name": "Roberto Benigni",
+      "department": "Writing",
+      "job": "Story"
+    }
+  ],
+  "backdrop": "/637-backdrop.avif",
+  "poster": "/637-poster.avif"
+}

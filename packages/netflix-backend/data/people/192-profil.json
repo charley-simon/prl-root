@@ -1,0 +1,16 @@
+{
+  "id": 192,
+  "gender": 2,
+  "name": "Morgan Freeman",
+  "tmdbId": 192,
+  "imdbID": "nm0000151",
+  "biography": "Morgan Freeman, né le 1er juin 1937 à Memphis (Tennessee), est un acteur américain.\n\nAyant commencé sa carrière théâtrale et cinématographique en 1964, il fut habitué aux seconds rôles pendant plus de vingt ans. Il acquiert une large reconnaissance internationale après avoir été nommé aux Oscars pour La Rue en 1987, Miss Daisy et son chauffeur en 1989, Les Évadés en 1994 et Invictus en 2009 ; il a par ailleurs reçu l'Oscar du meilleur acteur dans un second rôle pour Million Dollar Baby en 2004.",
+  "deathDay": null,
+  "birthDay": "1937-06-01",
+  "birthPlace": "Memphis, Tennessee, USA",
+  "homepage": null,
+  "popularity": 9.9191,
+  "imdbId": "nm0000151",
+  "wikidataId": "Q48337",
+  "wikiDescription": "acteur, réalisateur et producteur de cinéma américain"
+}

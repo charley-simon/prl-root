@@ -1,0 +1,133 @@
+{
+  "id": 238,
+  "title": "Le Parrain",
+  "original_title": "The Godfather",
+  "year": "1972",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "overview": "La Seconde Guerre mondiale vient de s'achever. À New York, le « parrain » Don Corleone, l'un des chefs respectés de la mafia, se sent vieillir. Il refuse de s'adapter à son temps et de se lancer, comme ses pairs, dans le trafic de drogue. Une frilosité qui entrave la bonne marche des affaires des autres « familles » et qui lui vaut d'être la cible d'un attentat. Don Corleone survit à ses blessures, mais reste très diminué. Mike, son plus jeune fils, qui jusque-là se tenait à l'écart des affaires de son père, devient le plus dévoué de ses héritiers. Plus efficace que ses frères, Sonny et Fredo, il venge son père et organise l'élimination de ses adversaires…",
+  "tagline": "Une offre que vous ne pouvez pas refuser.",
+  "vote": 8.695,
+  "popularity": 97.877,
+  "actors": [
+    {
+      "id": 3084,
+      "gender": 2,
+      "name": "Marlon Brando",
+      "character": "Don Vito Corleone",
+      "order": 0
+    },
+    {
+      "id": 1158,
+      "gender": 2,
+      "name": "Al Pacino",
+      "character": "Michael Corleone",
+      "order": 1
+    },
+    {
+      "id": 3085,
+      "gender": 2,
+      "name": "James Caan",
+      "character": "Sonny Corleone",
+      "order": 2
+    },
+    {
+      "id": 3087,
+      "gender": 2,
+      "name": "Robert Duvall",
+      "character": "Tom Hagen",
+      "order": 3
+    },
+    {
+      "id": 3086,
+      "gender": 2,
+      "name": "Richard S. Castellano",
+      "character": "Clemenza",
+      "order": 4
+    },
+    {
+      "id": 3092,
+      "gender": 1,
+      "name": "Diane Keaton",
+      "character": "Kay Adams",
+      "order": 5
+    },
+    {
+      "id": 3094,
+      "gender": 1,
+      "name": "Talia Shire",
+      "character": "Connie Corleone Rizzi",
+      "order": 6
+    },
+    {
+      "id": 3095,
+      "gender": 2,
+      "name": "Gianni Russo",
+      "character": "Carlo Rizzi",
+      "order": 7
+    },
+    {
+      "id": 3088,
+      "gender": 2,
+      "name": "Sterling Hayden",
+      "character": "Captain McCluskey",
+      "order": 8
+    },
+    {
+      "id": 3142,
+      "gender": 2,
+      "name": "John Marley",
+      "character": "Jack Woltz",
+      "order": 9
+    },
+    {
+      "id": 3090,
+      "gender": 2,
+      "name": "Richard Conte",
+      "character": "Barzini",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 1776,
+      "gender": 2,
+      "name": "Francis Ford Coppola",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 1776,
+      "gender": 2,
+      "name": "Francis Ford Coppola",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 3083,
+      "gender": 2,
+      "name": "Mario Puzo",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 3083,
+      "gender": 2,
+      "name": "Mario Puzo",
+      "department": "Writing",
+      "job": "Novel"
+    }
+  ],
+  "backdrop": "/238-backdrop.avif",
+  "poster": "/238-poster.avif"
+}

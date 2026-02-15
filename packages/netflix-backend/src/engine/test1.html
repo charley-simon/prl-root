@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Flux interactif avec Compacteur et Chef d'Orchestre</title>
+<style>
+  body { font-family: sans-serif; margin:0; }
+  #canvas { border:1px solid #aaa; display:block; margin:10px auto; background:#f8f8f8; }
+  #controls { text-align:center; margin:5px; }
+  #partition { border:1px solid #aaa; height:100px; background:#fff; margin:10px auto; width:800px; }
+</style>
+</head>
+<body>
+
+<canvas id="canvas" width="800" height="300"></canvas>
+<div id="controls">
+  <button onclick="step()">Step</button>
+  <button onclick="run()">Run</button>
+  <button onclick="reset()">Reset</button>
+</div>
+<canvas id="partition" width="800" height="100"></canvas>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+const partition = document.getElementById('partition');
+const pctx = partition.getContext('2d');
+
+ctx.font = "14px Arial";
+
+class Particle {
+  constructor(val, speed, size=5) {
+    this.val = val;
+    this.speed = speed;
+    this.size = size;
+    this.t = 0; 
+    this.from = null;
+    this.to = null;
+    this.color = "red";
+  }
+  move() {
+    if(this.from && this.to){
+      this.t += this.speed * 0.05;
+      if(this.t >= 1){
+        this.to.inputParticles.push(this);
+        this.from.outputParticles = this.from.outputParticles.filter(p => p !== this);
+        this.t = 0; this.from = null; this.to = null;
+      }
+    }
+  }
+}
+
+class Transformer {
+  constructor(x,y,name,capacity=3) {
+    this.x = x; this.y = y; this.name = name;
+    this.inputParticles = [];
+    this.outputParticles = [];
+    this.history = [];
+    this.capacity = capacity; // capacité max simultanée
+  }
+  process() {
+    let processed = 0;
+    while(this.inputParticles.length && processed < this.capacity) {
+      let p = this.inputParticles.shift();
+      p.val += 1; // simple transformation
+      this.outputParticles.push(p);
+      processed++;
+    }
+    this.history.push(this.inputParticles.length);
+    if(this.history.length>partition.width) this.history.shift();
+  }
+  draw() {
+    ctx.fillStyle = "lightblue";
+    ctx.fillRect(this.x-30,this.y-30,60,60);
+    ctx.fillStyle = "black";
+    ctx.fillText(this.name,this.x-25,this.y);
+    ctx.fillStyle="red";
+    ctx.fillText("fric:"+this.inputParticles.length,this.x-25,this.y+20);
+  }
+}
+
+// --- Compacteur ---
+class Compactor extends Transformer {
+  constructor(x,y,name,capacity=5) {
+    super(x,y,name,capacity);
+    this.buffer = [];
+  }
+  process() {
+    while(this.inputParticles.length) {
+      let p = this.inputParticles.shift();
+      this.buffer.push(p);
+      if(this.buffer.length >= this.capacity) {
+        // relâche une particule "compactée"
+        let totalVal = this.buffer.reduce((sum,part)=>sum+part.val,0);
+        let compacted = new Particle(totalVal,1,10);
+        compacted.color="orange";
+        this.outputParticles.push(compacted);
+        this.buffer = [];
+      }
+    }
+    this.history.push(this.inputParticles.length);
+    if(this.history.length>partition.width) this.history.shift();
+  }
+}
+
+// --- Chef d'orchestre ---
+class Conductor {
+  constructor(threshold=2){
+    this.threshold = threshold;
+  }
+  regulate(transformers){
+    transformers.forEach(t => {
+      if(t.inputParticles.length > this.threshold){
+        t.inputParticles.forEach(p => p.speed *= 0.5);
+        let duplicate = t.inputParticles.slice(0, Math.floor(t.inputParticles.length/2));
+        duplicate.forEach(p=>{
+          let clone = new Particle(p.val, p.speed);
+          clone.from = p.from;
+          clone.to = p.to;
+          clone.color="orange";
+          t.inputParticles.push(clone);
+        });
+      }
+    });
+  }
+}
+
+// --- Setup ---
+let Front = new Transformer(150,150,"Front");
+let Comp = new Compactor(300,150,"Compactor",5);
+let Back = new Transformer(500,150,"Backend");
+
+const transformers = [Front, Comp, Back];
+let links = [
+  { from: Front, to: Comp },
+  { from: Comp, to: Back },
+  { from: Back, to: Front } // boucle bidirectionnelle
+];
+
+let particles = [];
+let conductor = new Conductor();
+
+Front.outputParticles.push(new Particle(0,1));
+Front.outputParticles.push(new Particle(5,0.8));
+
+function step(){
+  transformers.forEach(t => t.process());
+  conductor.regulate(transformers);
+
+  links.forEach(l => {
+    l.from.outputParticles.forEach(p => {
+      if(p.from==null && p.to==null){
+        p.from = l.from;
+        p.to = l.to;
+        p.t = 0;
+        particles.push(p);
+      }
+    });
+    l.from.outputParticles = [];
+  });
+
+  drawAll();
+  drawPartition();
+}
+
+function drawAll(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.strokeStyle="gray";
+  links.forEach(l => {
+    ctx.beginPath();
+    ctx.moveTo(l.from.x,l.from.y);
+    ctx.lineTo(l.to.x,l.to.y);
+    ctx.stroke();
+  });
+  transformers.forEach(t => t.draw());
+  particles.forEach(p => {
+    p.move();
+    if(p.from && p.to){
+      let x = p.from.x + (p.to.x - p.from.x)*p.t;
+      let y = p.from.y + (p.to.y - p.from.y)*p.t;
+      ctx.fillStyle=p.color;
+      ctx.beginPath();
+      ctx.arc(x,y,p.size,0,2*Math.PI);
+      ctx.fill();
+    }
+  });
+}
+
+let interval = null;
+function run(){
+  if(!interval) interval = setInterval(step,50);
+}
+function reset(){
+  particles=[]; 
+  transformers.forEach(t => { t.inputParticles=[]; t.outputParticles=[]; t.history=[]; if(t.buffer) t.buffer=[]; });
+  Front.outputParticles.push(new Particle(0,1));
+  Front.outputParticles.push(new Particle(5,0.8));
+  clearInterval(interval); interval=null;
+  drawAll();
+  drawPartition();
+}
+
+function drawPartition(){
+  pctx.clearRect(0,0,partition.width,partition.height);
+  transformers.forEach((t,idx) => {
+    pctx.strokeStyle = idx==0 ? "blue" : idx==1 ? "orange" : "green";
+    pctx.beginPath();
+    t.history.forEach((val,i) => {
+      let y = partition.height - val*5;
+      if(i===0) pctx.moveTo(i,y);
+      else pctx.lineTo(i,y);
+    });
+    pctx.stroke();
+  });
+}
+
+drawAll();
+drawPartition();
+</script>
+</body>
+</html>

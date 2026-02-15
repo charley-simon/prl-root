@@ -1,0 +1,115 @@
+{
+  "id": 207,
+  "title": "Le Cercle des poètes disparus",
+  "original_title": "Dead Poets Society",
+  "year": "1989",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    }
+  ],
+  "overview": "Todd Anderson est un garçon plutôt timide. Désormais élève de la prestigieuse académie Welton, réputée pour être l'une des plus fermées et austères des États-Unis, tout le monde attend de lui qu'il suive les traces de son frère, qui avait fait à Welton de brillantes études.  C'est là qu'il va faire la rencontre de M. Keating, un professeur de lettres anglaises qui, c'est le moins que l'on puisse dire, sort des sentiers battus. Jour après jour, M. Keating encourage ses élèves à penser par eux-mêmes et à refuser l'ordre établi. Cette rencontre va bouleverser la vie du jeune Todd, mais aussi celle de ses amis.",
+  "tagline": "Il fut leur inspiration. Il a transformé leur vie à jamais.",
+  "vote": 8.301,
+  "popularity": 9.8996,
+  "actors": [
+    {
+      "id": 2157,
+      "gender": 2,
+      "name": "Robin Williams",
+      "character": "John Keating",
+      "order": 0
+    },
+    {
+      "id": 2692,
+      "gender": 2,
+      "name": "Robert Sean Leonard",
+      "character": "Neil Perry",
+      "order": 1
+    },
+    {
+      "id": 569,
+      "gender": 2,
+      "name": "Ethan Hawke",
+      "character": "Todd Anderson",
+      "order": 2
+    },
+    {
+      "id": 2694,
+      "gender": 2,
+      "name": "Josh Charles",
+      "character": "Knox Overstreet",
+      "order": 3
+    },
+    {
+      "id": 2693,
+      "gender": 2,
+      "name": "Gale Hansen",
+      "character": "Charlie Dalton",
+      "order": 4
+    },
+    {
+      "id": 2695,
+      "gender": 2,
+      "name": "Dylan Kussman",
+      "character": "Richard Cameron",
+      "order": 5
+    },
+    {
+      "id": 2696,
+      "gender": 2,
+      "name": "Allelon Ruggiero",
+      "character": "Steven Meeks",
+      "order": 6
+    },
+    {
+      "id": 2697,
+      "gender": 2,
+      "name": "James Waterston",
+      "character": "Gerard Pitts",
+      "order": 7
+    },
+    {
+      "id": 2698,
+      "gender": 2,
+      "name": "Norman Lloyd",
+      "character": "Mr. Nolan",
+      "order": 8
+    },
+    {
+      "id": 2115,
+      "gender": 2,
+      "name": "Kurtwood Smith",
+      "character": "Mr. Perry",
+      "order": 9
+    },
+    {
+      "id": 2699,
+      "gender": 0,
+      "name": "Carla Belver",
+      "character": "Mrs. Perry",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 2690,
+      "gender": 2,
+      "name": "Peter Weir",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 2691,
+      "gender": 2,
+      "name": "Tom Schulman",
+      "department": "Writing",
+      "job": "Writer"
+    }
+  ],
+  "backdrop": "/207-backdrop.avif",
+  "poster": "/207-poster.avif"
+}

@@ -1,0 +1,10 @@
+{
+  "id": 13318,
+  "title": "Norway of Life",
+  "releaseYear": "2006",
+  "overview": "Andréas se retrouve dans une ville étrange. Il ignore comment il est arrivé là. On lui remet un emploi, un appartement et même une femme. Très vite, il s'aperçoit pourtant qu'il y a quelque chose qui cloche.Tentant de s'enfuir, il découvre que la ville est sans issues. Il fait la connaissance de Hugo qui a découvert dans un mur de sa cave un trou dont s'échappent de merveilleux sons. Est-ce l'entrée vers \"l'autre monde\" ?Un nouveau plan d'évasion est mis sur pieds.",
+  "video": {
+    "localPath": "C:\\dev\\prl-root\\packages\\netflix-backend\\src\\import\\norway of life",
+    "provider": "local"
+  }
+}

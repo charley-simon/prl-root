@@ -1,0 +1,126 @@
+{
+  "id": 680,
+  "title": "Pulp Fiction",
+  "original_title": "Pulp Fiction",
+  "year": "1994",
+  "genres": [
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "overview": "L’odyssée sanglante et burlesque de petits malfrats dans la jungle d’Hollywood : Deux petits tueurs, un dangereux gangster marié à une camée, un boxeur roublard, des prêteurs sur gages sadiques, un caïd élégant et dévoué, un dealer bon mari et deux tourtereaux à la gâchette facile.",
+  "tagline": "Vous ne connaîtrez pas les faits tant que vous n’aurez pas vu la fiction.",
+  "vote": 8.489,
+  "popularity": 94.503,
+  "actors": [
+    {
+      "id": 8891,
+      "gender": 2,
+      "name": "John Travolta",
+      "character": "Vincent Vega",
+      "order": 0
+    },
+    {
+      "id": 2231,
+      "gender": 2,
+      "name": "Samuel L. Jackson",
+      "character": "Jules Winnfield",
+      "order": 1
+    },
+    {
+      "id": 139,
+      "gender": 1,
+      "name": "Uma Thurman",
+      "character": "Mia Wallace",
+      "order": 2
+    },
+    {
+      "id": 62,
+      "gender": 2,
+      "name": "Bruce Willis",
+      "character": "Butch Coolidge",
+      "order": 3
+    },
+    {
+      "id": 10182,
+      "gender": 2,
+      "name": "Ving Rhames",
+      "character": "Marsellus Wallace",
+      "order": 4
+    },
+    {
+      "id": 1037,
+      "gender": 2,
+      "name": "Harvey Keitel",
+      "character": "Winston \"The Wolf\" Wolfe",
+      "order": 5
+    },
+    {
+      "id": 7036,
+      "gender": 2,
+      "name": "Eric Stoltz",
+      "character": "Lance",
+      "order": 6
+    },
+    {
+      "id": 3129,
+      "gender": 2,
+      "name": "Tim Roth",
+      "character": "Ringo (\"Pumpkin\")",
+      "order": 7
+    },
+    {
+      "id": 99,
+      "gender": 1,
+      "name": "Amanda Plummer",
+      "character": "Yolanda (\"Honey Bunny\")",
+      "order": 8
+    },
+    {
+      "id": 2319,
+      "gender": 1,
+      "name": "Maria de Medeiros",
+      "character": "Fabienne",
+      "order": 9
+    }
+  ],
+  "directors": [
+    {
+      "id": 138,
+      "gender": 2,
+      "name": "Quentin Tarantino",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 138,
+      "gender": 2,
+      "name": "Quentin Tarantino",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 138,
+      "gender": 2,
+      "name": "Quentin Tarantino",
+      "department": "Writing",
+      "job": "Story"
+    },
+    {
+      "id": 8297,
+      "gender": 2,
+      "name": "Roger Avary",
+      "department": "Writing",
+      "job": "Story"
+    }
+  ],
+  "backdrop": "/680-backdrop.avif",
+  "poster": "/680-poster.avif"
+}

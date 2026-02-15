@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Flux Frontend ↔ Backend - Canaux Séparés</title>
+<style>
+  body { font-family: sans-serif; margin:0; overflow:hidden; background:#1e1e1e; color:#fff; }
+  #canvas { display:block; width:100vw; height:70vh; background:#111; }
+  #controls { height:30vh; display:flex; flex-direction:column; justify-content:center; align-items:center; background:#222; }
+  button { padding:0.5em 1em; margin:0.2em; font-size:1em; }
+  #partition { width:90%; height:120px; background:#000; border:1px solid #555; margin-top:10px; }
+</style>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+<div id="controls">
+  <div>
+    <button id="resetBtn">Reset</button>
+    <button id="stepBtn">Step</button>
+    <button id="runBtn">Run</button>
+  </div>
+  <canvas id="partition"></canvas>
+</div>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight * 0.7;
+
+const partition = document.getElementById('partition');
+const pctx = partition.getContext('2d');
+partition.width = partition.clientWidth;
+partition.height = partition.clientHeight;
+
+let tick = 0;
+let running = false;
+let particles = [];
+
+// Canaux séparés
+const channels = {
+  frontendToBackend: { y: canvas.height*0.3, color:'cyan' },
+  backendToFrontend: { y: canvas.height*0.6, color:'orange' }
+};
+
+// Génération particules
+function generateParticle(channel, type) {
+    particles.push({
+        x:0,
+        y:channels[channel].y,
+        targetX:canvas.width,
+        type:type,
+        channel:channel,
+        done:false
+    });
+}
+
+// Transformateur simple : turbulence
+function transform(p) {
+    p.y += (Math.random()-0.5)*2; // turbulence légère
+    return p;
+}
+
+// Step simulation
+function step() {
+    tick++;
+
+    // Générer particules aléatoires
+    if (tick % 30 === 0) generateParticle('frontendToBackend','user');
+    if (tick % 50 === 0) generateParticle('backendToFrontend','backend');
+
+    particles.forEach(p => {
+        if(p.done) return;
+
+        let dx = p.targetX - p.x;
+        p.x += dx*0.05;
+        transform(p);
+
+        if(Math.abs(dx)<2) {
+            p.done = true;
+        }
+    });
+
+    draw();
+    drawPartition();
+}
+
+function draw() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+
+    // Dessin des canaux
+    for (let c in channels) {
+        ctx.strokeStyle = channels[c].color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(0, channels[c].y);
+        ctx.lineTo(canvas.width, channels[c].y);
+        ctx.stroke();
+        ctx.fillStyle = '#fff';
+        ctx.fillText(c, 10, channels[c].y - 10);
+    }
+
+    // Particles
+    particles.forEach(p => {
+        if(p.done) return;
+        ctx.fillStyle = channels[p.channel].color;
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,5,0,2*Math.PI);
+        ctx.fill();
+    });
+}
+
+// Partition (traces)
+function drawPartition() {
+    pctx.fillStyle='#000';
+    pctx.fillRect(0,0,partition.width,partition.height);
+
+    pctx.fillStyle='lime';
+    let x = tick % partition.width;
+    // Tracer nombre de particules actives sur chaque canal
+    const f2bCount = particles.filter(p=>!p.done && p.channel==='frontendToBackend').length;
+    const b2fCount = particles.filter(p=>!p.done && p.channel==='backendToFrontend').length;
+
+    pctx.fillRect(x, partition.height*0.25, 1, f2bCount*2);
+    pctx.fillRect(x, partition.height*0.75, 1, b2fCount*2);
+}
+
+// Controls
+document.getElementById('resetBtn').onclick = () => { particles=[]; tick=0; draw(); drawPartition(); };
+document.getElementById('stepBtn').onclick = () => { step(); };
+document.getElementById('runBtn').onclick = () => { running=!running; };
+
+function animate() {
+    if(running) step();
+    requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+</body>
+</html>

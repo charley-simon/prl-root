@@ -1,0 +1,8 @@
+[
+  {"id": 0, "name": "Lead Actor", "departmentId": 0},
+  {"id": 1, "name": "Supporting Actor", "departmentId": 0},
+  {"id": 2, "name": "Guest Actor", "departmentId": 0},
+  {"id": 3, "name": "Director", "departmentId": 1},
+  {"id": 4, "name": "Writer", "departmentId": 2},
+  {"id": 5, "name": "Producer", "departmentId": 3}
+]

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Flux Réactifs Visuel</title>
+<style>
+  body { font-family: sans-serif; display:flex; flex-direction:column; align-items:center; margin:0; background:#222; color:#fff; }
+  #canvas { border:1px solid #555; background:#111; margin-top:10px; }
+  #controls { margin:10px; }
+  #partition { width: 800px; height: 100px; border:1px solid #555; margin-top:10px; background:#111; overflow-x:auto; white-space: nowrap; }
+  .particle { position:absolute; width:12px; height:12px; border-radius:50%; }
+</style>
+</head>
+<body>
+
+<h2>Mini Tableau de Bord Flux</h2>
+<div id="controls">
+  <button onclick="step()">Step</button>
+  <button onclick="run()">Run</button>
+  <button onclick="reset()">Reset</button>
+</div>
+
+<canvas id="canvas" width="800" height="300"></canvas>
+<div id="partition"></div>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const partition = document.getElementById('partition');
+
+class Particle {
+    constructor(data, flux) {
+        this.data = data;
+        this.flux = flux;
+        this.x = flux === 'FE→BE' ? 50 : 750;
+        this.y = Math.random()*250 + 25;
+        this.color = flux === 'FE→BE' ? 'cyan' : 'orange';
+        this.done = false;
+    }
+    move() {
+        if(this.flux === 'FE→BE') {
+            this.x += 2;
+            if(this.x>=750) this.done=true;
+        } else {
+            this.x -=2;
+            if(this.x<=50) this.done=true;
+        }
+    }
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 6, 0, Math.PI*2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+    }
+}
+
+let particles = [];
+let trace = [];
+
+function logPartition(p) {
+    const span = document.createElement('span');
+    span.textContent = `[${p.flux}:${p.data.type}] `;
+    partition.appendChild(span);
+    partition.scrollLeft = partition.scrollWidth;
+}
+
+function step() {
+    // Génération d'une particule FE→BE
+    const p = new Particle({type:'click', x:Math.random()*100, y:Math.random()*100}, 'FE→BE');
+    // Transformateur: filtre / compresseur
+    if(p.data.x<50) { // Ex: compresseur ne laisse passer que x<50
+        particles.push(p);
+        logPartition(p);
+    }
+    // Flux BE→FE transformation asynchrone (simulé)
+    setTimeout(()=> {
+        const q = new Particle({type:'actionAck', original:p.data}, 'BE→FE');
+        particles.push(q);
+        logPartition(q);
+    }, 300);
+}
+
+let running=false;
+function run() {
+    if(running) return;
+    running=true;
+    const interval = setInterval(()=> {
+        step();
+        if(!running) clearInterval(interval);
+    },500);
+}
+
+function reset() {
+    particles = [];
+    trace = [];
+    partition.innerHTML='';
+    running=false;
+    draw(); // redraw empty
+}
+
+// Animation
+function draw() {
+    ctx.clearRect(0,0,canvas.width, canvas.height);
+    // Axes flux
+    ctx.strokeStyle='#555'; ctx.lineWidth=2;
+    ctx.beginPath(); ctx.moveTo(50,50); ctx.lineTo(750,50); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(750,250); ctx.lineTo(50,250); ctx.stroke();
+    // Particles
+    particles.forEach(p=>{
+        p.move();
+        p.draw();
+    });
+    particles = particles.filter(p=>!p.done);
+    requestAnimationFrame(draw);
+}
+
+draw();
+</script>
+
+</body>
+</html>

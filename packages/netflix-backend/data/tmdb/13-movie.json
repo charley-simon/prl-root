@@ -1,0 +1,130 @@
+{
+  "id": 13,
+  "title": "Forrest Gump",
+  "original_title": "Forrest Gump",
+  "year": "1994",
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comédie"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "overview": "Durant trois décennies particulièrement agitées, Forrest Gump vit une série d'aventures le propulsant de l'état de handicapé physique à celui de star du football, de héros du Vietnam au roi de la crevette, des honneurs de la Maison Blanche au bonheur d'une grande histoire d'amour. Forrest est le symbole d'une époque, un candide dans une Amérique qui a perdu son innocence. Son cœur dépasse les limites de son QI…",
+  "tagline": "Le monde ne sera plus jamais le même quand vous l’aurez vu avec les yeux de Forrest Gump.",
+  "vote": 8.477,
+  "popularity": 116.046,
+  "actors": [
+    {
+      "id": 31,
+      "gender": 2,
+      "name": "Tom Hanks",
+      "character": "Forrest Gump",
+      "order": 0
+    },
+    {
+      "id": 32,
+      "gender": 1,
+      "name": "Robin Wright",
+      "character": "Jenny Curran",
+      "order": 1
+    },
+    {
+      "id": 33,
+      "gender": 2,
+      "name": "Gary Sinise",
+      "character": "Lieutenant Dan Taylor",
+      "order": 2
+    },
+    {
+      "id": 35,
+      "gender": 1,
+      "name": "Sally Field",
+      "character": "Mrs. Gump",
+      "order": 3
+    },
+    {
+      "id": 34,
+      "gender": 2,
+      "name": "Mykelti Williamson",
+      "character": "Benjamin Buford 'Bubba' Blue",
+      "order": 4
+    },
+    {
+      "id": 37821,
+      "gender": 2,
+      "name": "Michael Conner Humphreys",
+      "character": "Young Forrest Gump",
+      "order": 5
+    },
+    {
+      "id": 204997,
+      "gender": 1,
+      "name": "Hanna Hall",
+      "character": "Young Jenny Curran",
+      "order": 6
+    },
+    {
+      "id": 9640,
+      "gender": 2,
+      "name": "Haley Joel Osment",
+      "character": "Forrest Junior",
+      "order": 7
+    },
+    {
+      "id": 6751,
+      "gender": 1,
+      "name": "Siobhan Fallon Hogan",
+      "character": "School Bus Driver",
+      "order": 8
+    },
+    {
+      "id": 3817610,
+      "gender": 1,
+      "name": "Rebecca Williams",
+      "character": "Nurse at Park Bench",
+      "order": 9
+    },
+    {
+      "id": 196855,
+      "gender": 2,
+      "name": "Bob Penny",
+      "character": "Crony",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 24,
+      "gender": 2,
+      "name": "Robert Zemeckis",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 26,
+      "gender": 2,
+      "name": "Winston Groom",
+      "department": "Writing",
+      "job": "Novel"
+    },
+    {
+      "id": 27,
+      "gender": 2,
+      "name": "Eric Roth",
+      "department": "Writing",
+      "job": "Screenplay"
+    }
+  ],
+  "backdrop": "/13-backdrop.avif",
+  "poster": "/13-poster.avif"
+}

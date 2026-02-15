@@ -1,0 +1,111 @@
+[People: 1] 
+Purpose: Viewing director profile
+Intent: role=Director
+State: RESOLVED
+     |
+     | resolvedBy: people-director-movies via Movie-People
+     v
+[Movie: 2]
+Purpose: Selected movie directed by this person
+Intent: -
+State: RESOLVED
+     |
+     | resolvedBy: people-director-movies via Movie-People
+     v
+[People: Actors in Movie 2]
+Purpose: List actors of the selected movie
+Intent: role=Actor
+State: UNRESOLVED
+     |
+     | (to be resolved using movie-actors relation)
+     v
+[People: 10]
+Purpose: Inspect a specific actor in the movie
+Intent: role=Actor
+State: RESOLVED
+     |
+     | resolvedBy: movie-actors via Movie-People
+     v
+[Movie: 3]
+Purpose: Other movie where actor 10 plays
+Intent: -
+State: UNRESOLVED
+
+version plus compactée:
+[People: 1]  | Purpose: Viewing director profile          | Intent: role=Director | State: RESOLVED
+     ↓ resolvedBy: -
+[Movie: 2]   | Purpose: Selected movie directed by this person | Intent: -        | State: RESOLVED
+     ↓ resolvedBy: people-director-movies via Movie-People
+[People]     | Purpose: List actors of the selected movie | Intent: role=Actor | State: UNRESOLVED
+     ↓ resolvedBy: movie-actors (to resolve)
+[People: 10]| Purpose: Inspect a specific actor in the movie | Intent: role=Actor | State: RESOLVED
+     ↓ resolvedBy: movie-actors via Movie-People
+[Movie: 3]  | Purpose: Other movie where actor 10 plays | Intent: -           | State: UNRESOLVED
+
+pour visualiser exactement comment le moteur résout chaque frame :
+
+[People: 1]  
+Purpose: Viewing director profile  
+Intent: role=Director  
+State: RESOLVED  
+ResolvedBy: - (racine / point d’entrée)
+
+↓ resolvedBy: people-director-movies via Movie-People  
+   Filters: { peopleId: 1, roleId: Director }
+
+[Movie: 2]  
+Purpose: Selected movie directed by this person  
+Intent: -  
+State: RESOLVED  
+ResolvedBy: people-director-movies via Movie-People  
+Filters: { peopleId: 1, roleId: Director }
+
+↓ resolvedBy: movie-actors via Movie-People  
+   Filters: { movieId: 2, roleId: Actor }
+
+[People]  
+Purpose: List actors of the selected movie  
+Intent: role=Actor  
+State: UNRESOLVED  
+ResolvedBy: movie-actors via Movie-People  
+Filters (to apply): { movieId: 2, roleId: Actor }
+
+↓ resolvedBy: movie-actors via Movie-People  
+   Filters: { movieId: 2, peopleId: 10, roleId: Actor }
+
+[People: 10]  
+Purpose: Inspect a specific actor in the movie  
+Intent: role=Actor  
+State: RESOLVED  
+ResolvedBy: movie-actors via Movie-People  
+Filters: { movieId: 2, peopleId: 10, roleId: Actor }
+
+↓ resolvedBy: people-actor-movies via Movie-People  
+   Filters: { peopleId: 10, roleId: Actor }
+
+[Movie: 3]  
+Purpose: Other movie where actor 10 plays  
+Intent: -  
+State: UNRESOLVED  
+ResolvedBy: people-actor-movies via Movie-People  
+Filters (to apply): { peopleId: 10, roleId: Actor }
+
+
+En Plus condensé, une par stackframe:
+People:1  | RESOLVED   | Purpose: Viewing director profile       | Intent: role=Director | ResolvedBy: - 
+   ↓ people-director-movies via Movie-People | Filters: { peopleId:1, roleId:Director }
+Movie:2   | RESOLVED   | Purpose: Selected movie directed by this person | Intent: - | ResolvedBy: people-director-movies via Movie-People | Filters: { peopleId:1, roleId:Director }
+People    | UNRESOLVED | Purpose: List actors of the selected movie | Intent: role=Actor | ResolvedBy: movie-actors via Movie-People | Filters to apply: { movieId:2, roleId:Actor }
+People:10 | RESOLVED   | Purpose: Inspect a specific actor in the movie | Intent: role=Actor | ResolvedBy: movie-actors via Movie-People | Filters: { movieId:2, peopleId:10, roleId:Actor }
+Movie:3   | UNRESOLVED | Purpose: Other movie where actor 10 plays | Intent: - | ResolvedBy: people-actor-movies via Movie-People | Filters to apply: { peopleId:10, roleId:Actor }
+Aprés résolution:
+People:1  | RESOLVED   | Purpose: Viewing director profile       | Intent: role=Director | ResolvedBy: - 
+   ↓ people-director-movies via Movie-People | Filters: { peopleId:1, roleId:Director }
+
+Movie:2   | RESOLVED   | Purpose: Selected movie directed by this person | Intent: - | ResolvedBy: people-director-movies via Movie-People | Filters: { peopleId:1, roleId:Director }
+
+People:Actors in Movie 2  | RESOLVED | Purpose: List actors of the selected movie | Intent: role=Actor | ResolvedBy: movie-actors via Movie-People | Filters: { movieId:2, roleId:Actor }
+
+People:10 | RESOLVED   | Purpose: Inspect a specific actor in the movie | Intent: role=Actor | ResolvedBy: movie-actors via Movie-People | Filters: { movieId:2, peopleId:10, roleId:Actor }
+
+Movie:3   | RESOLVED   | Purpose: Other movie where actor 10 plays | Intent: - | ResolvedBy: people-actor-movies via Movie-People | Filters: { peopleId:10, roleId:Actor }

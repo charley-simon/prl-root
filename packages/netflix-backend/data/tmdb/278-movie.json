@@ -1,0 +1,126 @@
+{
+  "id": 278,
+  "title": "Les Évadés",
+  "original_title": "The Shawshank Redemption",
+  "year": "1994",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "overview": "En 1947, Andy Dufresne, un jeune banquier, est condamné à la prison à vie pour le meurtre de sa femme et de son amant. Ayant beau clamer son innocence, il est emprisonné à Shawshank, le pénitencier le plus sévère de l'État du Maine. Il y fait la rencontre de Red, un noir désabusé, détenu depuis vingt ans. Commence alors une grande histoire d'amitié entre les deux hommes…",
+  "tagline": "Même à Shawshank on n'enferme pas l'espoir…",
+  "vote": 8.704,
+  "popularity": 109.754,
+  "actors": [
+    {
+      "id": 504,
+      "gender": 2,
+      "name": "Tim Robbins",
+      "character": "Andy Dufresne",
+      "order": 0
+    },
+    {
+      "id": 192,
+      "gender": 2,
+      "name": "Morgan Freeman",
+      "character": "Ellis Boyd 'Red' Redding",
+      "order": 1
+    },
+    {
+      "id": 4029,
+      "gender": 2,
+      "name": "Bob Gunton",
+      "character": "Warden Norton",
+      "order": 2
+    },
+    {
+      "id": 6573,
+      "gender": 2,
+      "name": "William Sadler",
+      "character": "Heywood",
+      "order": 3
+    },
+    {
+      "id": 6574,
+      "gender": 2,
+      "name": "Clancy Brown",
+      "character": "Captain Byron T. Hadley",
+      "order": 4
+    },
+    {
+      "id": 6575,
+      "gender": 2,
+      "name": "Gil Bellows",
+      "character": "Tommy",
+      "order": 5
+    },
+    {
+      "id": 6577,
+      "gender": 2,
+      "name": "James Whitmore",
+      "character": "Brooks Hatlen",
+      "order": 6
+    },
+    {
+      "id": 6576,
+      "gender": 2,
+      "name": "Mark Rolston",
+      "character": "Bogs Diamond",
+      "order": 7
+    },
+    {
+      "id": 12645,
+      "gender": 2,
+      "name": "Jeffrey DeMunn",
+      "character": "1946 D.A.",
+      "order": 8
+    },
+    {
+      "id": 92119,
+      "gender": 2,
+      "name": "Larry Brandenburg",
+      "character": "Skeet",
+      "order": 9
+    },
+    {
+      "id": 168323,
+      "gender": 2,
+      "name": "Neil Giuntoli",
+      "character": "Jigger",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 4027,
+      "gender": 2,
+      "name": "Frank Darabont",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 3027,
+      "gender": 2,
+      "name": "Stephen King",
+      "department": "Writing",
+      "job": "Novel"
+    },
+    {
+      "id": 4027,
+      "gender": 2,
+      "name": "Frank Darabont",
+      "department": "Writing",
+      "job": "Screenplay"
+    }
+  ],
+  "backdrop": "/278-backdrop.avif",
+  "poster": "/278-poster.avif"
+}

@@ -1,0 +1,64 @@
+[
+  {
+    "entity": "People",
+    "id": 1,
+    "purpose": "Viewing director profile",
+    "intent": { "role": "Director" },
+    "state": "RESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 2,
+    "purpose": "Selected movie directed by this person",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-director-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 1 },
+        { "field": "roleId", "value": "Director" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "purpose": "List actors of the selected movie",
+    "intent": { "role": "Actor" },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 10,
+    "purpose": "Inspect a specific actor in the movie",
+    "intent": { "role": "Actor" },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 3,
+    "purpose": "Other movie where actor 10 plays",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 5,
+    "purpose": "Co-actor in Movie 3",
+    "intent": { "role": "Actor" },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 4,
+    "purpose": "Movie directed by People 5",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  }
+]

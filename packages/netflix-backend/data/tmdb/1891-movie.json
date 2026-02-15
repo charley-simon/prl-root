@@ -1,0 +1,137 @@
+{
+  "id": 1891,
+  "title": "L'Empire contre-attaque",
+  "original_title": "The Empire Strikes Back",
+  "year": "1980",
+  "genres": [
+    {
+      "id": 12,
+      "name": "Aventure"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 878,
+      "name": "Science-Fiction"
+    }
+  ],
+  "overview": "Malgré la destruction de l’Étoile Noire, l'Empire maintient son emprise sur la galaxie, et poursuit sans relâche sa lutte contre l'Alliance rebelle. Basés sur la planète glacée de Hoth, les rebelles essuient un assaut des troupes impériales. Parvenus à s'échapper, la princesse Leia, Han Solo, Chewbacca et C-3P0 se dirigent vers Bespin, la cité des nuages gouvernée par Lando Calrissian, ancien compagnon de Han. Suivant les instructions d'Obi-Wan Kenobi, Luke Skywalker se rend quant à lui vers le système de Dagobah, planète marécageuse où il doit recevoir l'enseignement du dernier maître Jedi, Yoda. Apprenant l'arrestation de ses compagnons par les stormtroopers de Dark Vador après la trahison de Lando, Luke décide d'interrompre son entraînement pour porter secours à ses amis et affronter le sombre seigneur Sith...",
+  "tagline": "La Guerre des Étoiles continue…",
+  "vote": 8.392,
+  "popularity": 9.5364,
+  "actors": [
+    {
+      "id": 2,
+      "gender": 2,
+      "name": "Mark Hamill",
+      "character": "Luke Skywalker",
+      "order": 0
+    },
+    {
+      "id": 3,
+      "gender": 2,
+      "name": "Harrison Ford",
+      "character": "Han Solo",
+      "order": 1
+    },
+    {
+      "id": 4,
+      "gender": 1,
+      "name": "Carrie Fisher",
+      "character": "Princess Leia",
+      "order": 2
+    },
+    {
+      "id": 3799,
+      "gender": 2,
+      "name": "Billy Dee Williams",
+      "character": "Lando Calrissian",
+      "order": 3
+    },
+    {
+      "id": 6,
+      "gender": 2,
+      "name": "Anthony Daniels",
+      "character": "C-3PO",
+      "order": 4
+    },
+    {
+      "id": 24342,
+      "gender": 2,
+      "name": "David Prowse",
+      "character": "Darth Vader",
+      "order": 5
+    },
+    {
+      "id": 24343,
+      "gender": 2,
+      "name": "Peter Mayhew",
+      "character": "Chewbacca",
+      "order": 6
+    },
+    {
+      "id": 130,
+      "gender": 2,
+      "name": "Kenny Baker",
+      "character": "R2-D2",
+      "order": 7
+    },
+    {
+      "id": 7908,
+      "gender": 2,
+      "name": "Frank Oz",
+      "character": "Yoda (Voice)",
+      "order": 8
+    },
+    {
+      "id": 12248,
+      "gender": 2,
+      "name": "Alec Guinness",
+      "character": "Obi-Wan Kenobi",
+      "order": 9
+    },
+    {
+      "id": 33185,
+      "gender": 2,
+      "name": "Jeremy Bulloch",
+      "character": "Boba Fett",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 10930,
+      "gender": 2,
+      "name": "Irvin Kershner",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 8844,
+      "gender": 2,
+      "name": "Lawrence Kasdan",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 4298,
+      "gender": 1,
+      "name": "Leigh Brackett",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 1,
+      "gender": 2,
+      "name": "George Lucas",
+      "department": "Writing",
+      "job": "Story"
+    }
+  ],
+  "backdrop": "/1891-backdrop.avif",
+  "poster": "/1891-poster.avif"
+}

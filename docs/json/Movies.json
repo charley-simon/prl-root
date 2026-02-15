@@ -1,0 +1,8 @@
+[
+  {
+    "movieId": 555,
+    "title": "Inception",
+    "year": 2010,
+    "genreIds": [1, 4, 0] // Action, SciFi, Thriller
+  }
+]

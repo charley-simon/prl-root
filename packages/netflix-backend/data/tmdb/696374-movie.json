@@ -1,0 +1,98 @@
+{
+  "id": 696374,
+  "title": "Gabriel's Inferno",
+  "original_title": "Gabriel's Inferno",
+  "year": "2020",
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    }
+  ],
+  "overview": "Exploration intrigante et pécheresse de la séduction, de l'amour interdit et de la rédemption, Gabriel's Inferno est un récit captivant et follement passionné de la fuite d'un homme de son propre enfer, alors qu'il tente de gagner l'impossible, le pardon et l'amour.",
+  "tagline": "",
+  "vote": 8.4,
+  "popularity": 1.957,
+  "actors": [
+    {
+      "id": 1312450,
+      "gender": 1,
+      "name": "Melanie Zanetti",
+      "character": "Julianne Mitchell",
+      "order": 0
+    },
+    {
+      "id": 544002,
+      "gender": 2,
+      "name": "Giulio Berruti",
+      "character": "Gabriel Emerson",
+      "order": 1
+    },
+    {
+      "id": 73659,
+      "gender": 2,
+      "name": "Kurt McKinney",
+      "character": "Tom Mitchell",
+      "order": 2
+    },
+    {
+      "id": 1188681,
+      "gender": 1,
+      "name": "Agnes Albright",
+      "character": "Paulina",
+      "order": 3
+    },
+    {
+      "id": 2595115,
+      "gender": 1,
+      "name": "Margaux Brooke",
+      "character": "Christa Peterson",
+      "order": 4
+    },
+    {
+      "id": 1326237,
+      "gender": 2,
+      "name": "Ned Van Zandt",
+      "character": "Professor Jeremy Martin",
+      "order": 5
+    },
+    {
+      "id": 1314554,
+      "gender": 1,
+      "name": "Vanessa Kai",
+      "character": "Dr. Ling",
+      "order": 6
+    }
+  ],
+  "directors": [
+    {
+      "id": 935563,
+      "gender": 1,
+      "name": "Tosca Musk",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 1972687,
+      "gender": 1,
+      "name": "Mary Pocrnic",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 2693030,
+      "gender": 0,
+      "name": "Sylvain Reynard",
+      "department": "Writing",
+      "job": "Novel"
+    }
+  ],
+  "backdrop": "/696374-backdrop.avif",
+  "poster": "/696374-poster.avif"
+}

@@ -1,0 +1,309 @@
+{
+  "id": 324857,
+  "title": "Spider-Man : New Generation",
+  "original_title": "Spider-Man: Into the Spider-Verse",
+  "year": "2018",
+  "genres": [
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 12,
+      "name": "Aventure"
+    },
+    {
+      "id": 878,
+      "name": "Science-Fiction"
+    }
+  ],
+  "overview": "Spider-Man : New Generation suit les aventures de Miles Morales, un adolescent afro-américain et portoricain qui vit à Brooklyn et s’efforce de s’intégrer dans son nouveau collège à Manhattan. Mais la vie de Miles se complique quand il se fait mordre par une araignée radioactive et se découvre des super-pouvoirs : il est désormais capable d’empoisonner ses adversaires, de se camoufler, de coller littéralement aux murs et aux plafonds ; son ouïe est démultipliée... Dans le même temps, le plus redoutable cerveau criminel de la ville, le Caïd, a mis au point un accélérateur de particules nucléaires capable d’ouvrir un portail sur d’autres univers. Son invention va provoquer l’arrivée de plusieurs autres versions de Spider-Man dans le monde de Miles, dont un Peter Parker plus âgé, Spider-Gwen, Spider-Man Noir, Spider-Cochon et Peni Parker, venue d’un dessin animé japonais.",
+  "tagline": "Découvrez un univers où ils sont plus d'un à porter le masque",
+  "vote": 8.393,
+  "popularity": 22.8703,
+  "actors": [
+    {
+      "id": 587506,
+      "gender": 2,
+      "name": "Shameik Moore",
+      "character": "Miles Morales (voice)",
+      "order": 0
+    },
+    {
+      "id": 543505,
+      "gender": 2,
+      "name": "Jake Johnson",
+      "character": "Peter B. Parker (voice)",
+      "order": 1
+    },
+    {
+      "id": 130640,
+      "gender": 1,
+      "name": "Hailee Steinfeld",
+      "character": "Gwen Stacy (voice)",
+      "order": 2
+    },
+    {
+      "id": 932967,
+      "gender": 2,
+      "name": "Mahershala Ali",
+      "character": "Uncle Aaron (voice)",
+      "order": 3
+    },
+    {
+      "id": 226366,
+      "gender": 2,
+      "name": "Brian Tyree Henry",
+      "character": "Jefferson Davis (voice)",
+      "order": 4
+    },
+    {
+      "id": 10437,
+      "gender": 1,
+      "name": "Lily Tomlin",
+      "character": "Aunt May (voice)",
+      "order": 5
+    },
+    {
+      "id": 141610,
+      "gender": 1,
+      "name": "Luna Lauren Vélez",
+      "character": "Rio Morales (voice)",
+      "order": 6
+    },
+    {
+      "id": 37153,
+      "gender": 1,
+      "name": "Zoë Kravitz",
+      "character": "Mary Jane (voice)",
+      "order": 7
+    },
+    {
+      "id": 933558,
+      "gender": 2,
+      "name": "John Mulaney",
+      "character": "Spider-Ham (voice)",
+      "order": 8
+    },
+    {
+      "id": 1443708,
+      "gender": 1,
+      "name": "Kimiko Glenn",
+      "character": "Peni Parker (voice)",
+      "order": 9
+    },
+    {
+      "id": 2963,
+      "gender": 2,
+      "name": "Nicolas Cage",
+      "character": "Spider-Man Noir (voice)",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 936670,
+      "gender": 2,
+      "name": "Bob Persichetti",
+      "department": "Directing",
+      "job": "Director"
+    },
+    {
+      "id": 151007,
+      "gender": 2,
+      "name": "Peter Ramsey",
+      "department": "Directing",
+      "job": "Director"
+    },
+    {
+      "id": 59918,
+      "gender": 2,
+      "name": "Rodney Rothman",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 107446,
+      "gender": 2,
+      "name": "Phil Lord",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 4566862,
+      "gender": 0,
+      "name": "Katie Smith",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 2555580,
+      "gender": 0,
+      "name": "Kasey Fagerquist",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 59918,
+      "gender": 2,
+      "name": "Rodney Rothman",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 107446,
+      "gender": 2,
+      "name": "Phil Lord",
+      "department": "Writing",
+      "job": "Story"
+    },
+    {
+      "id": 4097975,
+      "gender": 0,
+      "name": "Ryan Gaffney",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1624724,
+      "gender": 1,
+      "name": "Paula Assadourian",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1205985,
+      "gender": 2,
+      "name": "Stephan Franck",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 51955,
+      "gender": 1,
+      "name": "Sharon Bridgeman",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 12095,
+      "gender": 2,
+      "name": "Cody Cameron",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1450350,
+      "gender": 2,
+      "name": "Heiko von Drengenberg",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1577480,
+      "gender": 1,
+      "name": "Denise Koyama",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 2199361,
+      "gender": 2,
+      "name": "Vi-Dieu Nguyen",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 2199290,
+      "gender": 0,
+      "name": "Eva Bruschi",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1703174,
+      "gender": 2,
+      "name": "Miguel Jiron",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 2199366,
+      "gender": 0,
+      "name": "Jihyun Park",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 139686,
+      "gender": 2,
+      "name": "John Puglisi",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 3348886,
+      "gender": 1,
+      "name": "Jane Wu",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1923585,
+      "gender": 2,
+      "name": "Yoriaki Mochizuki",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 2008020,
+      "gender": 0,
+      "name": "Ryan Savas",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1460450,
+      "gender": 0,
+      "name": "Miles Thompson",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1511473,
+      "gender": 2,
+      "name": "Mark Ackland",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1633106,
+      "gender": 0,
+      "name": "Riccardo Durante",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1814037,
+      "gender": 2,
+      "name": "Mike Kunkel",
+      "department": "Writing",
+      "job": "Story Artist"
+    },
+    {
+      "id": 1254995,
+      "gender": 2,
+      "name": "Alex Hirsch",
+      "department": "Writing",
+      "job": "Story Coordinator"
+    }
+  ],
+  "backdrop": "./public/images/324857-backdrop.avif",
+  "poster": "./public/images/324857-poster.avif"
+}

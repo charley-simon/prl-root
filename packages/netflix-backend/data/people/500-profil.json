@@ -1,0 +1,16 @@
+{
+  "id": 500,
+  "gender": 2,
+  "name": "Tom Cruise",
+  "tmdbId": 500,
+  "imdbID": "nm0000129",
+  "biography": "Tom Cruise est un acteur et producteur américain né le 3 juillet 1962 à Syracuse, dans l'État de New York. Issu d'une famille modeste d'origine anglaise, allemande et irlandaise, il grandit dans plusieurs villes après de nombreux déménagements, notamment au Canada, et fréquente quinze écoles en quatorze ans. Il envisage d'abord la prêtrise puis le sport, mais se tourne vers le théâtre au lycée avant de s'installer à New York puis Los Angeles à 18 ans pour devenir acteur.\n\nIl débute au cinéma en 1981 avec des rôles secondaires dans Endless Love et Taps, puis perce en 1983 avec Risky Business et The Outsiders. Sa carrière explose avec Top Gun (1986, Top Gun), qui le consacre sex-symbol. Il enchaîne avec des drames acclamés : The Color of Money (1986), Rain Man (1988), Born on the Fourth of July (1989, Né un 4 juillet) – pour lequel il remporte un Golden Globe et une nomination aux Oscars du meilleur acteur –, A Few Good Men (1992), The Firm (1993), Interview with the Vampire (1994, Entretien avec un vampire), Jerry Maguire (1996) – second Golden Globe et nomination aux Oscars –, Magnolia (1999) – troisième Golden Globe et nomination aux Oscars pour le second rôle.\n\nProducteur via Cruise/Wagner Productions, il lance la franchise Mission: Impossible en 1996 (Mission: Impossible), où il incarne Ethan Hunt et réalise ses cascades. Il excelle dans l'action et la science-fiction : Minority Report (2002), The Last Samurai (2003), War of the Worlds (2005, La Guerre des mondes), Edge of Tomorrow (2014), Top Gun: Maverick (2022) – succès mondial –, Mission: Impossible – Dead Reckoning Part One (2023) et Mission: Impossible – The Final Reckoning (2025, son dernier film dans le rôle d'Ethan Hunt). Parmi ses distinctions : trois Golden Globes, quatre nominations aux Oscars, Palme d'or d'honneur à Cannes (2022), Academy Honorary Award, BFI Fellowship (2025) et Distinguished Public Service Award de l'US Navy (2024).\n\nIl est reconnu pour son engagement dans les cascades réelles et son statut d'icône hollywoodienne.",
+  "deathDay": null,
+  "birthDay": "1962-07-03",
+  "birthPlace": "Syracuse, New York, USA",
+  "homepage": "http://www.tomcruise.com",
+  "popularity": 17.1303,
+  "imdbId": "nm0000129",
+  "wikidataId": "Q37079",
+  "wikiDescription": "acteur, producteur et réalisateur de cinéma américain"
+}

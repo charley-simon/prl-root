@@ -1,0 +1,136 @@
+{
+  "id": 510,
+  "title": "Vol au-dessus d'un nid de coucou",
+  "original_title": "One Flew Over the Cuckoo's Nest",
+  "year": "1975",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    }
+  ],
+  "overview": "Randle P. McMurphy se fait interner pour échapper à la prison. Il va être touché par la détresse et la solitude des patients. Très rapidement, il comprend que l’infirmière en chef, Mlle Ratched, a imposé des règles strictes et entend bien les faire respecter. Il décide alors de révolutionner ce petit monde, plutôt au départ par jeu.",
+  "tagline": "Pour échapper à la prison, il est prêt à tout.",
+  "vote": 8.4,
+  "popularity": 7.8573,
+  "actors": [
+    {
+      "id": 514,
+      "gender": 2,
+      "name": "Jack Nicholson",
+      "character": "Randle Patrick McMurphy",
+      "order": 0
+    },
+    {
+      "id": 1370,
+      "gender": 2,
+      "name": "Brad Dourif",
+      "character": "Billy Bibbit",
+      "order": 1
+    },
+    {
+      "id": 7071,
+      "gender": 1,
+      "name": "Louise Fletcher",
+      "character": "Nurse Mildred Ratched",
+      "order": 2
+    },
+    {
+      "id": 518,
+      "gender": 2,
+      "name": "Danny DeVito",
+      "character": "Martini",
+      "order": 3
+    },
+    {
+      "id": 7072,
+      "gender": 2,
+      "name": "William Redfield",
+      "character": "Dale Harding",
+      "order": 4
+    },
+    {
+      "id": 7077,
+      "gender": 2,
+      "name": "Scatman Crothers",
+      "character": "Orderly Turkle",
+      "order": 5
+    },
+    {
+      "id": 1062,
+      "gender": 2,
+      "name": "Christopher Lloyd",
+      "character": "Max Taber",
+      "order": 6
+    },
+    {
+      "id": 68301,
+      "gender": 2,
+      "name": "Will Sampson",
+      "character": "Chief Bromden",
+      "order": 7
+    },
+    {
+      "id": 7075,
+      "gender": 2,
+      "name": "Dean R. Brooks",
+      "character": "Dr. John Spivey",
+      "order": 8
+    },
+    {
+      "id": 7073,
+      "gender": 2,
+      "name": "Michael Berryman",
+      "character": "Ellis",
+      "order": 9
+    },
+    {
+      "id": 7085,
+      "gender": 2,
+      "name": "Sydney Lassick",
+      "character": "Charlie Cheswick",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 3974,
+      "gender": 2,
+      "name": "Miloš Forman",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 7064,
+      "gender": 2,
+      "name": "Ken Kesey",
+      "department": "Writing",
+      "job": "Novel"
+    },
+    {
+      "id": 7065,
+      "gender": 2,
+      "name": "Lawrence Hauben",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 4181,
+      "gender": 2,
+      "name": "Bo Goldman",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 133878,
+      "gender": 2,
+      "name": "Dale Wasserman",
+      "department": "Writing",
+      "job": "Theatre Play"
+    }
+  ],
+  "backdrop": "/510-backdrop.avif",
+  "poster": "/510-poster.avif"
+}

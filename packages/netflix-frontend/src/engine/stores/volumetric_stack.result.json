@@ -1,0 +1,295 @@
+[
+  {
+    "entity": "People",
+    "id": 1,
+    "purpose": "Viewing director profile",
+    "intent": { "role": "Director" },
+    "state": "RESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 2,
+    "purpose": "Selected movie directed by this person",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-director-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 1 },
+        { "field": "roleId", "value": "Director" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "purpose": "Actors in Movie 2",
+    "intent": { "role": "Actor" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-actors",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 2 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "id": 10,
+    "purpose": "Inspect actor 10",
+    "intent": { "role": "Actor" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-actors",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 2 },
+        { "field": "peopleId", "value": 10 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "Movie",
+    "id": 3,
+    "purpose": "Other movie where actor 10 plays",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-actor-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 10 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "id": 5,
+    "purpose": "Co-actor in Movie 3",
+    "intent": { "role": "Actor" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-actors",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 3 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "Movie",
+    "id": 4,
+    "purpose": "Movie by co-actor 5",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-actor-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 5 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "id": 20,
+    "purpose": "Writer of Movie 4",
+    "intent": { "role": "Writer" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-writers",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 4 },
+        { "field": "roleId", "value": "Writer" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "id": 21,
+    "purpose": "Actor in Movie 4",
+    "intent": { "role": "Actor" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-actors",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 4 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "Movie",
+    "id": 5,
+    "purpose": "Movie where actor 21 plays",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-actor-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 21 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "id": 30,
+    "purpose": "Director of Movie 5",
+    "intent": { "role": "Director" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-director",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 5 },
+        { "field": "roleId", "value": "Director" }
+      ]
+    }
+  },
+  {
+    "entity": "Movie",
+    "id": 6,
+    "purpose": "Other movie by director 30",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-director-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 30 },
+        { "field": "roleId", "value": "Director" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "id": 40,
+    "purpose": "Actor in Movie 6",
+    "intent": { "role": "Actor" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-actors",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 6 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "Movie",
+    "id": 7,
+    "purpose": "Movie where actor 40 plays",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-actor-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 40 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "id": 50,
+    "purpose": "Co-actor in Movie 7",
+    "intent": { "role": "Actor" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-actors",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 7 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "Movie",
+    "id": 8,
+    "purpose": "Movie by director 50",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-director-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 50 },
+        { "field": "roleId", "value": "Director" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "id": 60,
+    "purpose": "Writer in Movie 8",
+    "intent": { "role": "Writer" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-writers",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 8 },
+        { "field": "roleId", "value": "Writer" }
+      ]
+    }
+  },
+  {
+    "entity": "Movie",
+    "id": 9,
+    "purpose": "Other movie by writer 60",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-writer-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 60 },
+        { "field": "roleId", "value": "Writer" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "id": 70,
+    "purpose": "Actor in Movie 9",
+    "intent": { "role": "Actor" },
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "movie-actors",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "movieId", "value": 9 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  },
+  {
+    "entity": "Movie",
+    "id": 10,
+    "purpose": "Final movie of actor 70",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-actor-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 70 },
+        { "field": "roleId", "value": "Actor" }
+      ]
+    }
+  }
+]

@@ -1,0 +1,155 @@
+{
+  "id": 40096,
+  "title": "Will A Dog",
+  "original_title": "O Auto da Compadecida",
+  "year": "2000",
+  "genres": [
+    {
+      "id": 35,
+      "name": "Comédie"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 14,
+      "name": "Fantastique"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "overview": "Le quartier animé João Grilo et chico sournoise sont pauvres gars qui vivent dans l'arrière-pays qui trichent un tas de gens dans une petite ville du Nord-Est du Brésil. Mais quand ils meurent, ils doivent être jugés par le Christ, le diable et la Vierge Marie, avant d'être admis au paradis.",
+  "tagline": "",
+  "vote": 8.419,
+  "popularity": 2.2943,
+  "actors": [
+    {
+      "id": 8600,
+      "gender": 2,
+      "name": "Matheus Nachtergaele",
+      "character": "João Grilo",
+      "order": 0
+    },
+    {
+      "id": 87341,
+      "gender": 2,
+      "name": "Selton Mello",
+      "character": "Chicó",
+      "order": 1
+    },
+    {
+      "id": 123757,
+      "gender": 2,
+      "name": "Rogério Cardoso",
+      "character": "Padre João",
+      "order": 2
+    },
+    {
+      "id": 123758,
+      "gender": 1,
+      "name": "Denise Fraga",
+      "character": "Dora",
+      "order": 3
+    },
+    {
+      "id": 102551,
+      "gender": 2,
+      "name": "Diogo Vilela",
+      "character": "Eurico",
+      "order": 4
+    },
+    {
+      "id": 90219,
+      "gender": 2,
+      "name": "Luís Melo",
+      "character": "Diabo",
+      "order": 5
+    },
+    {
+      "id": 123759,
+      "gender": 1,
+      "name": "Virginia Cavendish",
+      "character": "Rosinha",
+      "order": 6
+    },
+    {
+      "id": 123760,
+      "gender": 2,
+      "name": "Bruno Garcia",
+      "character": "Vicentão",
+      "order": 7
+    },
+    {
+      "id": 1126875,
+      "gender": 2,
+      "name": "Enrique Díaz",
+      "character": "Joaquim Brejeiro",
+      "order": 8
+    },
+    {
+      "id": 87340,
+      "gender": 2,
+      "name": "Maurício Gonçalves",
+      "character": "Jesus Cristo / Emanuel",
+      "order": 9
+    },
+    {
+      "id": 123761,
+      "gender": 2,
+      "name": "Aramis Trindade",
+      "character": "Cabo 70",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 102560,
+      "gender": 2,
+      "name": "Guel Arraes",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 102560,
+      "gender": 2,
+      "name": "Guel Arraes",
+      "department": "Writing",
+      "job": "Writer"
+    },
+    {
+      "id": 123765,
+      "gender": 1,
+      "name": "Adriana Falcão",
+      "department": "Writing",
+      "job": "Writer"
+    },
+    {
+      "id": 102559,
+      "gender": 2,
+      "name": "João Falcão",
+      "department": "Writing",
+      "job": "Writer"
+    },
+    {
+      "id": 1421958,
+      "gender": 2,
+      "name": "Ariano Suassuna",
+      "department": "Writing",
+      "job": "Theatre Play"
+    },
+    {
+      "id": 1421958,
+      "gender": 2,
+      "name": "Ariano Suassuna",
+      "department": "Writing",
+      "job": "Story"
+    }
+  ],
+  "backdrop": "/40096-backdrop.avif",
+  "poster": "/40096-poster.avif"
+}

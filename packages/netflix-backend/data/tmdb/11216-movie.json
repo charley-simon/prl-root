@@ -1,0 +1,133 @@
+{
+  "id": 11216,
+  "title": "Cinema Paradiso",
+  "original_title": "Nuovo Cinema Paradiso",
+  "year": "1988",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 10749,
+      "name": "Romance"
+    }
+  ],
+  "overview": "Alfredo vient de mourir. Pour Salvatore, cinéaste en vogue, c’est tout un pan de son passé qui s’écroule. On l’appelait Toto a l’époque. Il partageait son temps libre entre l’office où il était enfant de chœur et la salle de cinéma paroissiale, en particulier la cabine de projection où régnait Alfredo.",
+  "tagline": "Une célébration de la jeunesse, de l’amitié et de la magie éternelle des films.",
+  "vote": 8.4,
+  "popularity": 5.2245,
+  "actors": [
+    {
+      "id": 24366,
+      "gender": 2,
+      "name": "Philippe Noiret",
+      "character": "Alfredo",
+      "order": 0
+    },
+    {
+      "id": 20030,
+      "gender": 2,
+      "name": "Jacques Perrin",
+      "character": "Salvatore 'Totò' Di Vita (adult)",
+      "order": 1
+    },
+    {
+      "id": 27643,
+      "gender": 2,
+      "name": "Marco Leonardi",
+      "character": "Salvatore 'Totò' Di Vita (teen)",
+      "order": 2
+    },
+    {
+      "id": 68635,
+      "gender": 2,
+      "name": "Salvatore Cascio",
+      "character": "Salvatore 'Totò' Di Vita (child)",
+      "order": 3
+    },
+    {
+      "id": 120152,
+      "gender": 1,
+      "name": "Agnese Nano",
+      "character": "Elena Mendola (teen) / Elena's daughter (in Director's cut)",
+      "order": 4
+    },
+    {
+      "id": 70083,
+      "gender": 1,
+      "name": "Antonella Attili",
+      "character": "Maria Di Vita (young)",
+      "order": 5
+    },
+    {
+      "id": 25780,
+      "gender": 1,
+      "name": "Pupella Maggio",
+      "character": "Maria Di Vita (aged)",
+      "order": 6
+    },
+    {
+      "id": 52657,
+      "gender": 2,
+      "name": "Enzo Cannavale",
+      "character": "Spaccafico",
+      "order": 7
+    },
+    {
+      "id": 1014911,
+      "gender": 1,
+      "name": "Isa Danieli",
+      "character": "Anna",
+      "order": 8
+    },
+    {
+      "id": 119992,
+      "gender": 2,
+      "name": "Leo Gullotta",
+      "character": "Ignazio, usher",
+      "order": 9
+    },
+    {
+      "id": 14151,
+      "gender": 2,
+      "name": "Leopoldo Trieste",
+      "character": "Father Adelfio",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 65314,
+      "gender": 2,
+      "name": "Giuseppe Tornatore",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 65314,
+      "gender": 2,
+      "name": "Giuseppe Tornatore",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 3778372,
+      "gender": 0,
+      "name": "Vanna Paoli",
+      "department": "Writing",
+      "job": "Writer"
+    },
+    {
+      "id": 65314,
+      "gender": 2,
+      "name": "Giuseppe Tornatore",
+      "department": "Writing",
+      "job": "Story"
+    }
+  ],
+  "backdrop": "/11216-backdrop.avif",
+  "poster": "/11216-poster.avif"
+}

@@ -1,0 +1,126 @@
+{
+  "id": 598,
+  "title": "La Cité de Dieu",
+  "original_title": "Cidade de Deus",
+  "year": "2002",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "overview": "Dans une favela qui a vu le jour à Rio de Janeiro dans les années soixante, Fusée est un gamin noir, pauvre, trop fragile pour devenir hors-la-loi, mais assez malin pour ne pas se contenter d'un travail sous payé. Il grandit dans un environnement violent, mais tente de voir la réalité autrement, avec l'œil d'un artiste. Il rêve de devenir photographe professionnel. Petit Dé, un enfant de onze ans, emménage dans la Cité. Il souhaite pour sa part devenir le plus grand criminel de Rio et commence son apprentissage en rendant de menus services à la pègre locale. Il admire Tignasse et son gang, qui arraisonnent les camions et cambriolent à tout va. Tignasse donne à Petit Dé l'occasion de commettre un meurtre, le premier d'une longue série…",
+  "tagline": "Dans la cité de Dieu, il n'y a qu'une seule loi… Celle de la violence.",
+  "vote": 8.427,
+  "popularity": 7.8145,
+  "actors": [
+    {
+      "id": 8595,
+      "gender": 2,
+      "name": "Alexandre Rodrigues",
+      "character": "Buscapé - Rocket",
+      "order": 0
+    },
+    {
+      "id": 8596,
+      "gender": 2,
+      "name": "Leandro Firmino",
+      "character": "Zé Pequeno - Li'l Zé",
+      "order": 1
+    },
+    {
+      "id": 8597,
+      "gender": 2,
+      "name": "Phellipe Haagensen",
+      "character": "Bené - Benny",
+      "order": 2
+    },
+    {
+      "id": 8598,
+      "gender": 2,
+      "name": "Douglas Silva",
+      "character": "Dadinho - Li'l Dice",
+      "order": 3
+    },
+    {
+      "id": 8599,
+      "gender": 2,
+      "name": "Jonathan Haagensen",
+      "character": "Cabeleira - Shaggy",
+      "order": 4
+    },
+    {
+      "id": 8600,
+      "gender": 2,
+      "name": "Matheus Nachtergaele",
+      "character": "Sandro Cenoura - Carrot",
+      "order": 5
+    },
+    {
+      "id": 5659,
+      "gender": 2,
+      "name": "Seu Jorge",
+      "character": "Mané Galinha - Knockout Ned",
+      "order": 6
+    },
+    {
+      "id": 8601,
+      "gender": 2,
+      "name": "Jefechander Suplino",
+      "character": "Alicate - Clipper",
+      "order": 7
+    },
+    {
+      "id": 8602,
+      "gender": 1,
+      "name": "Alice Braga",
+      "character": "Angélica",
+      "order": 8
+    },
+    {
+      "id": 3883645,
+      "gender": 2,
+      "name": "Emerson Gomes",
+      "character": "Barbantinho - Stringy",
+      "order": 9
+    },
+    {
+      "id": 3582522,
+      "gender": 2,
+      "name": "Edson Oliveira",
+      "character": "Barbantinho Adulto - Older Stringy",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 8557,
+      "gender": 2,
+      "name": "Fernando Meirelles",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 8561,
+      "gender": 2,
+      "name": "Bráulio Mantovani",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 8560,
+      "gender": 2,
+      "name": "Paulo Lins",
+      "department": "Writing",
+      "job": "Novel"
+    }
+  ],
+  "backdrop": "/598-backdrop.avif",
+  "poster": "/598-poster.avif"
+}

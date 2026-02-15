@@ -1,0 +1,151 @@
+{
+  "id": 121,
+  "title": "Le Seigneur des anneaux : Les Deux Tours",
+  "original_title": "The Lord of the Rings: The Two Towers",
+  "year": "2002",
+  "genres": [
+    {
+      "id": 12,
+      "name": "Aventure"
+    },
+    {
+      "id": 14,
+      "name": "Fantastique"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "overview": "La Communauté est dissoute, mais la quête pour détruire l'Anneau Unique se poursuit. Accompagné par son fidèle Sam et guidé par l'étrange Gollum, Frodon cherche un moyen d'entrer en Mordor. Alors que l'armée de Saroumane se met en marche, les autres compagnons de la Communauté se préparent à la bataille. La Guerre de l'Anneau a commencé !",
+  "tagline": "L'aventure continue…",
+  "vote": 8.412,
+  "popularity": 19.734,
+  "actors": [
+    {
+      "id": 109,
+      "gender": 2,
+      "name": "Elijah Wood",
+      "character": "Frodo",
+      "order": 0
+    },
+    {
+      "id": 1327,
+      "gender": 2,
+      "name": "Ian McKellen",
+      "character": "Gandalf",
+      "order": 1
+    },
+    {
+      "id": 110,
+      "gender": 2,
+      "name": "Viggo Mortensen",
+      "character": "Aragorn",
+      "order": 2
+    },
+    {
+      "id": 1328,
+      "gender": 2,
+      "name": "Sean Astin",
+      "character": "Sam",
+      "order": 3
+    },
+    {
+      "id": 1333,
+      "gender": 2,
+      "name": "Andy Serkis",
+      "character": "Gollum",
+      "order": 4
+    },
+    {
+      "id": 655,
+      "gender": 2,
+      "name": "John Rhys-Davies",
+      "character": "Gimli / Treebeard (voice)",
+      "order": 5
+    },
+    {
+      "id": 114,
+      "gender": 2,
+      "name": "Orlando Bloom",
+      "character": "Legolas",
+      "order": 6
+    },
+    {
+      "id": 1369,
+      "gender": 2,
+      "name": "Bernard Hill",
+      "character": "Théoden",
+      "order": 7
+    },
+    {
+      "id": 502,
+      "gender": 1,
+      "name": "Miranda Otto",
+      "character": "Éowyn",
+      "order": 8
+    },
+    {
+      "id": 1330,
+      "gender": 2,
+      "name": "Dominic Monaghan",
+      "character": "Merry",
+      "order": 9
+    },
+    {
+      "id": 1329,
+      "gender": 2,
+      "name": "Billy Boyd",
+      "character": "Pippin",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 108,
+      "gender": 2,
+      "name": "Peter Jackson",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 11325,
+      "gender": 2,
+      "name": "Stephen Sinclair",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 128,
+      "gender": 1,
+      "name": "Philippa Boyens",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 108,
+      "gender": 2,
+      "name": "Peter Jackson",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 129,
+      "gender": 2,
+      "name": "J. R. R. Tolkien",
+      "department": "Writing",
+      "job": "Novel"
+    },
+    {
+      "id": 126,
+      "gender": 1,
+      "name": "Fran Walsh",
+      "department": "Writing",
+      "job": "Screenplay"
+    }
+  ],
+  "backdrop": "/121-backdrop.avif",
+  "poster": "/121-poster.avif"
+}

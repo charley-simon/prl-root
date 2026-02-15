@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flux Compression/Décompression</title>
+<style>
+body { margin:0; font-family:sans-serif; }
+canvas { display:block; margin:20px auto; background:#f0f0f0; border:1px solid #aaa; }
+</style>
+</head>
+<body>
+
+<canvas id="canvas" width="900" height="300"></canvas>
+
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+class Particle {
+  constructor(val, speed, size=5, color="red", originalCount=1){
+    this.val = val;
+    this.speed = speed;
+    this.size = size;
+    this.color = color;
+    this.originalCount = originalCount;
+    this.t = 0;
+    this.from = null;
+    this.to = null;
+  }
+
+  move(){
+    if(!this.from || !this.to) return false;
+
+    this.t += this.speed * 0.02;
+
+    if(this.t >= 1){
+      this.to.input.push(this);
+      return true; // indique qu'elle est arrivée
+    }
+    return false;
+  }
+
+  draw(){
+    if(!this.from || !this.to) return;
+
+    let x = this.from.x + (this.to.x - this.from.x) * this.t;
+let y = this.from.y + (this.to.y - this.from.y) * this.t;
+
+if(this.visualOffset){
+  y += this.visualOffset;
+}
+
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(x,y,this.size,0,Math.PI*2);
+    ctx.fill();
+  }
+}
+
+class Node {
+  constructor(x,y,name){
+    this.x=x;
+    this.y=y;
+    this.name=name;
+    this.input=[];
+    this.output=[];
+  }
+
+  draw(){
+    ctx.fillStyle="#cde";
+    ctx.fillRect(this.x-40,this.y-30,80,60);
+    ctx.fillStyle="black";
+    ctx.fillText(this.name,this.x-30,this.y);
+  }
+}
+
+class Compactor extends Node {
+  constructor(x,y,name,threshold=5){
+    super(x,y,name);
+    this.buffer=[];
+    this.threshold=threshold;
+  }
+
+  process(){
+    while(this.input.length){
+      this.buffer.push(this.input.shift());
+
+      if(this.buffer.length === this.threshold){
+
+        let total = this.buffer.reduce((s,p)=>s+p.val,0);
+        let avgSpeed = this.buffer.reduce((s,p)=>s+p.speed,0)/this.buffer.length;
+
+        let orange = new Particle(
+          total,
+          Math.max(0.2, avgSpeed*0.4), // plus lent
+          12,
+          "orange",
+          this.threshold
+        );
+
+        this.output.push(orange);
+        this.buffer=[];
+      }
+    }
+  }
+}
+
+class Decompactor extends Node {
+
+  process(){
+    while(this.input.length){
+
+      let p = this.input.shift();
+
+if(p.originalCount > 1){
+  for(let i=0;i<p.originalCount;i++){
+
+    let variation = (Math.random() * 0.2) - 0.1; // ±10%
+
+    let newParticle = new Particle(
+      Math.round(p.val/p.originalCount),
+      1 + variation,   // légère variation de vitesse
+      5,
+      "red",
+      1
+    );
+
+    // petit offset vertical pour les séparer visuellement
+    newParticle.visualOffset = (i - p.originalCount/2) * 4;
+
+    this.output.push(newParticle);
+  }
+}
+      else{
+        this.output.push(p);
+      }
+    }
+  }
+}
+
+class Processor extends Node {
+  process(){
+    while(this.input.length){
+      let p = this.input.shift();
+      p.val += 1;
+      this.output.push(p);
+    }
+  }
+}
+
+let Front = new Processor(100,150,"Frontend");
+let Comp = new Compactor(300,150,"Compacteur",5);
+let Decomp = new Decompactor(500,150,"Décompacteur");
+let Back = new Processor(700,150,"Backend");
+
+let links = [
+  {from:Front,to:Comp},
+  {from:Comp,to:Decomp},
+  {from:Decomp,to:Back},
+  {from:Back,to:Front}
+];
+
+let particles=[];
+
+function injectInitial(){
+  for(let i=0;i<10;i++){
+    Front.output.push(new Particle(i,1));
+  }
+}
+
+function update(){
+
+  // 1. Process nodes
+  [Front,Comp,Decomp,Back].forEach(n=>n.process());
+
+  // 2. Convert outputs to moving particles
+  links.forEach(link=>{
+    link.from.output.forEach(p=>{
+      p.from=link.from;
+      p.to=link.to;
+      p.t=0;
+      particles.push(p);
+    });
+    link.from.output=[];
+  });
+
+  // 3. Move particles
+  particles = particles.filter(p=>{
+    let arrived = p.move();
+    return !arrived; // supprime celles arrivées
+  });
+}
+
+function draw(){
+
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  // draw links
+  ctx.strokeStyle="#999";
+  links.forEach(l=>{
+    ctx.beginPath();
+    ctx.moveTo(l.from.x,l.from.y);
+    ctx.lineTo(l.to.x,l.to.y);
+    ctx.stroke();
+  });
+
+  // draw nodes
+  [Front,Comp,Decomp,Back].forEach(n=>n.draw());
+
+  // draw particles
+  particles.forEach(p=>p.draw());
+}
+
+function loop(){
+  update();
+  draw();
+  requestAnimationFrame(loop);
+}
+
+injectInitial();
+loop();
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+{
+  "id": 761053,
+  "title": "Gabriel's Inferno: Part III",
+  "original_title": "Gabriel's Inferno: Part III",
+  "year": "2020",
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    }
+  ],
+  "overview": "La dernière partie de l'adaptation cinématographique du roman d'amour érotique, Gabriel's Inferno, écrit par un auteur canadien anonyme sous le pseudonyme de Sylvain Reynard.",
+  "tagline": "",
+  "vote": 8.362,
+  "popularity": 2.6945,
+  "actors": [
+    {
+      "id": 1312450,
+      "gender": 1,
+      "name": "Melanie Zanetti",
+      "character": "Julia Mitchell",
+      "order": 0
+    },
+    {
+      "id": 544002,
+      "gender": 2,
+      "name": "Giulio Berruti",
+      "character": "Gabriel Emerson",
+      "order": 1
+    },
+    {
+      "id": 1844204,
+      "gender": 2,
+      "name": "Rhett Wellington Ramirez",
+      "character": "Simon Talbot",
+      "order": 2
+    },
+    {
+      "id": 2345991,
+      "gender": 2,
+      "name": "James Andrew Fraser",
+      "character": "Paul Norris",
+      "order": 3
+    },
+    {
+      "id": 2595115,
+      "gender": 1,
+      "name": "Margaux Brooke",
+      "character": "Christa Peterson",
+      "order": 4
+    },
+    {
+      "id": 139749,
+      "gender": 2,
+      "name": "Pat Asanti",
+      "character": "Antonio",
+      "order": 5
+    },
+    {
+      "id": 2913395,
+      "gender": 1,
+      "name": "Julia Barrett-Mitchell",
+      "character": "Rachel Clark",
+      "order": 6
+    },
+    {
+      "id": 73659,
+      "gender": 2,
+      "name": "Kurt McKinney",
+      "character": "Tom Mitchell",
+      "order": 7
+    }
+  ],
+  "directors": [
+    {
+      "id": 935563,
+      "gender": 1,
+      "name": "Tosca Musk",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 1972687,
+      "gender": 1,
+      "name": "Mary Pocrnic",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 2693030,
+      "gender": 0,
+      "name": "Sylvain Reynard",
+      "department": "Writing",
+      "job": "Novel"
+    }
+  ],
+  "backdrop": "./public/images/761053-backdrop.avif",
+  "poster": "./public/images/761053-poster.avif"
+}

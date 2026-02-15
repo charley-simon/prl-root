@@ -1,0 +1,130 @@
+{
+  "id": 539,
+  "title": "Psychose",
+  "original_title": "Psycho",
+  "year": "1960",
+  "genres": [
+    {
+      "id": 27,
+      "name": "Horreur"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    },
+    {
+      "id": 9648,
+      "name": "Mystère"
+    }
+  ],
+  "overview": "Marion Crane en a assez de ne pouvoir mener sa vie comme elle l'entend. Son travail ne la passionne plus, son amant ne peut l'épouser car il doit verser une énorme pension alimentaire le laissant sans le sou… Mais un beau jour, son patron lui demande de déposer 40 000 dollars à la banque. La tentation est trop grande, et Marion s'enfuit avec l'argent. Très vite la panique commence à se faire sentir. Partagée entre l'angoisse de se faire prendre et l'excitation de mener une nouvelle vie, Marion roule vers une destination qu'elle n'atteindra jamais. La pluie est battante, la jeune femme s'arrête près d'un motel, tenu par un sympathique gérant nommé Norman Bates, mais qui doit supporter le caractère possessif de sa mère. Après un copieux repas avec Norman, Marion prend toutes ses précautions afin de dissimuler l'argent. Pour se délasser de cette journée, elle prend une douche…",
+  "tagline": "Une nouvelle et tout à fait différente expérience à l'écran !",
+  "vote": 8.418,
+  "popularity": 9.6763,
+  "actors": [
+    {
+      "id": 7301,
+      "gender": 2,
+      "name": "Anthony Perkins",
+      "character": "Norman Bates",
+      "order": 0
+    },
+    {
+      "id": 7302,
+      "gender": 1,
+      "name": "Janet Leigh",
+      "character": "Marion Crane",
+      "order": 1
+    },
+    {
+      "id": 7303,
+      "gender": 1,
+      "name": "Vera Miles",
+      "character": "Lila Crane",
+      "order": 2
+    },
+    {
+      "id": 7304,
+      "gender": 2,
+      "name": "John Gavin",
+      "character": "Sam Loomis",
+      "order": 3
+    },
+    {
+      "id": 1936,
+      "gender": 2,
+      "name": "Martin Balsam",
+      "character": "Milton Arbogast",
+      "order": 4
+    },
+    {
+      "id": 53010,
+      "gender": 2,
+      "name": "John McIntire",
+      "character": "Al Chambers",
+      "order": 5
+    },
+    {
+      "id": 14063,
+      "gender": 2,
+      "name": "Simon Oakland",
+      "character": "Fred Richman",
+      "order": 6
+    },
+    {
+      "id": 78902,
+      "gender": 2,
+      "name": "Frank Albertson",
+      "character": "Tom Cassidy",
+      "order": 7
+    },
+    {
+      "id": 12500,
+      "gender": 1,
+      "name": "Patricia Hitchcock",
+      "character": "Caroline",
+      "order": 8
+    },
+    {
+      "id": 3641,
+      "gender": 2,
+      "name": "Vaughn Taylor",
+      "character": "George Lowery",
+      "order": 9
+    },
+    {
+      "id": 19781,
+      "gender": 1,
+      "name": "Lurene Tuttle",
+      "character": "Mrs. Chambers",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 2636,
+      "gender": 2,
+      "name": "Alfred Hitchcock",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 7300,
+      "gender": 2,
+      "name": "Joseph Stefano",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 7299,
+      "gender": 2,
+      "name": "Robert Bloch",
+      "department": "Writing",
+      "job": "Novel"
+    }
+  ],
+  "backdrop": "/539-backdrop.avif",
+  "poster": "/539-poster.avif"
+}

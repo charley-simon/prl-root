@@ -1,0 +1,16 @@
+{
+  "id": 138,
+  "gender": 2,
+  "name": "Quentin Tarantino",
+  "tmdbId": 138,
+  "imdbID": "nm0000233",
+  "biography": "Quentin Tarantino, né le 27 mars 1963 à Knoxville dans le Tennessee, est un réalisateur, scénariste, producteur et acteur américain. Il se fait connaître en tant que réalisateur de films indépendants avec ses deux premiers films, Reservoir Dogs (1992) et Pulp Fiction (1994) et remporte pour ce dernier la Palme d'or à Cannes. Après un troisième film en 1997 (Jackie Brown), il effectue son retour avec les deux volets de Kill Bill (2003 et 2004). Inglourious Basterds (2009) et Django Unchained (2012) sont ses plus grands succès commerciaux internationaux. Son deuxième western, Les Huit Salopards, est sorti en fin 2015.",
+  "deathDay": null,
+  "birthDay": "1963-03-27",
+  "birthPlace": "Knoxville, Tennessee, USA",
+  "homepage": null,
+  "popularity": 6.0393,
+  "imdbId": "nm0000233",
+  "wikidataId": "Q3772",
+  "wikiDescription": "réalisateur, scénariste, producteur et acteur américain"
+}

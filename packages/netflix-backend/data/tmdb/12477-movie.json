@@ -1,0 +1,130 @@
+{
+  "id": 12477,
+  "title": "Le Tombeau des lucioles",
+  "original_title": "火垂るの墓",
+  "year": "1988",
+  "genres": [
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 10752,
+      "name": "Guerre"
+    }
+  ],
+  "overview": "Japon, été 1945. Après le bombardement de Kobé, Seita, un adolescent de quatorze ans et sa petite sœur de quatre ans, Setsuko, orphelins, vont s’installer chez leur tante à quelques dizaines de kilomètres de chez eux. Celle‐ci leur fait comprendre qu’ils sont une gêne pour la famille et doivent mériter leur riz quotidien. Seita décide de partir avec sa petite sœur. Ils se réfugient dans un bunker désaffecté en pleine campagne et vivent des jours heureux illuminés par la présence de milliers de lucioles. Mais bientôt la nourriture commence cruellement à manquer.",
+  "tagline": "À quatre et quatorze ans, ils ont décidé de vivre.",
+  "vote": 8.443,
+  "popularity": 0.0067,
+  "actors": [
+    {
+      "id": 72413,
+      "gender": 2,
+      "name": "Tsutomu Tatsumi",
+      "character": "Seita (voice)",
+      "order": 0
+    },
+    {
+      "id": 72414,
+      "gender": 1,
+      "name": "Ayano Shiraishi",
+      "character": "Setsuko (voice)",
+      "order": 1
+    },
+    {
+      "id": 72415,
+      "gender": 1,
+      "name": "Yoshiko Shinohara",
+      "character": "Mother (voice)",
+      "order": 2
+    },
+    {
+      "id": 72416,
+      "gender": 1,
+      "name": "Akemi Yamaguchi",
+      "character": "Auntie (voice)",
+      "order": 3
+    },
+    {
+      "id": 3773484,
+      "gender": 0,
+      "name": "Masayo Sakai",
+      "character": "Woman who takes care of Setsuko (voice)",
+      "order": 4
+    },
+    {
+      "id": 3773478,
+      "gender": 0,
+      "name": "Kozo Hashida",
+      "character": "Obayashi Chairman (voice)",
+      "order": 5
+    },
+    {
+      "id": 3773488,
+      "gender": 0,
+      "name": "Kazumi Nozaki",
+      "character": "Cousin (voice)",
+      "order": 6
+    },
+    {
+      "id": 3773491,
+      "gender": 0,
+      "name": "Yoshio Matsuoka",
+      "character": "Gosaku (voice)",
+      "order": 7
+    },
+    {
+      "id": 3773492,
+      "gender": 0,
+      "name": "Masahiro Kanetake",
+      "character": "Aunt's House Guest (voice)",
+      "order": 8
+    },
+    {
+      "id": 3773494,
+      "gender": 0,
+      "name": "Kiyoshi Yanagawa",
+      "character": "Patrolman (voice)",
+      "order": 9
+    },
+    {
+      "id": 3773496,
+      "gender": 0,
+      "name": "Hajime Maki",
+      "character": "Man who arrests Seita (voice)",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 628,
+      "gender": 2,
+      "name": "Isao Takahata",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 628,
+      "gender": 2,
+      "name": "Isao Takahata",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 72417,
+      "gender": 2,
+      "name": "Akiyuki Nosaka",
+      "department": "Writing",
+      "job": "Short Story"
+    }
+  ],
+  "backdrop": "/12477-backdrop.avif",
+  "poster": "/12477-poster.avif"
+}

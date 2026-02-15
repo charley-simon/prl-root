@@ -1,0 +1,161 @@
+{
+  "id": 311,
+  "title": "Il était une fois en Amérique",
+  "original_title": "Once Upon a Time in America",
+  "year": "1984",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "overview": "À New York, à la fin de la prohibition, Noodles se réfugie dans une fumerie d'opium après un coup qui a mal tourné. Plus de trente ans plus tard, il est de retour en ville et se remémore son passé de gangster : de sa jeunesse de voyou dans les années 20, marquée par sa rencontre avec son ami Max et leurs nombreux trafics dans le ghetto juif de la ville, jusqu'à la période de prohibition où leur bande, liée par une profonde amitié, s'enrichit et marque son ascension dans la pègre grâce au commerce illégal d'alcool. Noodles se rappelle aussi de sa relation amoureuse échouée avec Deborah durant toute sa vie.",
+  "tagline": "Enfants, ils se sont dit qu'ils mourraient l'un pour l'autre. Adultes, ils l'ont fait.",
+  "vote": 8.39,
+  "popularity": 11.5611,
+  "actors": [
+    {
+      "id": 380,
+      "gender": 2,
+      "name": "Robert De Niro",
+      "character": "David 'Noodles' Aaronson",
+      "order": 0
+    },
+    {
+      "id": 4512,
+      "gender": 2,
+      "name": "James Woods",
+      "character": "Maximilian 'Max' Bercovicz",
+      "order": 1
+    },
+    {
+      "id": 4513,
+      "gender": 1,
+      "name": "Elizabeth McGovern",
+      "character": "Deborah Gelly",
+      "order": 2
+    },
+    {
+      "id": 4515,
+      "gender": 2,
+      "name": "Treat Williams",
+      "character": "James Conway O'Donnell",
+      "order": 3
+    },
+    {
+      "id": 4514,
+      "gender": 1,
+      "name": "Tuesday Weld",
+      "character": "Carol",
+      "order": 4
+    },
+    {
+      "id": 4517,
+      "gender": 2,
+      "name": "Joe Pesci",
+      "character": "Frankie Monaldi",
+      "order": 5
+    },
+    {
+      "id": 4521,
+      "gender": 2,
+      "name": "Burt Young",
+      "character": "Joe",
+      "order": 6
+    },
+    {
+      "id": 4516,
+      "gender": 2,
+      "name": "James Hayden",
+      "character": "Patrick 'Patsy' Goldberg",
+      "order": 7
+    },
+    {
+      "id": 4520,
+      "gender": 2,
+      "name": "William Forsythe",
+      "character": "Philip 'Cockeye' Stein",
+      "order": 8
+    },
+    {
+      "id": 4518,
+      "gender": 0,
+      "name": "Larry Rapp",
+      "character": "'Fat' Moe Gelly",
+      "order": 9
+    },
+    {
+      "id": 1550423,
+      "gender": 1,
+      "name": "Amy Ryder",
+      "character": "Peggy",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 4385,
+      "gender": 2,
+      "name": "Sergio Leone",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 4385,
+      "gender": 2,
+      "name": "Sergio Leone",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 4667,
+      "gender": 2,
+      "name": "Franco Arcalli",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 4664,
+      "gender": 2,
+      "name": "Leonardo Benvenuti",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 32048,
+      "gender": 2,
+      "name": "Enrico Medioli",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 69973,
+      "gender": 2,
+      "name": "Piero De Bernardi",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 4668,
+      "gender": 2,
+      "name": "Franco Ferrini",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 1344882,
+      "gender": 2,
+      "name": "Harry Grey",
+      "department": "Writing",
+      "job": "Novel"
+    }
+  ],
+  "backdrop": "/311-backdrop.avif",
+  "poster": "/311-poster.avif"
+}

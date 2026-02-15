@@ -1,0 +1,112 @@
+{
+  "id": 724089,
+  "title": "Gabriel's Inferno: Part II",
+  "original_title": "Gabriel's Inferno: Part II",
+  "year": "2020",
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    }
+  ],
+  "overview": "Le professeur Gabriel Emerson apprend enfin la vérité sur l'identité de Julia Mitchell, mais il le réalise un moment trop tard. Julia a fini d'attendre que le spécialiste très respecté de Dante se souvienne d'elle et ne veut plus rien avoir à faire avec lui. Gabriel peut-il regagner le cœur de Julia avant qu'elle ne trouve l'amour dans d'autres bras ?",
+  "tagline": "",
+  "vote": 8.37,
+  "popularity": 1.7026,
+  "actors": [
+    {
+      "id": 1312450,
+      "gender": 1,
+      "name": "Melanie Zanetti",
+      "character": "Julia Mitchell",
+      "order": 0
+    },
+    {
+      "id": 544002,
+      "gender": 2,
+      "name": "Giulio Berruti",
+      "character": "Gabriel Emerson",
+      "order": 1
+    },
+    {
+      "id": 2345991,
+      "gender": 2,
+      "name": "James Andrew Fraser",
+      "character": "Paul Norris",
+      "order": 2
+    },
+    {
+      "id": 2595115,
+      "gender": 1,
+      "name": "Margaux Brooke",
+      "character": "Christa Peterson",
+      "order": 3
+    },
+    {
+      "id": 1188681,
+      "gender": 1,
+      "name": "Agnes Albright",
+      "character": "Paulina",
+      "order": 4
+    },
+    {
+      "id": 109024,
+      "gender": 1,
+      "name": "Purva Bedi",
+      "character": "Professor Tara Chakravartty",
+      "order": 5
+    },
+    {
+      "id": 206423,
+      "gender": 1,
+      "name": "Sahar Bibiyan",
+      "character": "Soraya",
+      "order": 6
+    },
+    {
+      "id": 1784954,
+      "gender": 2,
+      "name": "Cedric Cannon",
+      "character": "Professor Robert Mwangi",
+      "order": 7
+    },
+    {
+      "id": 1326237,
+      "gender": 2,
+      "name": "Ned Van Zandt",
+      "character": "Professor Jeremy Martin",
+      "order": 8
+    }
+  ],
+  "directors": [
+    {
+      "id": 935563,
+      "gender": 1,
+      "name": "Tosca Musk",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 1972687,
+      "gender": 1,
+      "name": "Mary Pocrnic",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 2693030,
+      "gender": 0,
+      "name": "Sylvain Reynard",
+      "department": "Writing",
+      "job": "Novel"
+    }
+  ],
+  "backdrop": "/724089-backdrop.avif",
+  "poster": "/724089-poster.avif"
+}

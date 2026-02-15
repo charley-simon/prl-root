@@ -1,0 +1,142 @@
+[
+  {
+    "id": 0,
+    "name": "Unknow",
+    "deparmentId": 0
+  },
+  {
+    "id": 1,
+    "name": "Actor",
+    "deparmentId": 1
+  },
+  {
+    "id": 2,
+    "name": "Director",
+    "deparmentId": 2
+  },
+  {
+    "id": 3,
+    "name": "Writer",
+    "deparmentId": 3
+  },
+  {
+    "id": 4,
+    "name": "Novel",
+    "deparmentId": 3
+  },
+  {
+    "id": 5,
+    "name": "Screenplay",
+    "deparmentId": 3
+  },
+  {
+    "id": 6,
+    "name": "Dialogue",
+    "deparmentId": 3
+  },
+  {
+    "id": 7,
+    "name": "Lyricist",
+    "deparmentId": 3
+  },
+  {
+    "id": 8,
+    "name": "Story",
+    "deparmentId": 3
+  },
+  {
+    "id": 9,
+    "name": "Characters",
+    "deparmentId": 3
+  },
+  {
+    "id": 10,
+    "name": "Adaptation",
+    "deparmentId": 3
+  },
+  {
+    "id": 11,
+    "name": "Creative Producer",
+    "deparmentId": 3
+  },
+  {
+    "id": 12,
+    "name": "Theatre Play",
+    "deparmentId": 3
+  },
+  {
+    "id": 13,
+    "name": "Story Artist",
+    "deparmentId": 3
+  },
+  {
+    "id": 14,
+    "name": "Original Story",
+    "deparmentId": 3
+  },
+  {
+    "id": 15,
+    "name": "Head of Story",
+    "deparmentId": 3
+  },
+  {
+    "id": 16,
+    "name": "Story Coordinator",
+    "deparmentId": 3
+  },
+  {
+    "id": 17,
+    "name": "Comic Book",
+    "deparmentId": 3
+  },
+  {
+    "id": 18,
+    "name": "Author",
+    "deparmentId": 3
+  },
+  {
+    "id": 19,
+    "name": "Short Story",
+    "deparmentId": 3
+  },
+  {
+    "id": 20,
+    "name": "Book",
+    "deparmentId": 3
+  },
+  {
+    "id": 21,
+    "name": "Co-Writer",
+    "deparmentId": 3
+  },
+  {
+    "id": 22,
+    "name": "Storyboard",
+    "deparmentId": 3
+  },
+  {
+    "id": 23,
+    "name": "Original Series Creator",
+    "deparmentId": 3
+  },
+  {
+    "id": 24,
+    "name": "Original Film Writer",
+    "deparmentId": 3
+  },
+  {
+    "id": 25,
+    "name": "Story Supervisor",
+    "deparmentId": 3
+  },
+  {
+    "id": 26,
+    "name": "Screenstory",
+    "deparmentId": 3
+  },
+  {
+    "id": 27,
+    "name": "Story Editor",
+    "deparmentId": 3
+  }
+]

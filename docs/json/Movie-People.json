@@ -1,0 +1,8 @@
+[
+  {"movieId": 555, "peopleId": 101, "roleId": 0}, // Lead Actor → Acting
+  {"movieId": 555, "peopleId": 101, "roleId": 5}, // Producer → Production
+  {"movieId": 555, "peopleId": 102, "roleId": 1}, // Supporting Actor → Acting
+  {"movieId": 555, "peopleId": 103, "roleId": 2}, // Guest Actor → Acting
+  {"movieId": 555, "peopleId": 104, "roleId": 3}, // Director → Directing
+  {"movieId": 555, "peopleId": 105, "roleId": 4}  // Writer → Writing
+]

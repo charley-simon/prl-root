@@ -51,12 +51,6 @@ Thumbs.db
 # ==============================
 # Project-specific / generated media
 # ==============================
-/data/assets/**/*.avif
+**/data/assets/**/*.avif
 *.cache
 
-# ==============================
-# Large media files handled by Git LFS
-# ==============================
-# Extensions déjà trackées par Git LFS
-# Exemple: vidéos et dumps lourds
-# Pas besoin de mettre ici, car LFS gère déjà

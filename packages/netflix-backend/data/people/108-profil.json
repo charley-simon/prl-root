@@ -1,0 +1,16 @@
+{
+  "id": 108,
+  "name": "Peter Jackson",
+  "biography": "Peter Jackson est un réalisateur, scénariste et producteur néo-zélandais, né le 31 octobre 1961 à Wellington. Il est surtout connu pour avoir réalisé la trilogie du Seigneur des anneaux, d'après l'œuvre de J. R. R. Tolkien, et un remake de King Kong. Il réalise ensuite Le Hobbit, l'adaptation cinématographique en trois volets du roman de Tolkien.\n\nIl est membre de l'Ordre de Nouvelle-Zélande, chevalier de l'Ordre du Mérite de Nouvelle-Zélande et Officier des Arts et des Lettres.\n\nSource : https://fr.wikipedia.org (licensed under CC-BY-SA)",
+  "deathDay": null,
+  "birthDay": "1961-10-31",
+  "birthPlace": "Pukerua Bay, North Island, New Zealand",
+  "gender": 2,
+  "homepage": null,
+  "popularity": 2.4438,
+  "externalIds": {
+    "tmdb": "108",
+    "imdb": "nm0001392",
+    "wikidata": "Q4465"
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "id": 346,
+  "title": "Les Sept Samouraïs",
+  "original_title": "七人の侍",
+  "year": "1954",
+  "genres": [
+    {
+      "id": 28,
+      "name": "Action"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    }
+  ],
+  "overview": "Au XVIe siècle, au Japon, des paysans décident d'embaucher des samouraïs pour protéger leur village, et en trouvent sept. Ces hommes organisent la défense du village contre quarante brigands.",
+  "tagline": "Ils sont devenus les sept héros d'un petit village.",
+  "vote": 8.45,
+  "popularity": 8.0539,
+  "actors": [
+    {
+      "id": 7450,
+      "gender": 2,
+      "name": "Toshirō Mifune",
+      "character": "Kikuchiyo",
+      "order": 0
+    },
+    {
+      "id": 7453,
+      "gender": 2,
+      "name": "Takashi Shimura",
+      "character": "Kambei Shimada",
+      "order": 1
+    },
+    {
+      "id": 20828,
+      "gender": 2,
+      "name": "Yoshio Inaba",
+      "character": "Gorobei Katayama",
+      "order": 2
+    },
+    {
+      "id": 20829,
+      "gender": 2,
+      "name": "Seiji Miyaguchi",
+      "character": "Kyuzo",
+      "order": 3
+    },
+    {
+      "id": 7454,
+      "gender": 2,
+      "name": "Minoru Chiaki",
+      "character": "Heihachi Hayashida",
+      "order": 4
+    },
+    {
+      "id": 7457,
+      "gender": 2,
+      "name": "Daisuke Katō",
+      "character": "Shichiroji",
+      "order": 5
+    },
+    {
+      "id": 20830,
+      "gender": 2,
+      "name": "Isao Kimura",
+      "character": "Katsushiro Okamoto",
+      "order": 6
+    },
+    {
+      "id": 20831,
+      "gender": 1,
+      "name": "Keiko Tsushima",
+      "character": "Shino",
+      "order": 7
+    },
+    {
+      "id": 554250,
+      "gender": 1,
+      "name": "Yukiko Shimazaki",
+      "character": "Rikichi's Wife",
+      "order": 8
+    },
+    {
+      "id": 96552,
+      "gender": 2,
+      "name": "Kamatari Fujiwara",
+      "character": "Manzô - Father of Shino",
+      "order": 9
+    },
+    {
+      "id": 134272,
+      "gender": 2,
+      "name": "Yoshio Kosugi",
+      "character": "Mosuke",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 5026,
+      "gender": 2,
+      "name": "Akira Kurosawa",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 20827,
+      "gender": 2,
+      "name": "Hideo Oguni",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 7449,
+      "gender": 2,
+      "name": "Shinobu Hashimoto",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 5026,
+      "gender": 2,
+      "name": "Akira Kurosawa",
+      "department": "Writing",
+      "job": "Screenplay"
+    }
+  ],
+  "backdrop": "/346-backdrop.avif",
+  "poster": "/346-poster.avif"
+}

@@ -1,0 +1,16 @@
+{
+  "id": 380,
+  "gender": 2,
+  "name": "Robert De Niro",
+  "tmdbId": 380,
+  "imdbID": "nm0000134",
+  "biography": "Robert Mario Anthony De Niro est un acteur, réalisateur et producteur de cinéma italo-américain né le 17 août 1943 à New York.\n\nRéputé pour ses nombreux films culte, tels que Taxi Driver, Le Parrain 2, Il était une fois en Amérique, Brazil, Heat, Raging Bull, Les Affranchis, Casino ou encore Voyage au bout de l'enfer, De Niro a remporté de nombreuses récompenses comme l'Oscar du meilleur acteur, l'Oscar du meilleur acteur dans un second rôle et deux Golden Globe (dont un pour l'ensemble de sa carrière en 2011). Ses interprétations extrêmement travaillées et sa filmographie très éclectique lui ont permis de devenir l'un des acteurs les plus reconnus de l'histoire du cinéma.",
+  "deathDay": null,
+  "birthDay": "1943-08-17",
+  "birthPlace": "Greenwich Village, New York City, New York, USA",
+  "homepage": null,
+  "popularity": 7.603,
+  "imdbId": "nm0000134",
+  "wikidataId": "Q36949",
+  "wikiDescription": "acteur, producteur et réalisateur de cinéma italo-américain"
+}

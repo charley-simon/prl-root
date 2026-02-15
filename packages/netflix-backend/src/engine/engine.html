@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Graphe Causal 3D avec Traces</title>
+<style>
+  body { margin:0; overflow:hidden; font-family:sans-serif; }
+  #tracePanel {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    height: 200px;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.85);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+  }
+  .traceStep {
+    padding:2px 4px;
+  }
+  .currentStep {
+    background: yellow;
+    color: black;
+  }
+  button { position:fixed; top:10px; left:10px; margin-right:5px; z-index:10; }
+</style>
+</head>
+<body>
+
+<button onclick="resetGraph()">Reset</button>
+<button onclick="stepGraph()">Step</button>
+<button onclick="runSimulation()">Run</button>
+<button onclick="replayTrace()">Replay</button>
+
+<div id="3d-graph" style="width:100vw;height:100vh;"></div>
+<div id="tracePanel"><div id="traceContent"></div></div>
+
+<script src="https://unpkg.com/3d-force-graph"></script>
+<script>
+// ----------------------------
+// Données Graphe
+// ----------------------------
+let traceLog = [];
+let stepIndex = -1;
+
+// Node types: state, interaction, transformation
+const nodes = [
+  {id:'temperature', name:'temperature', type:'state', val:20},
+  {id:'alarm', name:'alarm', type:'state', val:false},
+  {id:'fan', name:'fan', type:'state', val:false},
+  {id:'sensor', name:'sensorTriggered', type:'interaction', triggered:false},
+  {id:'coolingSensor', name:'coolingSensor', type:'interaction', triggered:false}
+];
+
+const links = [
+  {source:'temperature', target:'alarm', type:'transformation', name:'checkHeat', active:false},
+  {source:'sensor', target:'alarm', type:'transformation', name:'checkHeat', active:false},
+  {source:'alarm', target:'fan', type:'transformation', name:'activateFan', active:false},
+  {source:'coolingSensor', target:'alarm', type:'transformation', name:'resetAlarm', active:false}
+];
+
+// ----------------------------
+// 3D Force Graph Setup
+// ----------------------------
+const Graph = ForceGraph3D()(document.getElementById('3d-graph'))
+  .graphData({nodes: nodes, links: links})
+  .nodeLabel(n => `${n.name}${n.type==='state'?': '+n.val:''}${n.type==='interaction'?': '+(n.triggered?'T':'F'):''}`)
+  .nodeAutoColorBy('type')
+  .linkDirectionalParticles(l => l.active ? 3 : 0)
+  .linkDirectionalParticleColor(l => l.active ? 'red' : 'gray')
+  .linkWidth(l => l.active ? 3 : 1)
+  .linkDirectionalArrowLength(6)
+  .linkDirectionalArrowRelPos(1)
+  .linkDirectionalParticleSpeed(0.02);
+
+// ----------------------------
+// État et Interaction
+// ----------------------------
+const stateMap = Object.fromEntries(nodes.filter(n=>n.type==='state').map(n=>[n.id,n]));
+const interactionMap = Object.fromEntries(nodes.filter(n=>n.type==='interaction').map(n=>[n.id,n]));
+
+function logTrace(entry){
+  traceLog.push(entry);
+  updateTracePanel();
+}
+
+// ----------------------------
+// Transformations
+// ----------------------------
+const transformations = [
+  {
+    name:'checkHeat',
+    sources:['temperature','sensor'],
+    targets:['alarm'],
+    condition:()=>stateMap['temperature'].val>50 && interactionMap['sensor'].triggered,
+    effect:()=>{
+      stateMap['alarm'].val=true;
+      activateLink('checkHeat');
+    },
+    applied:false
+  },
+  {
+    name:'activateFan',
+    sources:['alarm'],
+    targets:['fan'],
+    condition:()=>stateMap['alarm'].val===true,
+    effect:()=>{
+      stateMap['fan'].val=true;
+      activateLink('activateFan');
+    },
+    applied:false
+  },
+  {
+    name:'resetAlarm',
+    sources:['coolingSensor'],
+    targets:['alarm'],
+    condition:()=>interactionMap['coolingSensor'].triggered,
+    effect:()=>{
+      stateMap['alarm'].val=false;
+      activateLink('resetAlarm');
+    },
+    applied:false
+  }
+];
+
+// ----------------------------
+// Helper: activate link
+// ----------------------------
+function activateLink(name){
+  links.forEach(l=>{ l.active = (l.name===name); });
+  Graph.graphData({nodes, links});
+}
+
+// ----------------------------
+// Step / Reset / Run / Replay
+// ----------------------------
+function buildStepQueue(){
+  return [...transformations];
+}
+
+let stepQueue = buildStepQueue();
+
+function stepGraph(){
+  if(stepQueue.length===0) return;
+  for(let i=0;i<stepQueue.length;i++){
+    const t = stepQueue[i];
+    if(t.condition() && !t.applied){
+      t.effect();
+      t.applied=true;
+      logTrace({step:stepLogIndex(), type:'transformation', name:t.name});
+      stepIndex++;
+      highlightCurrentTrace();
+      return;
+    }
+  }
+}
+
+function resetGraph(){
+  Object.values(stateMap).forEach(s=>{ s.val=s.id==='temperature'?20:false; });
+  Object.values(interactionMap).forEach(i=>i.triggered=false);
+  transformations.forEach(t=>t.applied=false);
+  links.forEach(l=>l.active=false);
+  stepQueue = buildStepQueue();
+  traceLog=[];
+  stepIndex=-1;
+  updateTracePanel();
+  Graph.graphData({nodes, links});
+}
+
+function runSimulation(){
+  resetGraph();
+  interactionMap['sensor'].triggered=true;
+  stateMap['temperature'].val=55;
+  interactionMap['coolingSensor'].triggered=true;
+  while(stepQueue.some(t=>!t.applied)){ stepGraph(); }
+}
+
+function replayTrace(){
+  resetGraph();
+  let i=0;
+  traceLog.forEach(e=>{
+    setTimeout(()=>{
+      const t = transformations.find(tr=>tr.name===e.name);
+      if(t){ t.effect(); t.applied=true; }
+      stepIndex = i;
+      highlightCurrentTrace();
+    }, i*1000);
+    i++;
+  });
+}
+
+// ----------------------------
+// Trace Panel
+// ----------------------------
+function updateTracePanel(){
+  const panel = document.getElementById('traceContent');
+  panel.innerHTML = traceLog.map((t,idx)=>`<div class="traceStep" id="trace-${idx}">${idx+1}: ${t.name}</div>`).join('');
+  highlightCurrentTrace();
+}
+
+function highlightCurrentTrace(){
+  document.querySelectorAll('.traceStep').forEach(el=>el.classList.remove('currentStep'));
+  if(stepIndex>=0){
+    const el = document.getElementById(`trace-${stepIndex}`);
+    if(el) el.classList.add('currentStep');
+    el.scrollIntoView({behavior:'smooth', block:'nearest'});
+  }
+}
+
+// ----------------------------
+// Initial Draw
+// ----------------------------
+resetGraph();
+</script>
+</body>
+</html>

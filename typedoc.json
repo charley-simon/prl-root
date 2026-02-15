@@ -1,0 +1,11 @@
+{
+  "entryPoints": [
+    "packages/netflix-backend/src",
+    "packages/netflix-frontend/src",
+    "packages/prl-frontend/src",
+    "packages/production-reality-lab/src"
+  ],
+  "entryPointStrategy": "expand",
+  "out": "docs/api",
+  "exclude": ["**/node_modules/**", "**/tests/**"]
+}

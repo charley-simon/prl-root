@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Flux interactif Front↔Back</title>
+<style>
+  body { font-family: sans-serif; margin:0; }
+  #canvas { border:1px solid #aaa; display:block; margin:10px auto; background:#f8f8f8; }
+  #controls { text-align:center; margin:5px; }
+  #partition { border:1px solid #aaa; height:100px; background:#fff; margin:10px auto; width:800px; }
+</style>
+</head>
+<body>
+
+<canvas id="canvas" width="800" height="300"></canvas>
+<div id="controls">
+  <button onclick="step()">Step</button>
+  <button onclick="run()">Run</button>
+  <button onclick="reset()">Reset</button>
+</div>
+<canvas id="partition" width="800" height="100"></canvas>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+const partition = document.getElementById('partition');
+const pctx = partition.getContext('2d');
+
+ctx.font = "14px Arial";
+
+// --- Classes ---
+class Particle {
+  constructor(val, speed) {
+    this.val = val;
+    this.speed = speed;
+    this.t = 0; 
+    this.from = null;
+    this.to = null;
+  }
+  move() {
+    if(this.from && this.to){
+      this.t += this.speed * 0.05;
+      if(this.t >= 1){
+        this.to.inputParticles.push(this);
+        this.from.outputParticles = this.from.outputParticles.filter(p => p !== this);
+        this.t = 0; this.from = null; this.to = null;
+      }
+    }
+  }
+}
+
+class Transformer {
+  constructor(x,y,name) {
+    this.x = x; this.y = y; this.name = name;
+    this.inputParticles = [];
+    this.outputParticles = [];
+    this.history = [];
+  }
+  process() {
+    while(this.inputParticles.length) {
+      let p = this.inputParticles.shift();
+      p.val += 1; // simple transformation
+      this.outputParticles.push(p);
+    }
+    // stocker métrique friction
+    this.history.push(this.inputParticles.length);
+    if(this.history.length>partition.width) this.history.shift();
+  }
+  draw() {
+    ctx.fillStyle = "lightblue";
+    ctx.fillRect(this.x-30,this.y-30,60,60);
+    ctx.fillStyle = "black";
+    ctx.fillText(this.name,this.x-25,this.y);
+    // afficher friction
+    ctx.fillStyle="red";
+    ctx.fillText("fric:"+this.inputParticles.length,this.x-25,this.y+20);
+  }
+}
+
+// --- Setup ---
+let Front = new Transformer(150,150,"Front");
+let Back = new Transformer(400,150,"Backend");
+
+const transformers = [Front, Back];
+let links = [
+  { from: Front, to: Back },
+  { from: Back, to: Front } // boucle bidirectionnelle
+];
+
+let particles = [];
+
+// créer particules initiales
+Front.outputParticles.push(new Particle(0,1));
+Front.outputParticles.push(new Particle(5,0.8));
+
+function step(){
+  // traitement transformateurs
+  transformers.forEach(t => t.process());
+  
+  // envoyer particules sur liens
+  links.forEach(l => {
+    l.from.outputParticles.forEach(p => {
+      if(p.from==null && p.to==null){
+        p.from = l.from;
+        p.to = l.to;
+        p.t = 0;
+        particles.push(p);
+      }
+    });
+    l.from.outputParticles = [];
+  });
+
+  drawAll();
+  drawPartition();
+}
+
+function drawAll(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  // draw links
+  ctx.strokeStyle="gray";
+  links.forEach(l => {
+    ctx.beginPath();
+    ctx.moveTo(l.from.x,l.from.y);
+    ctx.lineTo(l.to.x,l.to.y);
+    ctx.stroke();
+  });
+
+  // draw transformers
+  transformers.forEach(t => t.draw());
+
+  // draw particles
+  particles.forEach(p => {
+    p.move();
+    if(p.from && p.to){
+      let x = p.from.x + (p.to.x - p.from.x)*p.t;
+      let y = p.from.y + (p.to.y - p.from.y)*p.t;
+      ctx.fillStyle="red";
+      ctx.beginPath();
+      ctx.arc(x,y,5,0,2*Math.PI);
+      ctx.fill();
+    }
+  });
+}
+
+let interval = null;
+function run(){
+  if(!interval) interval = setInterval(step,50);
+}
+function reset(){
+  particles=[]; 
+  transformers.forEach(t => { t.inputParticles=[]; t.outputParticles=[]; t.history=[]; });
+  Front.outputParticles.push(new Particle(0,1));
+  Front.outputParticles.push(new Particle(5,0.8));
+  clearInterval(interval); interval=null;
+  drawAll();
+  drawPartition();
+}
+
+// --- Partition / timeline ---
+function drawPartition(){
+  pctx.clearRect(0,0,partition.width,partition.height);
+  transformers.forEach((t,idx) => {
+    pctx.strokeStyle = idx==0 ? "blue" : "green";
+    pctx.beginPath();
+    t.history.forEach((val,i) => {
+      let y = partition.height - val*5;
+      if(i===0) pctx.moveTo(i,y);
+      else pctx.lineTo(i,y);
+    });
+    pctx.stroke();
+  });
+}
+
+// --- initial draw ---
+drawAll();
+drawPartition();
+</script>
+</body>
+</html>

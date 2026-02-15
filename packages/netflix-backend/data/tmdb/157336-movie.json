@@ -1,0 +1,130 @@
+{
+  "id": 157336,
+  "title": "Interstellar",
+  "original_title": "Interstellar",
+  "year": "2014",
+  "genres": [
+    {
+      "id": 12,
+      "name": "Aventure"
+    },
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 878,
+      "name": "Science-Fiction"
+    }
+  ],
+  "overview": "Dans un futur proche, face à une Terre exsangue, un groupe d’explorateurs utilise un vaisseau interstellaire pour franchir un trou de ver permettant de parcourir des distances jusque‐là infranchissables. Leur but : trouver un nouveau foyer pour l’humanité.",
+  "tagline": "L’Homme est né sur Terre, rien ne l’oblige à y mourir.",
+  "vote": 8.467,
+  "popularity": 32.4135,
+  "actors": [
+    {
+      "id": 10297,
+      "gender": 2,
+      "name": "Matthew McConaughey",
+      "character": "Cooper",
+      "order": 0
+    },
+    {
+      "id": 1813,
+      "gender": 1,
+      "name": "Anne Hathaway",
+      "character": "Brand",
+      "order": 1
+    },
+    {
+      "id": 3895,
+      "gender": 2,
+      "name": "Michael Caine",
+      "character": "Professor Brand",
+      "order": 2
+    },
+    {
+      "id": 83002,
+      "gender": 1,
+      "name": "Jessica Chastain",
+      "character": "Murph",
+      "order": 3
+    },
+    {
+      "id": 1893,
+      "gender": 2,
+      "name": "Casey Affleck",
+      "character": "Tom",
+      "order": 4
+    },
+    {
+      "id": 8210,
+      "gender": 2,
+      "name": "Wes Bentley",
+      "character": "Doyle",
+      "order": 5
+    },
+    {
+      "id": 17052,
+      "gender": 2,
+      "name": "Topher Grace",
+      "character": "Getty",
+      "order": 6
+    },
+    {
+      "id": 851784,
+      "gender": 1,
+      "name": "Mackenzie Foy",
+      "character": "Murph (10 Yrs.)",
+      "order": 7
+    },
+    {
+      "id": 9560,
+      "gender": 1,
+      "name": "Ellen Burstyn",
+      "character": "Murph (older)",
+      "order": 8
+    },
+    {
+      "id": 12074,
+      "gender": 2,
+      "name": "John Lithgow",
+      "character": "Donald",
+      "order": 9
+    },
+    {
+      "id": 58549,
+      "gender": 2,
+      "name": "Bill Irwin",
+      "character": "TARS (voice)",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 525,
+      "gender": 2,
+      "name": "Christopher Nolan",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 527,
+      "gender": 2,
+      "name": "Jonathan Nolan",
+      "department": "Writing",
+      "job": "Writer"
+    },
+    {
+      "id": 525,
+      "gender": 2,
+      "name": "Christopher Nolan",
+      "department": "Writing",
+      "job": "Writer"
+    }
+  ],
+  "backdrop": "/157336-backdrop.avif",
+  "poster": "/157336-poster.avif"
+}

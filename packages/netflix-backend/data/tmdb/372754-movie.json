@@ -1,0 +1,77 @@
+{
+  "id": 372754,
+  "title": "Doukyuusei",
+  "original_title": "同級生",
+  "year": "2016",
+  "genres": [
+    {
+      "id": 10749,
+      "name": "Romance"
+    },
+    {
+      "id": 16,
+      "name": "Animation"
+    }
+  ],
+  "overview": "Sajô Rihito est un lycéen calme, mais terriblement angoissé, ce qui lui crée de fréquents malaises. En cours de musique son camarade Kusakabe Hikaru, un garçon impulsif, remarque que Rihito ne chante pas réellement. Mais alors qu'il se promène dans les couloirs du lycée, il entend le grain de voix de Sajô qui chante seul dans une salle de classe. Il va alors lui proposer son aide et, au fil de leurs rencontres, les deux garçons vont s’attacher l’un à l’autre.",
+  "tagline": "",
+  "vote": 8.296,
+  "popularity": 2.4311,
+  "actors": [
+    {
+      "id": 126698,
+      "gender": 2,
+      "name": "Kenji Nojima",
+      "character": "Rihito Sajo (voice)",
+      "order": 0
+    },
+    {
+      "id": 93801,
+      "gender": 2,
+      "name": "Hiroshi Kamiya",
+      "character": "Hikaru Kusakabe (voice)",
+      "order": 1
+    },
+    {
+      "id": 9720,
+      "gender": 2,
+      "name": "Hideo Ishikawa",
+      "character": "Manabu Hara (voice)",
+      "order": 2
+    },
+    {
+      "id": 2258797,
+      "gender": 0,
+      "name": "Yurino",
+      "character": "Mikipon (voice)",
+      "order": 3
+    }
+  ],
+  "directors": [
+    {
+      "id": 1549377,
+      "gender": 1,
+      "name": "Shoko Nakamura",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 1549378,
+      "gender": 1,
+      "name": "Asumiko Nakamura",
+      "department": "Writing",
+      "job": "Comic Book"
+    },
+    {
+      "id": 1549378,
+      "gender": 1,
+      "name": "Asumiko Nakamura",
+      "department": "Writing",
+      "job": "Writer"
+    }
+  ],
+  "backdrop": "/372754-backdrop.avif",
+  "poster": "/372754-poster.avif"
+}

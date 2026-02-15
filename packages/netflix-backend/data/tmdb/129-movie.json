@@ -1,0 +1,130 @@
+{
+  "id": 129,
+  "title": "Le Voyage de Chihiro",
+  "original_title": "千と千尋の神隠し",
+  "year": "2001",
+  "genres": [
+    {
+      "id": 16,
+      "name": "Animation"
+    },
+    {
+      "id": 10751,
+      "name": "Familial"
+    },
+    {
+      "id": 14,
+      "name": "Fantastique"
+    }
+  ],
+  "overview": "Chihiro, 10 ans, a tout d’une petite fille capricieuse. Elle s’apprête à emménager avec ses parents dans une nouvelle demeure. Sur la route, la petite famille se retrouve face à un immense bâtiment rouge au centre duquel s’ouvre un long tunnel. De l’autre côté du passage se dresse une ville fantôme. Les parents découvrent dans un restaurant désert de nombreux mets succulents et ne tardent pas à se jeter dessus. Ils se retrouvent alors transformés en cochons. Prise de panique, Chihiro s’enfuit et se dématérialise progressivement. L’énigmatique Haku se charge de lui expliquer le fonctionnement de l’univers dans lequel elle vient de pénétrer. Pour sauver ses parents, la fillette va devoir faire face à la terrible sorcière Yubaba, qui arbore les traits d’une harpie méphistophélique.",
+  "tagline": "Un tunnel qui emmènera cette petite fille vers un monde mystérieux.",
+  "vote": 8.538,
+  "popularity": 84.716,
+  "actors": [
+    {
+      "id": 19587,
+      "gender": 1,
+      "name": "Rumi Hiiragi",
+      "character": "Chihiro Ogino / Sen (voice)",
+      "order": 0
+    },
+    {
+      "id": 19588,
+      "gender": 2,
+      "name": "Miyu Irino",
+      "character": "Haku (voice)",
+      "order": 1
+    },
+    {
+      "id": 19589,
+      "gender": 1,
+      "name": "Mari Natsuki",
+      "character": "Yubaba / Zeniba (voice)",
+      "order": 2
+    },
+    {
+      "id": 19590,
+      "gender": 2,
+      "name": "Takashi Naito",
+      "character": "Akio Ogino (voice)",
+      "order": 3
+    },
+    {
+      "id": 19591,
+      "gender": 1,
+      "name": "Yasuko Sawaguchi",
+      "character": "Yuko Ogino (voice)",
+      "order": 4
+    },
+    {
+      "id": 20334,
+      "gender": 2,
+      "name": "Tsunehiko Kamijô",
+      "character": "Chichiyaku (voice)",
+      "order": 5
+    },
+    {
+      "id": 544088,
+      "gender": 2,
+      "name": "Takehiko Ono",
+      "character": "Aniyaku (voice)",
+      "order": 6
+    },
+    {
+      "id": 119243,
+      "gender": 2,
+      "name": "Bunta Sugawara",
+      "character": "Kamaji (voice)",
+      "order": 7
+    },
+    {
+      "id": 554612,
+      "gender": 2,
+      "name": "Akio Nakamura",
+      "character": "Kaonashi (voice)",
+      "order": 8
+    },
+    {
+      "id": 19594,
+      "gender": 1,
+      "name": "Yumi Tamai",
+      "character": "Rin (voice)",
+      "order": 9
+    },
+    {
+      "id": 225730,
+      "gender": 2,
+      "name": "Ryunosuke Kamiki",
+      "character": "Boh (voice)",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 608,
+      "gender": 2,
+      "name": "Hayao Miyazaki",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 608,
+      "gender": 2,
+      "name": "Hayao Miyazaki",
+      "department": "Writing",
+      "job": "Writer"
+    },
+    {
+      "id": 608,
+      "gender": 2,
+      "name": "Hayao Miyazaki",
+      "department": "Writing",
+      "job": "Original Story"
+    }
+  ],
+  "backdrop": "/129-backdrop.avif",
+  "poster": "/129-poster.avif"
+}

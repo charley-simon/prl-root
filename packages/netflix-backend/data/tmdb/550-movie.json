@@ -1,0 +1,126 @@
+{
+  "id": 550,
+  "title": "Fight Club",
+  "original_title": "Fight Club",
+  "year": "1999",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 53,
+      "name": "Thriller"
+    }
+  ],
+  "overview": "Le narrateur, sans identité précise, vit seul, travaille seul, dort seul, mange seul ses plateaux‐repas pour une personne comme beaucoup d’autres personnes seules qui connaissent la misère humaine, morale et sexuelle. C’est pourquoi il va devenir membre du Fight club, un lieu clandestin où il va pouvoir retrouver sa virilité, l’échange et la communication. Ce club est dirigé par Tyler Durden, une sorte d’anarchiste entre gourou et philosophe qui prêche l’amour de son prochain.",
+  "tagline": "Chaos. Confusion. Savon.",
+  "vote": 8.438,
+  "popularity": 20.9317,
+  "actors": [
+    {
+      "id": 819,
+      "gender": 2,
+      "name": "Edward Norton",
+      "character": "Narrator",
+      "order": 0
+    },
+    {
+      "id": 287,
+      "gender": 2,
+      "name": "Brad Pitt",
+      "character": "Tyler Durden",
+      "order": 1
+    },
+    {
+      "id": 1283,
+      "gender": 1,
+      "name": "Helena Bonham Carter",
+      "character": "Marla Singer",
+      "order": 2
+    },
+    {
+      "id": 7470,
+      "gender": 2,
+      "name": "Meat Loaf",
+      "character": "Robert Paulson",
+      "order": 3
+    },
+    {
+      "id": 7499,
+      "gender": 2,
+      "name": "Jared Leto",
+      "character": "Angel Face",
+      "order": 4
+    },
+    {
+      "id": 7471,
+      "gender": 2,
+      "name": "Zach Grenier",
+      "character": "Richard Chesler (Regional Manager)",
+      "order": 5
+    },
+    {
+      "id": 7497,
+      "gender": 2,
+      "name": "Holt McCallany",
+      "character": "The Mechanic",
+      "order": 6
+    },
+    {
+      "id": 7498,
+      "gender": 2,
+      "name": "Eion Bailey",
+      "character": "Ricky",
+      "order": 7
+    },
+    {
+      "id": 7472,
+      "gender": 2,
+      "name": "Richmond Arquette",
+      "character": "Intern at Hospital",
+      "order": 8
+    },
+    {
+      "id": 7219,
+      "gender": 2,
+      "name": "David Andrews",
+      "character": "Thomas at Remaining Men Together",
+      "order": 9
+    },
+    {
+      "id": 1129738,
+      "gender": 2,
+      "name": "George Maguire",
+      "character": "Group Leader at Remaining Men Together",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 7467,
+      "gender": 2,
+      "name": "David Fincher",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 7468,
+      "gender": 2,
+      "name": "Chuck Palahniuk",
+      "department": "Writing",
+      "job": "Novel"
+    },
+    {
+      "id": 7469,
+      "gender": 2,
+      "name": "Jim Uhls",
+      "department": "Writing",
+      "job": "Screenplay"
+    }
+  ],
+  "backdrop": "/550-backdrop.avif",
+  "poster": "/550-poster.avif"
+}

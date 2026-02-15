@@ -1,0 +1,48 @@
+{
+  "name": "prl-root",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Backend Netflix-like + laboratoire de realite production. \r Voir docs/architecture.md pour la vision globale.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start:netflix-backend": "tsx packages/netflix-backend/src/main.ts",
+    "build": "pnpm -r run build",
+    "clean": "pnpm -r run clean",
+    "dev": "pnpm -r run dev",
+    "format": "prettier --write \"**/*.{ts,json,md,svelte}\"",
+    "format:check": "prettier --check \"**/*.{ts,json,md,svelte}\"",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "docs": "typedoc",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "validate": "pnpm install && pnpm lint && pnpm typecheck && pnpm build && pnpm test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^25.2.3",
+    "@typescript-eslint/eslint-plugin": "^8.55.0",
+    "@typescript-eslint/parser": "^8.55.0",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
+    "prettier": "3.8.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typedoc": "^0.28.17",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18"
+  },
+  "dependencies": {
+    "axios": "^1.13.5",
+    "pnpm": "^10.29.3",
+    "rimraf": "^6.1.2"
+  },
+  "packageManager": "pnpm@10.0.0"
+}

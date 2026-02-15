@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Flux Frontend ↔ Backend</title>
+<style>
+  body { font-family: sans-serif; margin: 0; overflow: hidden; }
+  svg { width: 100vw; height: 100vh; background: #f0f0f0; }
+  .module { fill: #4a90e2; stroke: #333; stroke-width: 2px; }
+  .label { fill: white; font-weight: bold; font-size: 14px; text-anchor: middle; }
+  .transformer { fill: #50e3c2; stroke: #333; stroke-width: 1px; }
+  .particle { fill: red; r: 5; }
+</style>
+</head>
+<body>
+<svg id="canvas"></svg>
+<script>
+const svg = document.getElementById('canvas');
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+// Modules Frontend / Backend
+const modules = [
+  { id: 'frontend', x: width/2 - 150, y: height/2, w: 120, h: 60, label: 'Frontend' },
+  { id: 'backend', x: width/2 + 150, y: height/2, w: 120, h: 60, label: 'Backend' }
+];
+
+// Dessiner modules
+modules.forEach(m => {
+  svg.innerHTML += `<rect class="module" x="${m.x}" y="${m.y}" width="${m.w}" height="${m.h}" rx="10" ry="10"></rect>`;
+  svg.innerHTML += `<text class="label" x="${m.x + m.w/2}" y="${m.y + m.h/2 + 5}">${m.label}</text>`;
+});
+
+// Transformateurs internes au Backend
+const backendTrans = [
+  { x: modules[1].x + 20, y: modules[1].y + 15, w: 30, h: 30, label: 'Filter' },
+  { x: modules[1].x + 70, y: modules[1].y + 15, w: 30, h: 30, label: 'Transformer' }
+];
+
+backendTrans.forEach(t => {
+  svg.innerHTML += `<rect class="transformer" x="${t.x}" y="${t.y}" width="${t.w}" height="${t.h}" rx="5" ry="5"></rect>`;
+  svg.innerHTML += `<text class="label" x="${t.x + t.w/2}" y="${t.y + t.h/2 + 5}" font-size="10">${t.label}</text>`;
+});
+
+// Flux courbes (Frontend -> Backend et Backend -> Frontend)
+const fluxPaths = [
+  { id:'f2b', d:`M${modules[0].x + modules[0].w} ${modules[0].y + modules[0].h/2} 
+                   C${width/2 - 50} ${modules[0].y + modules[0].h/2 - 100}, 
+                     ${width/2 + 50} ${modules[1].y + modules[1].h/2 - 100}, 
+                     ${modules[1].x} ${modules[1].y + modules[1].h/2}`, color:'green'},
+  { id:'b2f', d:`M${modules[1].x} ${modules[1].y + modules[1].h/2 + 10} 
+                   C${width/2 + 50} ${modules[1].y + modules[1].h/2 + 150}, 
+                     ${width/2 - 50} ${modules[0].y + modules[0].h/2 + 150}, 
+                     ${modules[0].x + modules[0].w} ${modules[0].y + modules[0].h/2 + 10}`, color:'orange'}
+];
+
+fluxPaths.forEach(f => {
+  svg.innerHTML += `<path id="${f.id}" d="${f.d}" stroke="${f.color}" stroke-width="3" fill="none" marker-end="url(#arrow)"/>`;
+});
+
+// Définir un marker flèche
+svg.innerHTML += `<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="black"/>
+  </marker>
+</defs>`;
+
+// Particules animées
+const particles = [
+  { path: fluxPaths[0], t: 0, speed: 0.002 },
+  { path: fluxPaths[1], t: 0, speed: 0.0025 }
+];
+
+particles.forEach(p => {
+  p.el = document.createElementNS("http://www.w3.org/2000/svg",'circle');
+  p.el.setAttribute('r', 5);
+  p.el.setAttribute('fill', 'red');
+  svg.appendChild(p.el);
+});
+
+// Animation des particules le long des courbes
+function animate() {
+  particles.forEach(p => {
+    const path = document.getElementById(p.path.id);
+    const len = path.getTotalLength();
+    p.t += p.speed;
+    if (p.t > 1) p.t = 0; // boucle
+    const point = path.getPointAtLength(p.t * len);
+    p.el.setAttribute('cx', point.x);
+    p.el.setAttribute('cy', point.y);
+  });
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+</body>
+</html>

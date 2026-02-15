@@ -1,0 +1,133 @@
+{
+  "id": 769,
+  "title": "Les Affranchis",
+  "original_title": "GoodFellas",
+  "year": "1990",
+  "genres": [
+    {
+      "id": 18,
+      "name": "Drame"
+    },
+    {
+      "id": 80,
+      "name": "Crime"
+    }
+  ],
+  "overview": "Brooklyn, dans les années 50. Depuis l'enfance, le jeune Henry Hill rêve de devenir gangster. À 16 ans, il se met en selle auprès de Paul Cicero, un caïd local, et commet ses premiers délits. Arrêté et interrogé, il refuse de parler et gagne ainsi le respect du milieu. À sa sortie de prison, il fait la connaissance de James Conway et de Tommy DeVito, deux truands d'une extrême violence, et se lance avec eux dans des trafics de grande envergure. Karen, une jeune bourgeoise qu'il courtise et finit par épouser, ne devine sa profession qu'après être passée devant l'officier d'état-civil. Grisé par le succès, Henry multiplie les coups les plus audacieux…",
+  "tagline": "Trente ans passés dans la Mafia",
+  "vote": 8.452,
+  "popularity": 17.3201,
+  "actors": [
+    {
+      "id": 380,
+      "gender": 2,
+      "name": "Robert De Niro",
+      "character": "James Conway",
+      "order": 0
+    },
+    {
+      "id": 11477,
+      "gender": 2,
+      "name": "Ray Liotta",
+      "character": "Henry Hill",
+      "order": 1
+    },
+    {
+      "id": 4517,
+      "gender": 2,
+      "name": "Joe Pesci",
+      "character": "Tommy DeVito",
+      "order": 2
+    },
+    {
+      "id": 11478,
+      "gender": 1,
+      "name": "Lorraine Bracco",
+      "character": "Karen Hill",
+      "order": 3
+    },
+    {
+      "id": 7004,
+      "gender": 2,
+      "name": "Paul Sorvino",
+      "character": "Paul Cicero",
+      "order": 4
+    },
+    {
+      "id": 11480,
+      "gender": 2,
+      "name": "Frank Sivero",
+      "character": "Frankie Carbone",
+      "order": 5
+    },
+    {
+      "id": 11482,
+      "gender": 2,
+      "name": "Tony Darrow",
+      "character": "Sonny Bunz",
+      "order": 6
+    },
+    {
+      "id": 5170,
+      "gender": 2,
+      "name": "Mike Starr",
+      "character": "Frenchy",
+      "order": 7
+    },
+    {
+      "id": 7164,
+      "gender": 2,
+      "name": "Frank Vincent",
+      "character": "Billy Batts",
+      "order": 8
+    },
+    {
+      "id": 11479,
+      "gender": 2,
+      "name": "Chuck Low",
+      "character": "Morris Kessler",
+      "order": 9
+    },
+    {
+      "id": 11481,
+      "gender": 2,
+      "name": "Frank DiLeo",
+      "character": "Tuddy Cicero",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 1032,
+      "gender": 2,
+      "name": "Martin Scorsese",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 7163,
+      "gender": 2,
+      "name": "Nicholas Pileggi",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 1032,
+      "gender": 2,
+      "name": "Martin Scorsese",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 7163,
+      "gender": 2,
+      "name": "Nicholas Pileggi",
+      "department": "Writing",
+      "job": "Book"
+    }
+  ],
+  "backdrop": "/769-backdrop.avif",
+  "poster": "/769-poster.avif"
+}

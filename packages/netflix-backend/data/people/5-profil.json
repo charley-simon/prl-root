@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "gender": 2,
+  "name": "Peter Cushing",
+  "tmdbId": 5,
+  "imdbID": "nm0001088",
+  "biography": "Peter Cushing est un acteur britannique, né le 26 mai 1913 à Kenley, dans le comté de Surrey (aujourd'hui dans le district londonien de Croydon) et décédé le 11 août 1994 à Canterbury au Royaume-Uni, surtout connu pour son interprétation de Van Helsing dans les sagas Dracula et Frankenstein.",
+  "deathDay": "1994-08-11",
+  "birthDay": "1913-05-26",
+  "birthPlace": "Kenley, Surrey, England, UK",
+  "homepage": null,
+  "popularity": 2.6787,
+  "imdbId": "nm0001088",
+  "wikidataId": "Q309589",
+  "wikiDescription": "acteur britannique (1913-1994)"
+}

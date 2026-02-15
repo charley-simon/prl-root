@@ -1,0 +1,144 @@
+{
+  "id": 120,
+  "title": "Le Seigneur des anneaux : La Communauté de l'anneau",
+  "original_title": "The Lord of the Rings: The Fellowship of the Ring",
+  "year": "2001",
+  "genres": [
+    {
+      "id": 12,
+      "name": "Aventure"
+    },
+    {
+      "id": 14,
+      "name": "Fantastique"
+    },
+    {
+      "id": 28,
+      "name": "Action"
+    }
+  ],
+  "overview": "Le jeune hobbit Frodon Sacquet hérite d'un anneau. Il s'agit de l'Anneau Unique, instrument de pouvoir absolu qui permettrait à Sauron, de régner sur la Terre du Milieu et de réduire en esclavage ses peuples… À moins que Frodon et ses fidèles compagnons ne parviennent à emporter l'Anneau jusqu'en Mordor, lieu où il a été forgé, et à le détruire pour toujours…",
+  "tagline": "Le périple de Frodon commence…",
+  "vote": 8.4,
+  "popularity": 20.3077,
+  "actors": [
+    {
+      "id": 109,
+      "gender": 2,
+      "name": "Elijah Wood",
+      "character": "Frodo",
+      "order": 0
+    },
+    {
+      "id": 1327,
+      "gender": 2,
+      "name": "Ian McKellen",
+      "character": "Gandalf",
+      "order": 1
+    },
+    {
+      "id": 110,
+      "gender": 2,
+      "name": "Viggo Mortensen",
+      "character": "Aragorn",
+      "order": 2
+    },
+    {
+      "id": 1328,
+      "gender": 2,
+      "name": "Sean Astin",
+      "character": "Sam",
+      "order": 3
+    },
+    {
+      "id": 65,
+      "gender": 2,
+      "name": "Ian Holm",
+      "character": "Bilbo",
+      "order": 4
+    },
+    {
+      "id": 882,
+      "gender": 1,
+      "name": "Liv Tyler",
+      "character": "Arwen",
+      "order": 5
+    },
+    {
+      "id": 113,
+      "gender": 2,
+      "name": "Christopher Lee",
+      "character": "Saruman",
+      "order": 6
+    },
+    {
+      "id": 48,
+      "gender": 2,
+      "name": "Sean Bean",
+      "character": "Boromir",
+      "order": 7
+    },
+    {
+      "id": 1329,
+      "gender": 2,
+      "name": "Billy Boyd",
+      "character": "Pippin",
+      "order": 8
+    },
+    {
+      "id": 1330,
+      "gender": 2,
+      "name": "Dominic Monaghan",
+      "character": "Merry",
+      "order": 9
+    },
+    {
+      "id": 655,
+      "gender": 2,
+      "name": "John Rhys-Davies",
+      "character": "Gimli",
+      "order": 10
+    }
+  ],
+  "directors": [
+    {
+      "id": 108,
+      "gender": 2,
+      "name": "Peter Jackson",
+      "department": "Directing",
+      "job": "Director"
+    }
+  ],
+  "writers": [
+    {
+      "id": 126,
+      "gender": 1,
+      "name": "Fran Walsh",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 128,
+      "gender": 1,
+      "name": "Philippa Boyens",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 108,
+      "gender": 2,
+      "name": "Peter Jackson",
+      "department": "Writing",
+      "job": "Screenplay"
+    },
+    {
+      "id": 129,
+      "gender": 2,
+      "name": "J. R. R. Tolkien",
+      "department": "Writing",
+      "job": "Novel"
+    }
+  ],
+  "backdrop": "./public/images/120-backdrop.avif",
+  "poster": "./public/images/120-poster.avif"
+}
