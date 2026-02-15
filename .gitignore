@@ -1,0 +1,62 @@
+# ==============================
+# Node.js dependencies
+# ==============================
+node_modules/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# ==============================
+# Build outputs
+# ==============================
+/dist/
+/build/
+*.tsbuildinfo
+
+# ==============================
+# Logs
+# ==============================
+logs/
+*.log
+
+# ==============================
+# Test coverage
+# ==============================
+coverage/
+
+# ==============================
+# IDE / Editor
+# ==============================
+.vscode/
+*.swp
+*.swo
+
+# ==============================
+# Operating system files
+# ==============================
+.DS_Store
+Thumbs.db
+
+# ==============================
+# Environment / secrets
+# ==============================
+.env
+.env.local
+
+# ==============================
+# Temporary files
+# ==============================
+*.tmp
+
+# ==============================
+# Project-specific / generated media
+# ==============================
+/data/assets/**/*.avif
+*.cache
+
+# ==============================
+# Large media files handled by Git LFS
+# ==============================
+# Extensions déjà trackées par Git LFS
+# Exemple: vidéos et dumps lourds
+# Pas besoin de mettre ici, car LFS gère déjà
