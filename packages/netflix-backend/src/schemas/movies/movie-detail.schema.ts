@@ -1,5 +1,13 @@
 import { Type, Static } from '@sinclair/typebox'
 
+export const MovieExternalIdsSchema = Type.Optional(
+  Type.Object({
+    tmdb: Type.Number(),
+    imdb: Type.Optional(Type.String()),
+    wikidata: Type.Optional(Type.String())
+  })
+)
+
 export const MovieDetailSchema = Type.Object({
   id: Type.Integer({ description: 'Identifiant unique du film', examples: [1, 2, 3] }),
   title: Type.String({ description: 'Titre du film', examples: ['Matrix', 'Inception'] }),
@@ -16,8 +24,14 @@ export const MovieDetailSchema = Type.Object({
   tagLine: Type.Optional(Type.String()),
   popularity: Type.Optional(Type.Number()),
   rating: Type.Optional(Type.Number()),
-  isLocal: Type.Boolean(),
-  movieSource: Type.Optional(Type.String())
+  video: Type.Optional(
+    Type.Object({
+      localPath: Type.Optional(Type.String()),
+      provider: Type.Optional(Type.String())
+    })
+  ),
+  externalsIds: MovieExternalIdsSchema
 })
 
+export type MovieExternalIds = Static<typeof MovieExternalIdsSchema>
 export type Movie = Static<typeof MovieDetailSchema>

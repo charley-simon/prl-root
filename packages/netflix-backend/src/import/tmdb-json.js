@@ -29,11 +29,11 @@ function getMovieById(id) {
   return movie
 }
 
-function addGenre(genre) {
-  let result = categories.find(m => m.id == genre.id)
+function addCategory(category) {
+  let result = categories.find(m => m.id == category.id)
   if (!result) {
-    categories.push(genre)
-    result = genre
+    categories.push(category)
+    result = category
   }
   return result
 }
@@ -104,10 +104,11 @@ function importMovie(movieId) {
 
   // categories
   const movieCategories = []
-  if (movie.categories)
-    movie.categories.forEach(category => {
-      movieCategories.push(addGenre(category).id)
+  if (movie.genres) {
+    movie.categories.forEach(genre => {
+      movieCategories.push(addCategory(genre))
     })
+  }
   // Directors
   if (movie.directors) {
     movie.directors.forEach(people => {

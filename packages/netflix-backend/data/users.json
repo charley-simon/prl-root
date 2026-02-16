@@ -16,7 +16,7 @@
   {
     "id": 2,
     "name": "alice",
-    "password": "alice",
+    "password": "pass123",
     "isAdmin": false,
     "preferences": {
       "favoriteCategories": [
@@ -31,7 +31,7 @@
   {
     "id": 3,
     "name": "bob",
-    "password": "bob",
+    "password": "bobpass",
     "isAdmin": false,
     "preferences": {
       "favoriteCategories": [

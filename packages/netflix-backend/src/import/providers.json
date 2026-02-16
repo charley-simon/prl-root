@@ -1,0 +1,170 @@
+{
+  "id": 63,
+  "results": {
+    "FR": {
+      "link": "https://www.themoviedb.org/movie/63-twelve-monkeys/watch?locale=FR",
+      "ads": [
+        {
+          "logo_path": "/8qSG9LtUhBQIWy2Fr6fzeW7gBdd.jpg",
+          "provider_id": 1967,
+          "provider_name": "Molotov TV",
+          "display_priority": 36
+        }
+      ],
+      "flatrate": [
+        {
+          "logo_path": "/blrBF9R2ONYu04ifGkYEb3k779N.jpg",
+          "provider_id": 1754,
+          "provider_name": "TF1+",
+          "display_priority": 56
+        }
+      ],
+      "free": [
+        {
+          "logo_path": "/vPZrjHe7wvALuwJEXT2kwYLi0gV.jpg",
+          "provider_id": 234,
+          "provider_name": "Arte",
+          "display_priority": 13
+        }
+      ],
+      "buy": [
+        {
+          "logo_path": "/SPnB1qiCkYfirS2it3hZORwGVn.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV Store",
+          "display_priority": 5
+        },
+        {
+          "logo_path": "/cAUTwxqoI7zc9XtYr1SMtWZEsXg.jpg",
+          "provider_id": 58,
+          "provider_name": "Canal VOD",
+          "display_priority": 9
+        },
+        {
+          "logo_path": "/9Fyo6njYvroAIxAzTBbLgnjgYga.jpg",
+          "provider_id": 61,
+          "provider_name": "Orange VOD",
+          "display_priority": 12
+        },
+        {
+          "logo_path": "/bZvc9dXrXNly7cA0V4D9pR8yJwm.jpg",
+          "provider_id": 35,
+          "provider_name": "Rakuten TV",
+          "display_priority": 19
+        },
+        {
+          "logo_path": "/11Yzww3g6lYZznKrom3cSrKP4St.jpg",
+          "provider_id": 239,
+          "provider_name": "Universcine",
+          "display_priority": 35
+        },
+        {
+          "logo_path": "/PAaj5bekwbeeoRC1evWg4KJW8p.jpg",
+          "provider_id": 2286,
+          "provider_name": "VIVA by videofutur",
+          "display_priority": 83
+        },
+        {
+          "logo_path": "/rdMFjYYE0uZ55rBdlX149gRF1XQ.jpg",
+          "provider_id": 2307,
+          "provider_name": "Premiere Max",
+          "display_priority": 85
+        },
+        {
+          "logo_path": "/1gtidYfh89iLkGcbhPtr1lvx47W.jpg",
+          "provider_id": 2671,
+          "provider_name": "ARTE Boutique",
+          "display_priority": 111
+        }
+      ],
+      "rent": [
+        {
+          "logo_path": "/SPnB1qiCkYfirS2it3hZORwGVn.jpg",
+          "provider_id": 2,
+          "provider_name": "Apple TV Store",
+          "display_priority": 5
+        },
+        {
+          "logo_path": "/cAUTwxqoI7zc9XtYr1SMtWZEsXg.jpg",
+          "provider_id": 58,
+          "provider_name": "Canal VOD",
+          "display_priority": 9
+        },
+        {
+          "logo_path": "/9Fyo6njYvroAIxAzTBbLgnjgYga.jpg",
+          "provider_id": 61,
+          "provider_name": "Orange VOD",
+          "display_priority": 12
+        },
+        {
+          "logo_path": "/s7mg9n4UHrcdJQL78JmaU6oAdHt.jpg",
+          "provider_id": 59,
+          "provider_name": "Bbox VOD",
+          "display_priority": 18
+        },
+        {
+          "logo_path": "/bZvc9dXrXNly7cA0V4D9pR8yJwm.jpg",
+          "provider_id": 35,
+          "provider_name": "Rakuten TV",
+          "display_priority": 19
+        },
+        {
+          "logo_path": "/11Yzww3g6lYZznKrom3cSrKP4St.jpg",
+          "provider_id": 239,
+          "provider_name": "Universcine",
+          "display_priority": 35
+        },
+        {
+          "logo_path": "/PAaj5bekwbeeoRC1evWg4KJW8p.jpg",
+          "provider_id": 2286,
+          "provider_name": "VIVA by videofutur",
+          "display_priority": 83
+        },
+        {
+          "logo_path": "/rdMFjYYE0uZ55rBdlX149gRF1XQ.jpg",
+          "provider_id": 2307,
+          "provider_name": "Premiere Max",
+          "display_priority": 85
+        },
+        {
+          "logo_path": "/1gtidYfh89iLkGcbhPtr1lvx47W.jpg",
+          "provider_id": 2671,
+          "provider_name": "ARTE Boutique",
+          "display_priority": 111
+        }
+      ]
+    },
+    "GB": {
+      "link": "https://www.themoviedb.org/movie/63-twelve-monkeys/watch?locale=GB",
+      "free": [
+        {
+          "logo_path": "/nc8Tpsr8SqCbsTUogPDD06gGzB3.jpg",
+          "provider_id": 38,
+          "provider_name": "BBC iPlayer",
+          "display_priority": 13
+        }
+      ]
+    }
+  }
+}
+providers.FR.free
+movieId('l-armee-des-12-singes') = 63
+providerId(Arte) = 234
+
+{
+  "id": 234,
+  "name": "Arte",
+  "logo_path": "/vPZrjHe7wvALuwJEXT2kwYLi0gV.jpg",
+  "basePath": ""
+}
+
+<div>
+	<a href="https://www.arte.tv/fr/videos/041600-000-A/l-armee-des-12-singes/?uct_country=fr"
+		title="Regarder L'Armée des 12 singes sur Arte"
+		target="_blank"
+		rel="noopener">
+		<img src="https://media.themoviedb.org/t/p/original/vPZrjHe7wvALuwJEXT2kwYLi0gV.jpg" width="50" height="50">
+	</a>
+	<span class="wrapper free">
+	</span>
+</div>

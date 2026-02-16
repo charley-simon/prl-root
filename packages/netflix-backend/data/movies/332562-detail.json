@@ -1,0 +1,62 @@
+{
+  "id": 332562,
+  "title": "A Star is Born",
+  "releaseYear": 18,
+  "overview": "Star de country un peu oubliée, Jackson Maine découvre Ally, une jeune chanteuse très prometteuse. Tandis qu’ils tombent follement amoureux l’un de l’autre, Jack propulse Ally sur le devant de la scène et fait d’elle une artiste adulée par le public. Bientôt éclipsé par le succès de la jeune femme, il vit de plus en plus mal son propre déclin…",
+  "video": {
+    "localPath": "C:\\dev\\prl-root\\packages\\netflix-backend\\incoming\\A Star is Born.2018.mkv",
+    "provider": "local"
+  },
+  "externalIds": {
+    "tmdb": "332562",
+    "imdb": "tt1517451",
+    "wikidata": "Q3286391"
+  },
+  "originalTitle": "A Star Is Born",
+  "budget": 36000000,
+  "revenue": 436388866,
+  "categories": [
+    10402,
+    18,
+    10749
+  ],
+  "synopsis": "Star de country un peu oubliée, Jackson Maine découvre Ally, une jeune chanteuse très prometteuse. Tandis qu’ils tombent follement amoureux l’un de l’autre, Jack propulse Ally sur le devant de la scène et fait d’elle une artiste adulée par le public. Bientôt éclipsé par le succès de la jeune femme, il vit de plus en plus mal son propre déclin…",
+  "tagLine": "",
+  "popularity": 7.6532,
+  "rating": 7.495,
+  "wikiDescription": {
+    "description": "film de Bradley Cooper, sorti en 2018",
+    "genres": [
+      "film ou téléfilm musical",
+      "film ou téléfilm d'amour",
+      "drame romantique"
+    ],
+    "directors": [
+      "Bradley Cooper"
+    ],
+    "cast": [
+      "Lady Gaga",
+      "Dave Chappelle",
+      "Brandi Carlile",
+      "Alec Baldwin",
+      "Bradley Cooper",
+      "Bonnie Somerville",
+      "Greg Grunberg",
+      "Sam Elliott",
+      "Ron Rifkin",
+      "Eddie Griffin",
+      "Luenell Campbell",
+      "Don Was",
+      "Andrew Dice Clay",
+      "Drena De Niro",
+      "Matthew Libatique",
+      "Rafi Gavron",
+      "Rebecca Field",
+      "Michael D. Roberts",
+      "Shangela Laquifa Wadley",
+      "Michael J. Harney",
+      "Marlon Williams",
+      "Anthony Ramos Martinez"
+    ]
+  }
+}

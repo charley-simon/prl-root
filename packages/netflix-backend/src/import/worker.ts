@@ -459,9 +459,11 @@ async function handlePeopleId(peopleId: number) {
   // Enrichissement IDs externes
   const externalIDs = await fetchExternalIDs(peopleData.id)
   console.log(' IDs: ', externalIDs)
-  peopleData.externalIds.tmdb = peopleTmdb.id.toString()
-  peopleData.externalIds.imdb = peopleData.imdbId || externalIDs.imdbId
-  peopleData.externalIds.wikidata = peopleData.wikidataId || externalIDs.wikidataId
+  peopleData.externalIds = {
+    tmdb: peopleTmdb.id.toString(),
+    imdb: externalIDs.imdbId,
+    wikidata: externalIDs.wikidataId
+  }
 
   // Enrichissement narratif depuis Wikidata
   if (peopleData.wikidataId && !peopleData.wikiDescription) {
@@ -478,15 +480,6 @@ async function handlePeopleId(peopleId: number) {
 
 import { validatePersonDetail } from '../validation/people.validation'
 
-function readJSON(fileName: string) {
-  return JSON.parse(fs.readFileSync(fileName, 'utf-8'))
-}
-
-function writeJSON(fileName: string, jsonData: string) {
-  console.log(`writing: ${fileName}, array.length ${jsonData.length}`)
-  return fs.writeFileSync(fileName, JSON.stringify(jsonData), 'utf-8')
-}
-
 async function checkPeopleCompletion() {
   const peoples = readJSON('./data/people.json')
 
@@ -499,6 +492,142 @@ async function checkPeopleCompletion() {
   })
 }
 
+function readJSON(fileName: string) {
+  return JSON.parse(fs.readFileSync(fileName, 'utf-8'))
+}
+
+function writeJSON(fileName: string, jsonData: string) {
+  console.log(`writing: ${fileName}, array.length ${jsonData.length}`)
+  return fs.writeFileSync(fileName, JSON.stringify(jsonData), 'utf-8')
+}
+
 handleVideoById(111)
 // checkPeopleCompletion();
-// handleVideoFile('A.Star.is.Born.2018.mkv');
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Télécharger + conversion en Avif
+async function downloadAndConvertTMDBImage(tmdbPath: string, baseName: string, widths: number[]) {
+  if (!tmdbPath) return {}
+
+  const url = `https://image.tmdb.org/t/p/original${tmdbPath}`
+  const res = await fetch(url)
+  if (!res.ok) return {}
+
+  const buffer = Buffer.from(await res.arrayBuffer())
+  const result: any = {}
+
+  for (const w of widths) {
+    const suffix = w <= 150 ? 'Sm' : w <= 500 ? 'Md' : 'Lg'
+    const filePath = path.join(ASSETS_DIR, `${baseName}${suffix}.avif`)
+    await sharp(buffer).resize({ width: w }).avif({ quality: 80 }).toFile(filePath)
+    result[suffix] = filePath
+  }
+  return result
+}
+
+async function searchTMDB(title: string, year?: number) {
+  const url = new URL('https://api.themoviedb.org/3/search/movie')
+  const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization:
+        'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZjkxZmJmMjVmOGY5MzM2MWU5Yjc0MDVmYTU0NDE1NyIsIm5iZiI6MTcwNDk5Mzc1My4zNzEsInN1YiI6IjY1YTAyM2Q5MjdkYjYxMDEyNzk4NjYxNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.roO7_rw2FyxvExevz5oFaUY785nbVshk8YwRIYz3ers'
+    }
+  }
+  url.searchParams.set('query', title)
+  url.searchParams.set('language', 'fr-FR')
+  if (year) url.searchParams.set('year', year.toString())
+
+  const res = await fetch(url.toString(), options)
+  const data = (await res.json()) as TMDBSearchResponse
+  if (data.results && data.results.length > 0) {
+    const movie = data.results[0]
+    return {
+      tmdbId: movie.id,
+      title: movie.title,
+      releaseYear: Number(movie.release_date?.slice(0, 4)),
+      overview: movie.overview,
+      posterPath: movie.poster_path,
+      backdropPath: movie.backdrop_path
+    }
+  }
+  return null
+}
+
+// -----------------------------
+// Utils
+// -----------------------------
+function parseVideoFilename(filename: string) {
+  let name = filename.replace(/\.[^.]+$/, '') // enlever extension
+  name = name.replace(/\[(.*?)\]/g, '') // enlever [..]
+  name = name.replace(
+    /\b(1080p|720p|BluRay|WEB-DL|HDLight|x264|AC3|MULTi|EXTREME|STVFRV|Pop)\b/gi,
+    ''
+  )
+  name = name.replace(/[._]+/g, ' ').trim()
+
+  const yearMatch = name.match(/\b(19|20)\d{1}\b/)
+  const year = yearMatch ? parseInt(yearMatch[0]) : null
+
+  // Version plus élégante : enlever l'année si elle existe
+  const title = name.replace(yearMatch?.[0] ?? '', '').trim()
+
+  return { title, year }
+}
+
+// -----------------------------
+// Worker : traitement d'un fichier vidéo
+// -----------------------------
+async function handleVideoFile(filepath: string) {
+  const filename = path.basename(filepath)
+  const { title, year } = parseVideoFilename(filename)
+  console.log(`Fichier détecté: ${filename} -> title: "${title}", year: ${year}`)
+
+  const movie = await searchTMDB(title, year ?? undefined)
+  if (!movie) {
+    console.warn(`Aucun film trouvé pour: "${title}" (${year ?? 'unknown'})`)
+    return
+  }
+
+  console.log(`Film trouvé TMDB ID: ${movie.tmdbId}, title: "${movie.title}"`)
+
+  const movieJsonPath = path.join(DATA_DIR, `${movie.tmdbId}-movie.json`)
+  let movieData: any = {
+    id: movie.tmdbId,
+    title: movie.title,
+    releaseYear: Number(movie.releaseYear ?? year),
+    overview: movie.overview ?? '',
+    video: {
+      localPath: path.resolve(filepath),
+      provider: 'local'
+    }
+  }
+
+  // Télécharger et convertir images TMDB en Avif
+  if (movie.posterPath) {
+    const posterFiles = await downloadAndConvertTMDBImage(
+      movie.posterPath,
+      `${movie.tmdbId}-poster`,
+      [100, 300, 500]
+    )
+  }
+
+  if (movie.backdropPath) {
+    const backdropFiles = await downloadAndConvertTMDBImage(
+      movie.backdropPath,
+      `${movie.tmdbId}-background`,
+      [300, 1000]
+    )
+  }
+
+  // Merge avec existant si nécessaire
+  if (fs.existsSync(movieJsonPath)) {
+    const existing = JSON.parse(fs.readFileSync(movieJsonPath, 'utf-8'))
+    movieData = { ...existing, ...movieData }
+  }
+
+  fs.writeFileSync(movieJsonPath, JSON.stringify(movieData, null, 2), 'utf-8')
+  console.log(`Movie JSON mis à jour: ${movieJsonPath}`)
+}
+
+handleVideoFile('A.Star.is.Born.2018.mkv')

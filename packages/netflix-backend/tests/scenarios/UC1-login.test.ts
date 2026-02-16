@@ -1,31 +1,32 @@
-import { describe, it, expect, beforeAll } from 'vitest'
-import { UserService, User } from '../../src/services/user/userService'
+import { describe, it, expect } from 'vitest'
+import { User } from '../../src/schemas/users/user.schema'
+import { UserServiceImpl } from '../../src/services/user/userService'
+import { UserCache } from '../../src/services/user/userCache'
 
 describe('UC1 – Login simple', () => {
-  let userService: UserService
+  const userCache = new UserCache('./data')
+  const userService = new UserServiceImpl(userCache)
 
-  beforeAll(() => {
-    userService = new UserService()
+  it('doit connecter un utilisateur existant avec mot de passe correct', async () => {
+    const user: User = await userService.login('alice', 'pass123')
+
+    expect(user).toHaveProperty('id', 2)
+    expect(user.isAdmin).toBe(false)
   })
 
-  it('doit connecter un utilisateur existant avec mot de passe correct', () => {
-    const user: User = userService.login('alice', 'pass123')
-    expect(user).toHaveProperty('id', 1)
-    expect(user.isAdmin).toBe(true)
+  it('doit refuser un utilisateur inconnu', async () => {
+    await expect(userService.login('unknown', 'pass123')).rejects.toThrow('Invalid credentials')
   })
 
-  it('doit refuser un utilisateur inconnu', () => {
-    expect(() => userService.login('unknown', 'pass123')).toThrow(/Utilisateur inconnu/)
+  it('doit refuser un mot de passe incorrect', async () => {
+    await expect(userService.login('alice', 'wrongpass')).rejects.toThrow('Invalid credentials')
   })
 
-  it('doit refuser un mot de passe incorrect', () => {
-    expect(() => userService.login('alice', 'wrongpass')).toThrow(/Mot de passe incorrect/)
-  })
+  it('doit distinguer admin et utilisateur normal', async () => {
+    const admin = await userService.login('admin', 'admin')
+    const user = await userService.login('bob', 'bobpass')
 
-  it('doit distinguer admin et utilisateur normal', () => {
-    const admin = userService.login('alice', 'pass123')
-    const user = userService.login('bob', 'bobpass')
-    expect(userService.isAdmin(admin)).toBe(true)
-    expect(userService.isAdmin(user)).toBe(false)
+    expect(await userService.isAdmin(admin.id)).toBe(true)
+    expect(await userService.isAdmin(user.id)).toBe(false)
   })
 })

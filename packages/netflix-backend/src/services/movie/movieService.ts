@@ -5,6 +5,7 @@ import { Movie, MovieDetailSchema } from '../../schemas/movies/movie-detail.sche
 import { Person, PersonDetailSchema } from '../../schemas/people/person-detail.schema'
 import { TypeCompiler } from '@sinclair/typebox/compiler'
 import { UserPreferences } from '../../schemas/users/user.schema' // à ajouter en import
+import { movieEvents, MovieEventPayload } from '../../services/movie/movieEvents'
 
 export interface MovieService {
   getMovieDetailById(movieId: number): Promise<Movie>
@@ -45,6 +46,22 @@ export class MovieServiceImpl implements MovieService {
 
   constructor() {
     this.loadReferences()
+
+    // ✅ S'abonner aux événements movie-updated
+    movieEvents.on('movie-updated', (payload: MovieEventPayload) => {
+      this.reloadMovie(payload.filePath)
+      console.log(`MovieService: cache mis à jour pour movieId=${payload.id}`)
+    })
+  }
+
+  // Méthode pour recharger un film depuis son JSON
+  reloadMovie(movieFilePath: string) {
+    const movieData = JSON.parse(fs.readFileSync(movieFilePath, 'utf-8')) as Movie
+    this.moviesById[movieData.id] = movieData
+
+    const idx = this.movies.findIndex(m => m.id === movieData.id)
+    if (idx >= 0) this.movies[idx] = movieData
+    else this.movies.push(movieData)
   }
 
   private loadReferences() {
@@ -124,10 +141,8 @@ export class MovieServiceImpl implements MovieService {
   async listMovies(batch?: { offset: number; limit: number }): Promise<Movie[]> {
     const offset = batch?.offset ?? 0
     const limit = batch?.limit ?? 50
-    console.log(
-      `listMovies(${batch?.offset}, ${batch?.limit}), this.movies.slice(${offset}, ${offset + limit}) => ${this.movies.length}`
-    )
-    return this.movies.slice(offset, offset + limit)
+    const allMovies = Object.values(this.moviesById)
+    return allMovies.slice(offset, offset + limit)
   }
 
   async getSimilarMovies(movieId: number): Promise<Movie[]> {
