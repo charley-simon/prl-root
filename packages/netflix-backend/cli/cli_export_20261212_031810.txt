@@ -1,0 +1,405 @@
+═══ CLI EXPORT — 20261212_031810 ═══
+
+─── TRACES ────────────────────────────────────────
+[req-0000] [WS] opening DB connection — 19.07ms
+[req-0001] [PAYMENT] resolving query — 38.05ms
+[req-0002] [DB] hitting cache — 2.83ms
+[req-0003] [WS] preparing SQL — 9.86ms
+[req-0004] [AUTH] dispatching event — 4.29ms
+[req-0005] [PAYMENT] hitting cache — 46.99ms
+[req-0006] [WS] hitting cache — 37.19ms
+[req-0007] [WS] closing pool — 10.05ms
+[req-0008] [MAILER] executing middleware — 41.27ms
+[req-0009] [AUTH] dispatching event — 39.95ms
+[req-0010] [WS] serializing response — 18.35ms
+[req-0011] [ROUTER] dispatching event — 1.28ms
+[req-0012] [ROUTER] serializing response — 7.13ms
+[req-0013] [MAILER] checking JWT — 41.21ms
+[req-0014] [ROUTER] preparing SQL — 22.52ms
+[req-0015] [WS] dispatching event — 41.51ms
+[req-0016] [AUTH] checking JWT — 28.86ms
+[req-0017] [AUTH] parsing request body — 30.55ms
+[req-0018] [ROUTER] executing middleware — 44.21ms
+[req-0019] [AUTH] opening DB connection — 3.98ms
+[req-0020] [DB] serializing response — 18.95ms
+[req-0021] [WS] hitting cache — 28.68ms
+[req-0022] [AUTH] preparing SQL — 46.74ms
+[req-0023] [ROUTER] hitting cache — 8.83ms
+[req-0024] [AUTH] hitting cache — 43.74ms
+[req-0025] [PAYMENT] checking JWT — 23.00ms
+[req-0026] [AUTH] opening DB connection — 44.51ms
+[req-0027] [PAYMENT] preparing SQL — 46.16ms
+[req-0028] [AUTH] preparing SQL — 22.51ms
+[req-0029] [CACHE] resolving query — 47.38ms
+[req-0030] [MAILER] closing pool — 40.78ms
+[req-0031] [PAYMENT] checking JWT — 36.24ms
+[req-0032] [MAILER] hitting cache — 0.17ms
+[req-0033] [CACHE] serializing response — 12.09ms
+[req-0034] [PAYMENT] closing pool — 11.07ms
+[req-0035] [WS] opening DB connection — 12.72ms
+[req-0036] [ROUTER] dispatching event — 4.66ms
+[req-0037] [ROUTER] serializing response — 47.45ms
+[req-0038] [AUTH] opening DB connection — 40.48ms
+[req-0039] [PAYMENT] checking JWT — 33.50ms
+[req-0040] [DB] preparing SQL — 0.66ms
+[req-0041] [MAILER] opening DB connection — 33.66ms
+[req-0042] [DB] serializing response — 44.53ms
+[req-0043] [ROUTER] closing pool — 9.55ms
+[req-0044] [ROUTER] parsing request body — 38.20ms
+[req-0045] [ROUTER] opening DB connection — 7.64ms
+[req-0046] [DB] checking JWT — 43.65ms
+[req-0047] [PAYMENT] opening DB connection — 38.86ms
+[req-0048] [AUTH] closing pool — 48.21ms
+[req-0049] [CACHE] checking JWT — 28.42ms
+[req-0050] [CACHE] checking JWT — 17.28ms
+[req-0051] [PAYMENT] serializing response — 0.15ms
+[req-0052] [WS] resolving query — 6.16ms
+[req-0053] [AUTH] resolving query — 16.22ms
+[req-0054] [PAYMENT] serializing response — 46.17ms
+[req-0055] [PAYMENT] preparing SQL — 4.97ms
+[req-0056] [AUTH] executing middleware — 21.20ms
+[req-0057] [MAILER] opening DB connection — 25.89ms
+[req-0058] [MAILER] checking JWT — 3.42ms
+[req-0059] [MAILER] executing middleware — 42.59ms
+[req-0060] [ROUTER] checking JWT — 19.28ms
+[req-0061] [WS] resolving query — 38.29ms
+[req-0062] [AUTH] resolving query — 4.26ms
+[req-0063] [MAILER] preparing SQL — 15.84ms
+[req-0064] [PAYMENT] checking JWT — 14.89ms
+[req-0065] [PAYMENT] opening DB connection — 45.66ms
+[req-0066] [PAYMENT] resolving query — 5.65ms
+[req-0067] [PAYMENT] parsing request body — 43.65ms
+[req-0068] [PAYMENT] opening DB connection — 36.11ms
+[req-0069] [ROUTER] dispatching event — 9.68ms
+[req-0070] [AUTH] closing pool — 19.94ms
+[req-0071] [ROUTER] executing middleware — 37.63ms
+[req-0072] [DB] resolving query — 36.74ms
+[req-0073] [DB] serializing response — 18.77ms
+[req-0074] [CACHE] dispatching event — 7.32ms
+[req-0075] [DB] opening DB connection — 39.60ms
+[req-0076] [CACHE] hitting cache — 22.30ms
+[req-0077] [PAYMENT] serializing response — 23.75ms
+[req-0078] [PAYMENT] preparing SQL — 19.24ms
+[req-0079] [WS] preparing SQL — 41.13ms
+[req-0080] [DB] dispatching event — 5.28ms
+[req-0081] [CACHE] opening DB connection — 20.34ms
+[req-0082] [CACHE] closing pool — 38.31ms
+[req-0083] [DB] resolving query — 15.43ms
+[req-0084] [DB] dispatching event — 2.42ms
+[req-0085] [PAYMENT] preparing SQL — 2.40ms
+[req-0086] [WS] opening DB connection — 48.06ms
+[req-0087] [MAILER] parsing request body — 43.12ms
+[req-0088] [DB] closing pool — 16.03ms
+[req-0089] [WS] checking JWT — 12.00ms
+[req-0090] [CACHE] preparing SQL — 2.90ms
+[req-0091] [ROUTER] checking JWT — 46.86ms
+[req-0092] [AUTH] serializing response — 25.44ms
+[req-0093] [ROUTER] closing pool — 1.99ms
+[req-0094] [DB] resolving query — 33.15ms
+[req-0095] [ROUTER] resolving query — 6.98ms
+[req-0096] [ROUTER] executing middleware — 36.69ms
+[req-0097] [MAILER] resolving query — 24.95ms
+[req-0098] [DB] parsing request body — 19.65ms
+[req-0099] [MAILER] serializing response — 46.78ms
+[req-0100] [DB] checking JWT — 29.32ms
+[req-0101] [PAYMENT] dispatching event — 36.56ms
+[req-0102] [PAYMENT] opening DB connection — 39.44ms
+[req-0103] [PAYMENT] executing middleware — 13.97ms
+[req-0104] [MAILER] checking JWT — 3.67ms
+[req-0105] [WS] checking JWT — 0.59ms
+[req-0106] [ROUTER] executing middleware — 32.86ms
+[req-0107] [MAILER] preparing SQL — 45.97ms
+[req-0108] [ROUTER] opening DB connection — 17.75ms
+[req-0109] [MAILER] hitting cache — 2.56ms
+[req-0110] [ROUTER] dispatching event — 8.99ms
+[req-0111] [WS] resolving query — 46.82ms
+[req-0112] [MAILER] closing pool — 36.33ms
+[req-0113] [PAYMENT] preparing SQL — 41.63ms
+[req-0114] [WS] hitting cache — 15.51ms
+[req-0115] [ROUTER] serializing response — 43.21ms
+[req-0116] [PAYMENT] dispatching event — 29.76ms
+[req-0117] [MAILER] closing pool — 47.71ms
+[req-0118] [AUTH] resolving query — 37.70ms
+[req-0119] [PAYMENT] dispatching event — 42.12ms
+[req-0120] [CACHE] resolving query — 19.93ms
+[req-0121] [DB] serializing response — 6.36ms
+[req-0122] [ROUTER] executing middleware — 35.11ms
+[req-0123] [ROUTER] hitting cache — 34.61ms
+[req-0124] [PAYMENT] opening DB connection — 30.22ms
+[req-0125] [AUTH] closing pool — 9.99ms
+[req-0126] [AUTH] preparing SQL — 40.86ms
+[req-0127] [CACHE] resolving query — 43.84ms
+[req-0128] [CACHE] checking JWT — 3.62ms
+[req-0129] [WS] serializing response — 47.11ms
+[req-0130] [CACHE] resolving query — 25.32ms
+[req-0131] [MAILER] dispatching event — 41.49ms
+[req-0132] [PAYMENT] serializing response — 38.21ms
+[req-0133] [MAILER] preparing SQL — 9.90ms
+[req-0134] [AUTH] hitting cache — 9.38ms
+[req-0135] [AUTH] opening DB connection — 11.26ms
+[req-0136] [ROUTER] executing middleware — 10.64ms
+[req-0137] [WS] parsing request body — 44.10ms
+[req-0138] [DB] resolving query — 11.65ms
+[req-0139] [AUTH] serializing response — 20.30ms
+[req-0140] [WS] opening DB connection — 15.64ms
+[req-0141] [DB] resolving query — 17.78ms
+[req-0142] [DB] opening DB connection — 6.45ms
+[req-0143] [PAYMENT] executing middleware — 7.51ms
+[req-0144] [CACHE] resolving query — 47.82ms
+[req-0145] [WS] closing pool — 21.24ms
+[req-0146] [AUTH] closing pool — 31.40ms
+[req-0147] [MAILER] resolving query — 0.35ms
+[req-0148] [MAILER] resolving query — 46.04ms
+[req-0149] [CACHE] resolving query — 32.42ms
+[req-0150] [MAILER] closing pool — 29.43ms
+[req-0151] [ROUTER] parsing request body — 33.46ms
+[req-0152] [DB] resolving query — 2.68ms
+[req-0153] [PAYMENT] preparing SQL — 27.77ms
+[req-0154] [CACHE] dispatching event — 10.09ms
+[req-0155] [ROUTER] executing middleware — 37.86ms
+[req-0156] [MAILER] closing pool — 23.18ms
+[req-0157] [ROUTER] dispatching event — 45.09ms
+[req-0158] [WS] preparing SQL — 25.34ms
+[req-0159] [WS] opening DB connection — 37.52ms
+[req-0160] [DB] preparing SQL — 2.49ms
+[req-0161] [CACHE] closing pool — 35.49ms
+[req-0162] [WS] opening DB connection — 45.19ms
+[req-0163] [AUTH] closing pool — 21.94ms
+[req-0164] [AUTH] executing middleware — 40.24ms
+[req-0165] [PAYMENT] parsing request body — 19.12ms
+[req-0166] [CACHE] checking JWT — 10.58ms
+[req-0167] [WS] parsing request body — 30.31ms
+[req-0168] [PAYMENT] preparing SQL — 42.00ms
+[req-0169] [AUTH] parsing request body — 23.39ms
+[req-0170] [CACHE] parsing request body — 46.93ms
+[req-0171] [ROUTER] opening DB connection — 5.43ms
+[req-0172] [ROUTER] dispatching event — 9.28ms
+[req-0173] [WS] parsing request body — 6.11ms
+[req-0174] [MAILER] parsing request body — 33.90ms
+[req-0175] [CACHE] parsing request body — 16.40ms
+[req-0176] [MAILER] executing middleware — 19.70ms
+[req-0177] [AUTH] dispatching event — 42.34ms
+[req-0178] [WS] checking JWT — 37.87ms
+[req-0179] [CACHE] parsing request body — 37.76ms
+[req-0180] [WS] resolving query — 39.66ms
+[req-0181] [DB] parsing request body — 20.11ms
+[req-0182] [AUTH] dispatching event — 21.14ms
+[req-0183] [AUTH] preparing SQL — 20.56ms
+[req-0184] [CACHE] closing pool — 38.54ms
+[req-0185] [PAYMENT] resolving query — 14.46ms
+[req-0186] [DB] resolving query — 10.11ms
+[req-0187] [CACHE] executing middleware — 13.27ms
+[req-0188] [MAILER] dispatching event — 44.43ms
+[req-0189] [MAILER] preparing SQL — 21.68ms
+[req-0190] [PAYMENT] resolving query — 27.24ms
+[req-0191] [MAILER] hitting cache — 49.70ms
+[req-0192] [AUTH] opening DB connection — 27.12ms
+[req-0193] [PAYMENT] resolving query — 39.15ms
+[req-0194] [MAILER] checking JWT — 20.46ms
+[req-0195] [PAYMENT] opening DB connection — 49.01ms
+[req-0196] [AUTH] resolving query — 8.77ms
+[req-0197] [ROUTER] preparing SQL — 12.38ms
+[req-0198] [CACHE] serializing response — 21.12ms
+[req-0199] [WS] closing pool — 10.27ms
+[req-0200] [CACHE] closing pool — 20.56ms
+[req-0201] [PAYMENT] checking JWT — 15.09ms
+[req-0202] [MAILER] serializing response — 47.52ms
+[req-0203] [PAYMENT] dispatching event — 15.88ms
+[req-0204] [AUTH] parsing request body — 0.54ms
+[req-0205] [MAILER] preparing SQL — 21.97ms
+[req-0206] [DB] hitting cache — 36.53ms
+[req-0207] [PAYMENT] dispatching event — 43.37ms
+[req-0208] [ROUTER] hitting cache — 39.14ms
+[req-0209] [WS] resolving query — 15.22ms
+[req-0210] [PAYMENT] preparing SQL — 38.33ms
+[req-0211] [DB] serializing response — 20.75ms
+[req-0212] [WS] checking JWT — 5.62ms
+[req-0213] [WS] resolving query — 17.73ms
+[req-0214] [WS] checking JWT — 9.66ms
+[req-0215] [WS] dispatching event — 17.42ms
+[req-0216] [DB] checking JWT — 1.47ms
+[req-0217] [PAYMENT] closing pool — 3.31ms
+[req-0218] [DB] hitting cache — 36.19ms
+[req-0219] [AUTH] parsing request body — 8.95ms
+[req-0220] [PAYMENT] hitting cache — 45.80ms
+[req-0221] [PAYMENT] parsing request body — 47.22ms
+[req-0222] [MAILER] executing middleware — 39.50ms
+[req-0223] [AUTH] opening DB connection — 15.80ms
+[req-0224] [MAILER] parsing request body — 34.84ms
+[req-0225] [WS] resolving query — 16.40ms
+[req-0226] [PAYMENT] closing pool — 42.15ms
+[req-0227] [CACHE] checking JWT — 48.55ms
+[req-0228] [CACHE] closing pool — 12.56ms
+[req-0229] [CACHE] hitting cache — 15.35ms
+[req-0230] [CACHE] dispatching event — 7.16ms
+[req-0231] [MAILER] parsing request body — 1.37ms
+[req-0232] [PAYMENT] dispatching event — 35.45ms
+[req-0233] [AUTH] dispatching event — 36.71ms
+[req-0234] [PAYMENT] serializing response — 47.84ms
+[req-0235] [AUTH] resolving query — 5.03ms
+[req-0236] [PAYMENT] parsing request body — 18.83ms
+[req-0237] [PAYMENT] serializing response — 2.98ms
+[req-0238] [MAILER] resolving query — 36.70ms
+[req-0239] [WS] closing pool — 20.36ms
+[req-0240] [WS] checking JWT — 49.65ms
+[req-0241] [CACHE] parsing request body — 42.89ms
+[req-0242] [MAILER] checking JWT — 29.10ms
+[req-0243] [WS] dispatching event — 31.62ms
+[req-0244] [DB] parsing request body — 2.17ms
+[req-0245] [CACHE] resolving query — 21.31ms
+[req-0246] [WS] resolving query — 16.20ms
+[req-0247] [PAYMENT] parsing request body — 22.49ms
+[req-0248] [AUTH] preparing SQL — 15.75ms
+[req-0249] [WS] parsing request body — 31.01ms
+[req-0250] [CACHE] preparing SQL — 29.62ms
+[req-0251] [DB] executing middleware — 33.85ms
+[req-0252] [PAYMENT] dispatching event — 18.85ms
+[req-0253] [PAYMENT] closing pool — 17.85ms
+[req-0254] [DB] preparing SQL — 26.31ms
+[req-0255] [PAYMENT] hitting cache — 0.48ms
+[req-0256] [CACHE] closing pool — 27.58ms
+[req-0257] [DB] preparing SQL — 27.56ms
+[req-0258] [CACHE] checking JWT — 9.27ms
+[req-0259] [MAILER] opening DB connection — 44.89ms
+[req-0260] [ROUTER] opening DB connection — 16.58ms
+[req-0261] [WS] parsing request body — 45.61ms
+[req-0262] [AUTH] hitting cache — 1.29ms
+[req-0263] [WS] preparing SQL — 13.96ms
+[req-0264] [MAILER] executing middleware — 16.57ms
+[req-0265] [ROUTER] executing middleware — 39.37ms
+[req-0266] [AUTH] resolving query — 6.99ms
+[req-0267] [WS] hitting cache — 36.52ms
+[req-0268] [AUTH] hitting cache — 4.20ms
+[req-0269] [CACHE] preparing SQL — 6.40ms
+[req-0270] [MAILER] resolving query — 18.54ms
+[req-0271] [AUTH] preparing SQL — 11.94ms
+[req-0272] [CACHE] checking JWT — 19.95ms
+[req-0273] [DB] resolving query — 26.81ms
+[req-0274] [DB] parsing request body — 0.07ms
+[req-0275] [CACHE] resolving query — 17.69ms
+[req-0276] [PAYMENT] preparing SQL — 4.96ms
+[req-0277] [AUTH] executing middleware — 45.62ms
+[req-0278] [CACHE] parsing request body — 38.51ms
+[req-0279] [CACHE] dispatching event — 18.59ms
+[req-0280] [PAYMENT] serializing response — 20.28ms
+[req-0281] [DB] dispatching event — 3.39ms
+[req-0282] [AUTH] parsing request body — 40.33ms
+[req-0283] [CACHE] resolving query — 35.80ms
+[req-0284] [AUTH] parsing request body — 33.53ms
+[req-0285] [PAYMENT] executing middleware — 45.69ms
+[req-0286] [WS] parsing request body — 38.93ms
+[req-0287] [CACHE] executing middleware — 33.56ms
+[req-0288] [PAYMENT] parsing request body — 30.66ms
+[req-0289] [WS] dispatching event — 5.11ms
+[req-0290] [MAILER] opening DB connection — 21.94ms
+[req-0291] [AUTH] opening DB connection — 39.24ms
+[req-0292] [PAYMENT] checking JWT — 4.02ms
+[req-0293] [ROUTER] parsing request body — 5.39ms
+[req-0294] [MAILER] closing pool — 49.61ms
+[req-0295] [CACHE] dispatching event — 46.22ms
+[req-0296] [AUTH] executing middleware — 42.51ms
+[req-0297] [AUTH] hitting cache — 47.74ms
+[req-0298] [DB] serializing response — 14.13ms
+[req-0299] [ROUTER] closing pool — 22.48ms
+[req-0300] [CACHE] preparing SQL — 36.05ms
+[req-0301] [PAYMENT] closing pool — 44.09ms
+[req-0302] [MAILER] opening DB connection — 18.25ms
+[req-0303] [WS] hitting cache — 29.46ms
+[req-0304] [DB] executing middleware — 28.64ms
+[req-0305] [ROUTER] resolving query — 35.39ms
+[req-0306] [ROUTER] checking JWT — 9.37ms
+[req-0307] [ROUTER] checking JWT — 17.47ms
+[req-0308] [AUTH] opening DB connection — 2.76ms
+[req-0309] [WS] resolving query — 30.11ms
+[req-0310] [CACHE] closing pool — 45.24ms
+[req-0311] [DB] preparing SQL — 11.45ms
+[req-0312] [WS] hitting cache — 29.60ms
+[req-0313] [AUTH] serializing response — 28.32ms
+[req-0314] [WS] checking JWT — 47.09ms
+[req-0315] [CACHE] opening DB connection — 13.75ms
+[req-0316] [WS] parsing request body — 44.36ms
+[req-0317] [MAILER] checking JWT — 5.08ms
+[req-0318] [DB] serializing response — 38.67ms
+[req-0319] [PAYMENT] checking JWT — 47.65ms
+[req-0320] [WS] preparing SQL — 20.35ms
+[req-0321] [MAILER] checking JWT — 6.61ms
+[req-0322] [PAYMENT] dispatching event — 37.52ms
+[req-0323] [CACHE] closing pool — 17.74ms
+[req-0324] [ROUTER] dispatching event — 19.53ms
+[req-0325] [PAYMENT] serializing response — 3.89ms
+[req-0326] [PAYMENT] opening DB connection — 3.68ms
+[req-0327] [CACHE] closing pool — 44.47ms
+[req-0328] [ROUTER] parsing request body — 8.28ms
+[req-0329] [DB] parsing request body — 25.02ms
+[req-0330] [AUTH] parsing request body — 29.38ms
+[req-0331] [CACHE] preparing SQL — 37.87ms
+[req-0332] [MAILER] dispatching event — 6.98ms
+[req-0333] [WS] executing middleware — 12.54ms
+[req-0334] [MAILER] executing middleware — 25.73ms
+[req-0335] [WS] opening DB connection — 23.78ms
+[req-0336] [WS] executing middleware — 21.14ms
+[req-0337] [PAYMENT] opening DB connection — 4.37ms
+[req-0338] [MAILER] opening DB connection — 49.46ms
+[req-0339] [WS] opening DB connection — 33.32ms
+[req-0340] [ROUTER] executing middleware — 14.57ms
+[req-0341] [PAYMENT] resolving query — 46.31ms
+[req-0342] [DB] closing pool — 39.71ms
+[req-0343] [DB] hitting cache — 22.98ms
+[req-0344] [MAILER] dispatching event — 3.11ms
+[req-0345] [PAYMENT] dispatching event — 38.23ms
+[req-0346] [CACHE] closing pool — 6.94ms
+[req-0347] [WS] opening DB connection — 9.77ms
+[req-0348] [CACHE] closing pool — 30.54ms
+[req-0349] [AUTH] opening DB connection — 39.08ms
+[req-0350] [ROUTER] hitting cache — 36.00ms
+[req-0351] [ROUTER] preparing SQL — 47.38ms
+[req-0352] [WS] opening DB connection — 34.04ms
+[req-0353] [MAILER] hitting cache — 13.93ms
+[req-0354] [MAILER] serializing response — 30.22ms
+[req-0355] [DB] executing middleware — 16.40ms
+[req-0356] [WS] hitting cache — 6.18ms
+[req-0357] [AUTH] dispatching event — 5.63ms
+
+─── LOGS ──────────────────────────────────────────
+[INFO]  📖 Historique chargé — 7 commandes (↑↓ pour naviguer)
+[INFO]  LOG    → ✓ CLI connecté au serveur mock
+[INFO]  LOG    → Commandes: ping | start trace | stop trace | pause trace | status
+[WARN]  LOG    → GET /api/sessions 200 (320ms) — réponse lente
+[INFO]  LOG    → Svelte client reconnecté après 3s
+[INFO]  LOG    → Cache hit: products_list (TTL: 42s restants)
+[INFO]  LOG    → GET /api/products 200 (8ms)
+[ERROR] LOG    → POST /api/payments 500 — stripe timeout
+[WARN]  LOG    → GET /api/sessions 200 (320ms) — réponse lente
+[WARN]  LOG    → Rate limit proche pour IP 192.168.1.42 (87/100)
+[ERROR] LOG    → Échec connexion DB: timeout après 5000ms
+[INFO]  LOG    → Job "send_emails" terminé: 12 emails envoyés
+[INFO]  > start trace
+[INFO]  LOG    → ▶ Trace démarrée
+[INFO]  LOG    → POST /api/orders 201 (45ms)
+[WARN]  LOG    → Mémoire heap à 78% — GC en cours
+[INFO]  LOG    → WebSocket client connecté (id: ws-4421)
+[ERROR] LOG    → Échec connexion DB: timeout après 5000ms
+[INFO]  LOG    → PUT /api/users/99 200 (23ms)
+[INFO]  > ping
+[INFO]  SERVER → pong
+[INFO]  LOG    → Cache hit: products_list (TTL: 42s restants)
+[WARN]  LOG    → Mémoire heap à 78% — GC en cours
+[ERROR] LOG    → POST /api/payments 500 — stripe timeout
+[INFO]  LOG    → Job "send_emails" terminé: 12 emails envoyés
+[INFO]  LOG    → DELETE /api/sessions/old 200 — 34 sessions expirées supprimées
+[INFO]  LOG    → Cache hit: products_list (TTL: 42s restants)
+[INFO]  LOG    → Svelte client reconnecté après 3s
+[DEBUG] LOG    → Token JWT validé pour user_id=1042
+[ERROR] LOG    → POST /api/payments 500 — stripe timeout
+[INFO]  LOG    → Job "send_emails" terminé: 12 emails envoyés
+[INFO]  LOG    → PUT /api/users/99 200 (23ms)
+[INFO]  LOG    → POST /api/orders 201 (45ms)
+[WARN]  LOG    → Mémoire heap à 78% — GC en cours
+[INFO]  LOG    → Job "send_emails" terminé: 12 emails envoyés
+[ERROR] LOG    → Échec connexion DB: timeout après 5000ms
+[DEBUG] LOG    → Token JWT validé pour user_id=1042
+[WARN]  LOG    → GET /api/sessions 200 (320ms) — réponse lente
+[INFO]  LOG    → WebSocket client connecté (id: ws-4421)
+[INFO]  LOG    → Job "send_emails" terminé: 12 emails envoyés
+
+═══ 358 traces  40  logs ═══

@@ -1,4 +1,4 @@
-# Réflexions sur les Liasons
+# Réflexions sur les Liaisons
 
 # Types
 
@@ -36,3 +36,75 @@ Une solution:
 - Le canon doit anticiper sur la futur position de la cible. Donc l'observateur doit nous donner non seulement la position de la cible mais sa vitesse et sa direction (déduit des changements de position). Le canon pourrait le faire aussi avec les changements de position.
 
 Cela pourrait marcher avec un canon mobile et une cible mobile; calcul d'une trajectoire d'interception
+
+Et pour celui la, je te donne des extraits (c'est dans le code en commentaire):
+app.js:
+const express = require('express')
+const { getGraph } = require('./controllers/wrap-service.js')
+// const { cmdAction } = require('./controllers/action-service.js')
+const { getMovies, getMovie } = require('./controllers/movie-service.js')
+const { getPeoples, getPeople } = require('./controllers/people-service.js')
+// import { timeout } from './utils.js'
+
+const app = express()
+const port = 3000
+
+app.set('view engine', 'ejs')
+app.use(express.static('public'))
+
+app.get('/', (req, res) => {
+const user = {
+firstName: 'Tim',
+lastName: 'Cook'
+}
+
+res.render('pages/index', {
+user
+})
+})
+/*
+app.get(/.*cmd$/, function (req, res) {
+const action = req.query.action;
+const params = req.query.params;
+res.send( cmdAction( action, params ) )
+});
+_/
+Puis action-service.js:
+const fs = require('fs')
+const wrapper = require('wrapper')
+/_
+const actions = new Map()
+actions['glop'] = (param) => {wrapper.setRecord(param); return wrapper.getRecord()}
+actions['pas_glop'] = (param) => {wrapper.setRecord(param); return wrapper.getRecord()}
+actions['exit'] = (action) => {return process.exit(0);}
+\*/
+
+function cmdAction( action, params ) {
+let result = `CMD -> action: ${action}, params: ${params}`
+if( actions[action] ) {
+const act = actions[action]
+result += ' -> ' + act(params)
+}
+console.log(result)
+return result
+}
+
+function call_after( param ) {
+/_ param = {
+id: fileName,
+module: moduleName,
+name: fct,
+content: `CALL:${moduleName}.${fct}(${getArgs(args)}) -> ${JSON.stringify(result)}`,
+function: fct,
+arguments: args,
+result: result
+} _/
+if(wrapper.getRecord()) {
+fs.appendFileSync('./trace.log', `fct: ${param.function}( ${param.arguments} ) -> ${param.result}\n`, 'utf8');
+// console.log(param.content)
+}
+}
+
+// wrapper.eventEmitter.on('call.after', call_after)
+
+// module.exports = {cmdAction}

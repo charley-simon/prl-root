@@ -8,7 +8,7 @@ Révéler, simplifier, redonner.
 
 Révéler. Simplifier. Autonomiser.
 
-" L’architecture logicielle d’un système est l’ensemble des structures nécessaires pour raisonner sur le système, ce qui comprend les éléments logiciels, les relations qui existent entre ces éléments, et les propriétés des éléments et des relations" Software architecture in practice
+"L’architecture logicielle d’un système est l’ensemble des structures nécessaires pour raisonner sur le système, ce qui comprend les éléments logiciels, les relations qui existent entre ces éléments, et les propriétés des éléments et des relations" Software architecture in practice
 
 Quel que soit le type d’architecture utilisée, les exigences sont de trois types :
 
@@ -50,3 +50,19 @@ Si les exigences peuvent s'exprimer en indicateurs, alors un logiciel pourrait l
 - # Indicateurs QAR
 
 Voir docs/architecture.md pour la vision globale.
+
+
+🧭 9. Ce que tu es en train d’inventer
+
+Tu n’es pas en train de copier Oracle.
+
+Tu construis :
+
+🧠 un moteur observable
+🔍 auto-diagnostique
+🔁 reproductible
+📊 améliorable par l’expérience
+
+et ça…
+
+c’est exactement ce que les systèmes modernes cherchent à devenir.

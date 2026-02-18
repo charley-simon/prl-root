@@ -1,0 +1,16 @@
+═══ CLI EXPORT — 20261211_221312 ═══
+
+─── TRACES ────────────────────────────────────────
+(aucune trace)
+
+─── LOGS ──────────────────────────────────────────
+[INFO]  LOG    → ✓ CLI connecté au serveur mock
+[INFO]  LOG    → Commandes: ping | start trace | stop trace | pause trace | status
+[WARN]  LOG    → Rate limit proche pour IP 192.168.1.42 (87/100)
+[INFO]  LOG    → PUT /api/users/99 200 (23ms)
+[INFO]  LOG    → Cache hit: products_list (TTL: 42s restants)
+[WARN]  LOG    → Mémoire heap à 78% — GC en cours
+[INFO]  LOG    → Svelte client reconnecté après 3s
+[ERROR] LOG    → POST /api/payments 500 — stripe timeout
+
+═══ 0 traces  8  logs ═══
