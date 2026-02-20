@@ -1,0 +1,29 @@
+[
+  {
+    "entity": "People",
+    "id": 1,
+    "purpose": "Viewing director profile",
+    "intent": { "role": "Director" },
+    "state": "resolved"
+  },
+  {
+    "entity": "Movie",
+    "id": 2,
+    "purpose": "Selected movie directed by this person",
+    "state": "resolved",
+    "resolvedBy": {
+      "relation": "people-director-movies",
+      "via": "Movie-People",
+      "filters": [
+        { "field": "peopleId", "value": 1 },
+        { "field": "roleId", "value": "Director" }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "purpose": "List actors of the selected movie",
+    "intent": { "role": "Actor" },
+    "state": "unresolved"
+  }
+]

@@ -1,143 +1,91 @@
 // engine/Engine.ts
-import { StackStore } from './stores/stackStore'
-import { Resolver } from './resolver/resolveContext'
-import type { Frame, Graph } from './stores/types'
 
-export interface EngineAction {
-  name: string
-  execute?: (
-    stack: Frame[]
-  ) =>
-    | { type: 'SUCCESS' | 'FAIL' | 'DEFER'; [key: string]: any }
-    | Promise<{ type: 'SUCCESS' | 'FAIL' | 'DEFER'; [key: string]: any }>
-  WHEN?: (ctx: Record<string, Frame>, stack: Frame[]) => boolean
-  executed?: boolean
-  retryCount?: number
-  cooldown?: number
-  cooldownUntil?: number
-  weight?: number
-  onUse?: (result: any) => void
-  inputs?: string[]
-  contextRequired?: string[]
-}
-
-export interface EngineStepResult {
-  time: number
-  state: 'RESOLVED' | 'RETRY_LATER'
-  retryCount: number
-  deferredJobs: EngineAction[]
-  executedAction: string | null
-}
-
-export interface EngineOptions {
-  context: Frame[]
-  graph: Graph
-  actions: EngineAction[]
-  maxRetry?: number
-}
+import type { Action, Frame, EngineResult, EngineStepResult } from './stores/types'
 
 export class Engine {
-  private stackStore: StackStore
-  private resolver: Resolver
-  private graph: Graph
-  private actions: EngineAction[]
-  private maxRetry: number
-  private deferredJobs: EngineAction[] = []
-  private time: number = 0
+  private stack: Frame[]
+  private actions: Action[]
+  private time = 0
+  private retryCount = 0
+  private deferredJobs: Action[] = []
 
-  constructor({ context, graph, actions, maxRetry = 3 }: EngineOptions) {
-    this.stackStore = new StackStore(context)
-    this.graph = graph
-    this.actions = actions.map(a => ({
-      ...a,
-      executed: false,
-      retryCount: 0
-    }))
-    this.resolver = new Resolver(this.stackStore, this.graph.relations)
-    this.maxRetry = maxRetry
+  constructor(params: { context: Frame[]; actions: Action[]; graph?: any }) {
+    this.stack = params.context
+    this.actions = params.actions
   }
 
-  async step(): Promise<EngineStepResult> {
-    this.resolver.resolveContext()
+  async run(maxSteps = 50): Promise<EngineStepResult[]> {
+    const results: EngineStepResult[] = []
 
-    const ctx = this.stackStore.getContext()
-    const stack = this.stackStore.getFrames()
+    for (let i = 0; i < maxSteps; i++) {
+      const step = await this.step()
+      results.push(step)
 
-    const availableActions = this.actions.filter(a => {
-      const whenOk = !a.WHEN || a.WHEN(ctx, stack)
-      const cooldownOk = !a.cooldownUntil || this.time >= a.cooldownUntil
-      return !a.executed && whenOk && cooldownOk
-    })
+      // Stop si aucune action dispo et pas de deferred
+      if (!step.executedAction && this.deferredJobs.length === 0) {
+        break
+      }
+    }
 
-    if (availableActions.length === 0) {
-      this.time++
+    return results
+  }
+
+  private async step(): Promise<EngineStepResult> {
+    this.time++
+
+    const available = this.actions
+      .filter(a => !a.executed)
+      .filter(a => {
+        if (!a.WHEN) return true
+
+        if (typeof a.WHEN === 'function') {
+          return a.WHEN({}, this.stack)
+        }
+
+        // Si WHEN est string
+        return Function('stack', `return (${a.WHEN})`)(this.stack)
+      })
+      .filter(a => {
+        if (!a.cooldownUntil) return true
+        return this.time >= a.cooldownUntil
+      })
+      .sort((a, b) => (b.weight ?? 0) - (a.weight ?? 0))
+
+    if (available.length === 0) {
       return {
         time: this.time,
-        state: 'RETRY_LATER',
-        retryCount: 0,
-        deferredJobs: [...this.deferredJobs],
-        executedAction: null
+        retryCount: this.retryCount,
+        deferredJobs: this.deferredJobs
       }
     }
 
-    const selected = availableActions.sort((a, b) => (b.weight || 0) - (a.weight || 0))[0]
+    const selected = available[0]
 
-    let result: { type: 'SUCCESS' | 'FAIL' | 'DEFER'; [key: string]: any }
-    try {
-      result = await (typeof selected.execute === 'function'
-        ? selected.execute(this.stackStore.getFrames()) // <-- on passe la stack
-        : { type: 'SUCCESS' })
-    } catch (e) {
-      console.error(`[Engine] action ${selected.name} failed`, e)
-      result = { type: 'FAIL', reason: 'EXCEPTION' }
+    let result: EngineResult = { type: 'SUCCESS' }
+
+    if (selected.execute) {
+      result = await selected.execute(this.stack)
     }
 
-    if (result.type === 'FAIL') {
-      selected.retryCount! += 1
-      if (selected.retryCount! <= this.maxRetry) {
-        selected.cooldownUntil = this.time + (selected.cooldown || 1)
-        this.deferredJobs.push(selected)
-      } else {
-        selected.executed = true
-      }
-    } else if (result.type === 'DEFER') {
-      selected.cooldownUntil = this.time + (selected.cooldown || 1)
-      this.deferredJobs.push(selected)
-    } else {
+    if (result.type === 'SUCCESS') {
       selected.executed = true
-      if (selected.onUse) selected.onUse(result)
+      selected.onUse?.(this.stack)
     }
 
-    // après SUCCESS, DEFER etc.
-    if (result.type === 'SUCCESS' && typeof selected.onUse === 'function') {
-      selected.onUse(this.stackStore.getFrames()) // <-- idem, on passe stack
+    if (result.type === 'DEFER') {
+      selected.cooldownUntil = this.time + (selected.cooldown ?? 1)
+      this.deferredJobs.push(selected)
     }
-
-    this.time++
 
     return {
       time: this.time,
-      state: result.type === 'FAIL' || result.type === 'DEFER' ? 'RETRY_LATER' : 'RESOLVED',
-      retryCount: selected.retryCount || 0,
-      deferredJobs: [...this.deferredJobs],
+      retryCount: this.retryCount,
+      deferredJobs: this.deferredJobs,
       executedAction: selected.name
     }
   }
 
-  async run(maxSteps = 50): Promise<EngineStepResult[]> {
-    const steps: EngineStepResult[] = []
-
-    for (let i = 0; i < maxSteps; i++) {
-      const stepRes = await this.step()
-      steps.push(stepRes)
-
-      const unfinished = this.stackStore.getFrames().some(f => f.state !== 'RESOLVED')
-      if (!unfinished && this.deferredJobs.length === 0) break
-
-      // 🔹 stop immediately si aucune action n’est disponible
-      if (stepRes.state === 'RETRY_LATER' && stepRes.deferredJobs.length === 0) break
-    }
-
-    return steps
+  public getStack() {
+    return this.stack
   }
 }

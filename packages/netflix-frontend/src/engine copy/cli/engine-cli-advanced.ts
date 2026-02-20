@@ -2,16 +2,12 @@
 import fs from 'fs'
 import path from 'path'
 import { Engine } from '../Engine'
-import type { Frame, Action, EngineStepResult } from '../stores/types'
+import type { Frame, EngineAction, EngineStepResult } from '../stores/types'
 
 type Scenario = 'api_succes' | 'api_fail' | 'scenario1'
 
 // ---------------- HELPER POUR EVAL ----------------
-function evalCondition(code: string, context: any) {
-  return Function(...Object.keys(context), `return (${code})`)(...Object.values(context))
-}
-
-function evalExecute(code: string, context: any) {
+function evalWithContext(code: string, context: Record<string, any>): any {
   return Function(...Object.keys(context), code)(...Object.values(context))
 }
 
@@ -27,12 +23,13 @@ async function runScenario(scenario: Scenario) {
   const graph = loadJson('graph.json')
 
   // Transforme les actions JSON en EngineAction
-  const wrappedActions: Action[] = actionsRaw.map(a => ({
+  const wrappedActions: EngineAction[] = actionsRaw.map(a => ({
     ...a,
-    WHEN: a.WHEN ? (ctx, stack) => evalCondition(a.WHEN, { ctx, stack }) : undefined,
-
-    execute: a.execute ? stack => evalExecute(a.execute, { stack }) : undefined,
-    onUse: a.onUse ? stack => evalExecute(a.onUse, { stack }) : undefined,
+    WHEN: a.WHEN
+      ? (ctx: Record<string, Frame>, stack: Frame[]) => evalWithContext(a.WHEN, { ctx, stack })
+      : undefined,
+    execute: a.execute ? (stack: Frame[]) => evalWithContext(a.execute, { stack }) : undefined,
+    onUse: a.onUse ? () => evalWithContext(a.onUse, {}) : undefined,
     executed: false,
     retryCount: 0
   }))
@@ -43,7 +40,7 @@ async function runScenario(scenario: Scenario) {
   console.log(`SCENARIO: ${scenario}`)
   console.log('===================================')
 
-  const steps: EngineStepResult[] = await engine.run(8)
+  const steps: EngineStepResult[] = await engine.run(50)
 
   steps.forEach((step, idx) => {
     console.log('\n-----------------------------------')
@@ -63,7 +60,7 @@ async function runScenario(scenario: Scenario) {
       console.log(`DEFERRED JOBS: none`)
     }
 
-    console.log('STACK:', JSON.stringify(engine.getStack(), null, 2))
+    console.log('STACK:', JSON.stringify(engine['stackStore'].getFrames(), null, 2))
     console.log(step.executedAction ? `→ SELECTED: ${step.executedAction}` : 'NO ACTION AVAILABLE')
     console.log('RESULT:', step.executedAction ? 'SUCCESS / FAIL / DEFER handled' : 'N/A')
   })

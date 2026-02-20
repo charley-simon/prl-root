@@ -1,0 +1,7 @@
+[
+  {
+    "relationName": "people-movies",
+    "field": "departmentId",
+    "value": "Acting"
+  }
+]
