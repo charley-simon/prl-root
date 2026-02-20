@@ -4,7 +4,7 @@ interface TmdbGeneric {
   id: number
 }
 
-interface TmdbGenre extends TmdbGeneric {
+export interface TmdbGenre extends TmdbGeneric {
   name: string
 }
 
@@ -80,6 +80,7 @@ interface TmdbCrew extends TmdbMoviePerson {
 }
 
 export interface TmdbExternalIds extends TmdbGeneric {
+  id: number
   imdb_id?: string
   wikidata_id?: string
   facebook_id?: string

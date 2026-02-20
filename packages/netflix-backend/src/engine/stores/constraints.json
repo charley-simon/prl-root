@@ -1,0 +1,17 @@
+[
+  {
+    "relationName": "people-director-movies",
+    "field": "roleId",
+    "value": "Director"
+  },
+  {
+    "relationName": "movie-actors",
+    "field": "roleId",
+    "value": "Actor"
+  },
+  {
+    "relationName": "people-actor-movies",
+    "field": "roleId",
+    "value": "Actor"
+  }
+]

@@ -1,23 +1,29 @@
 import { Type, Static } from '@sinclair/typebox'
+import { PersonShortSchema } from '../../schemas/people/person-short.schema'
 
-export const PersonDetailSchema = Type.Object({
-  id: Type.Integer({ description: 'Identifiant unique de la personne' }),
-  name: Type.String({ description: 'Nom complet' }),
+// Type.Intersect = extends en TypeBox
 
-  gender: Type.Optional(Type.Integer()),
+export const PersonDetailSchema = Type.Intersect([
+  PersonShortSchema,
+  Type.Object({
+    name: Type.String({ description: 'Nom complet' }),
 
-  biography: Type.Optional(Type.String()),
+    gender: Type.Optional(Type.Integer()),
 
-  birthDay: Type.Optional(Type.String({ format: 'date' })),
-  deathDay: Type.Optional(Type.Union([Type.String({ format: 'date' }), Type.Null()])),
+    biography: Type.Optional(Type.String()),
 
-  birthPlace: Type.Optional(Type.String()),
+    birthDay: Type.Optional(Type.String({ format: 'date' })),
+    deathDay: Type.Optional(Type.Union([Type.String({ format: 'date' }), Type.Null()])),
 
-  homepage: Type.Optional(Type.Union([Type.String({ format: 'uri' }), Type.Null()])),
+    birthPlace: Type.Optional(Type.String()),
 
-  popularity: Type.Optional(Type.Number()),
+    homepage: Type.Optional(Type.Union([Type.String({ format: 'uri' }), Type.Null()])),
 
-  externalIds: Type.Optional(Type.Record(Type.String(), Type.String()))
-})
+    popularity: Type.Optional(Type.Number()),
+
+    wikiDescription: Type.Optional(Type.String())
+  })
+])
 
 export type Person = Static<typeof PersonDetailSchema>
+export type People = Static<typeof PersonDetailSchema>[]

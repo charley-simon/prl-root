@@ -19,9 +19,9 @@ describe('UC4 – Films similaires (mock TMDB)', () => {
     similar.forEach(s => {
       expect(s.id).not.toBe(movieId)
 
-      const intersection = s.categories.filter(c => movie.categories.includes(c))
+      const intersection = s.categories?.filter(c => movie.categories?.includes(c))
 
-      expect(intersection.length).toBeGreaterThan(0)
+      expect(intersection?.length).toBeGreaterThan(0)
     })
   })
 

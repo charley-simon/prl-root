@@ -2,9 +2,15 @@ import fs from 'fs'
 import path from 'path'
 import fetch from 'node-fetch'
 import { TmdbMovieDetails, TmdbMovieCredits, TmdbExternalIds, TmdbMovieImages } from './tmdb.types'
+import { Movie } from '../../schemas/movies/movie-detail.schema'
+import { IEntityProvider } from '../EntityProvider'
 
-export class TmdbHttpMovieProvider {
+export class TmdbHttpMovieProvider implements IEntityProvider<Movie> {
   constructor(private token: string) {}
+
+  async enrich(movie: Movie): Promise<Movie> {
+    return movie
+  }
 
   private get headers() {
     return { Authorization: `Bearer ${this.token}`, Accept: 'application/json' }

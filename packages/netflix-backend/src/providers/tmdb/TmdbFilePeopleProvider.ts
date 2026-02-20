@@ -1,9 +1,15 @@
 import fs from 'fs'
 import path from 'path'
 import { TmdbPerson } from './tmdb.types'
+import { Person } from '../../schemas/people/person-detail.schema'
+import { IEntityProvider } from '../EntityProvider'
 
-export class TmdbFilePeopleProvider {
+export class TmdbFilePeopleProvider implements IEntityProvider<Person> {
   constructor(private baseDir: string) {}
+
+  async enrich(person: Person): Promise<Person> {
+    return person
+  }
 
   private async readJson<T>(fileName: string): Promise<T> {
     const filePath = path.join(this.baseDir, fileName)

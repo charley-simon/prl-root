@@ -1,4 +1,4 @@
-import { IMovieProvider } from '../providers/IMovieProvider'
+import { IMovieProvider } from '../providers/EntityProvider'
 import { Movie, EnrichLevel } from '../models/types'
 import { engineEvents, EngineEventType, statsEvents, StatsEventType } from '../events/events'
 

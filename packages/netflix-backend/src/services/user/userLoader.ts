@@ -1,3 +1,4 @@
+import { ENV } from '../../config/env'
 import fs from 'fs'
 import path from 'path'
 import { TypeCompiler } from '@sinclair/typebox/compiler'
@@ -6,6 +7,7 @@ import { UserSchema, User } from '../../schemas/users/user.schema'
 const UserValidator = TypeCompiler.Compile(UserSchema)
 
 export function loadUsers(dataPath: string): User[] {
+  console.log(`userLoader.loadUser(${dataPath}): ENV.dataDir: ${ENV.dataDir}`)
   const filePath = path.join(dataPath, 'users.json')
   const raw = fs.readFileSync(filePath, 'utf-8')
   const json = JSON.parse(raw)

@@ -1,4 +1,6 @@
-import { describe, it, expect } from 'vitest'
+import 'dotenv/config' // charge automatiquement .env à la racine
+import { ENV } from '../../src/config/env'
+import { describe, it, expect, beforeAll } from 'vitest'
 import { User } from '../../src/schemas/users/user.schema'
 import { UserServiceImpl } from '../../src/services/user/userService'
 import { UserCache } from '../../src/services/user/userCache'
@@ -6,6 +8,10 @@ import { UserCache } from '../../src/services/user/userCache'
 describe('UC1 – Login simple', () => {
   const userCache = new UserCache('./data')
   const userService = new UserServiceImpl(userCache)
+
+  beforeAll(async () => {
+    
+  })
 
   it('doit connecter un utilisateur existant avec mot de passe correct', async () => {
     const user: User = await userService.login('alice', 'pass123')

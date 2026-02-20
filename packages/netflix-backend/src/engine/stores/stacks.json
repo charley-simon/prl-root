@@ -1,0 +1,196 @@
+[
+  {
+    "entity": "People",
+    "id": 1,
+    "purpose": "Director profile",
+    "intent": {
+      "role": "Director"
+    },
+    "state": "RESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 2,
+    "purpose": "Movie by director 1",
+    "intent": {},
+    "state": "RESOLVED",
+    "resolvedBy": {
+      "relation": "people-director-movies",
+      "via": "Movie-People",
+      "filters": [
+        {
+          "field": "peopleId",
+          "value": 1
+        },
+        {
+          "field": "roleId",
+          "value": "Director"
+        }
+      ]
+    }
+  },
+  {
+    "entity": "People",
+    "purpose": "Actors in Movie 2",
+    "intent": {
+      "role": "Actor"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 10,
+    "purpose": "Inspect actor 10",
+    "intent": {
+      "role": "Actor"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 3,
+    "purpose": "Other movie where actor 10 plays",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 5,
+    "purpose": "Co-actor in Movie 3",
+    "intent": {
+      "role": "Actor"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 4,
+    "purpose": "Movie by co-actor 5",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 20,
+    "purpose": "Writer of Movie 4",
+    "intent": {
+      "role": "Writer"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 21,
+    "purpose": "Actor in Movie 4",
+    "intent": {
+      "role": "Actor"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 5,
+    "purpose": "Movie where actor 21 plays",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 30,
+    "purpose": "Director of Movie 5",
+    "intent": {
+      "role": "Director"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 6,
+    "purpose": "Other movie by director 30",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 40,
+    "purpose": "Actor in Movie 6",
+    "intent": {
+      "role": "Actor"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 7,
+    "purpose": "Movie where actor 40 plays",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 50,
+    "purpose": "Co-actor in Movie 7",
+    "intent": {
+      "role": "Actor"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 8,
+    "purpose": "Movie by director 50",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 60,
+    "purpose": "Writer in Movie 8",
+    "intent": {
+      "role": "Writer"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 9,
+    "purpose": "Other movie by writer 60",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "People",
+    "id": 70,
+    "purpose": "Actor in Movie 9",
+    "intent": {
+      "role": "Actor"
+    },
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  },
+  {
+    "entity": "Movie",
+    "id": 10,
+    "purpose": "Final movie of actor 70",
+    "intent": {},
+    "state": "UNRESOLVED",
+    "resolvedBy": null
+  }
+]

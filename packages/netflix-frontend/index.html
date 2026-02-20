@@ -10,3 +10,17 @@
     <script type="module" src="./src/main.ts"></script>
   </body>
 </html>
+/** Ce que je te conseillerais maintenant (sans te disperser) - Ne pas implémenter tout de suite -
+Ajouter conceptuellement : - WHEN - weight - onUse (alert / trace) - Tester un seul scénario de
+panne - Observer comment le moteur réagit Quand tu sentiras le moteur “vivre” sans devenir
+chaotique, tu sauras que tu es au bon endroit. Concept : vues comme des “relations actives” Si
+chaque vue (liste, grid, fiche) est déclarée avec : - Entrées nécessaires : quels frames / données
+elle exploite - Sortie / intention : ce qu’elle peut afficher - Contrainte / précondition : contexte
+minimal pour fonctionner Alors tu peux considérer chaque vue comme une action dans le graphe de
+présentation : Intention utilisateur → moteur → choix de la vue la plus adaptée - Le moteur sait
+quelles données sont déjà résolues dans la pile. - Il sait quelle vue peut consommer quelles
+données. - Il peut donc choisir la vue la plus adaptée automatiquement, de manière déterministe. [ {
+"name": "MoviesGrid", "inputs": ["Movie"], "type": "grid", "contextRequired": ["Movie.directorId"]
+}, { "name": "ActorsList", "inputs": ["People"], "type": "list", "contextRequired": ["Movie.id"] },
+{ "name": "PeopleDetail", "inputs": ["People"], "type": "detail", "contextRequired": ["People.id"] }
+] */

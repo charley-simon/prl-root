@@ -2,7 +2,7 @@
 import fs from 'fs'
 import path from 'path'
 import { Movie } from '../schemas/movies/movie-detail.schema'
-import { IMovieProvider } from '../providers/IMovieProvider'
+import { IMovieProvider } from '../providers/EntityProvider'
 import { MetricsRegistry } from '../services/monitoring/metricsRegistry'
 
 const DATA_DIR = path.resolve('./data/movies')

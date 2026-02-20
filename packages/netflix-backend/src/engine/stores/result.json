@@ -1,0 +1,34 @@
+[
+  {
+    "name": "people-director-movie",
+    "fromEntity": "People",
+    "toEntity": "Movie",
+    "via": "Movie-People",
+    "constraintFilters": [
+      {
+        "field": "roleId",
+        "value": "Director"
+      },
+      {
+        "field": "departmentId",
+        "value": "Directing"
+      }
+    ]
+  },
+  {
+    "name": "people-actor-movie",
+    "fromEntity": "People",
+    "toEntity": "Movie",
+    "via": "Movie-People",
+    "constraintFilters": [
+      {
+        "field": "roleId",
+        "value": "Actor"
+      },
+      {
+        "field": "departmentId",
+        "value": "Acting"
+      }
+    ]
+  }
+]

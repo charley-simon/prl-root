@@ -1,0 +1,16 @@
+[
+  {
+    "name": "fetchMovie",
+    "weight": 10,
+    "WHEN": "stack[0].state === 'UNKNOWN'",
+    "execute": "stack[0].state = 'AVAILABLE'; return { type: 'SUCCESS' }",
+    "onUse": "console.log('fetchMovie executed')"
+  },
+  {
+    "name": "proposeSimilar",
+    "weight": 20,
+    "WHEN": "stack[0].state !== 'AVAILABLE'",
+    "execute": "stack[0].state = 'AVAILABLE'; return { type: 'SUCCESS' }",
+    "onUse": "console.log('proposeSimilar executed')"
+  }
+]
