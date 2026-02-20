@@ -2,7 +2,7 @@
 import fs from 'fs'
 import path from 'path'
 import { Engine } from '../Engine'
-import type { Frame, Action, EngineStepResult } from '../stores/types'
+import type { Frame, Action } from '../stores/types'
 
 type Scenario = 'api_succes' | 'api_fail' | 'scenario1'
 
@@ -24,26 +24,28 @@ async function runScenario(scenario: Scenario) {
 
   const context: Frame[] = loadJson('context.json')
   const actionsRaw: any[] = loadJson('actions.json')
-  const graph = loadJson('graph.json')
 
   // Transforme les actions JSON en EngineAction
   const wrappedActions: Action[] = actionsRaw.map(a => ({
     ...a,
-    WHEN: a.WHEN ? (ctx, stack) => evalCondition(a.WHEN, { ctx, stack }) : undefined,
-
-    execute: a.execute ? stack => evalExecute(a.execute, { stack }) : undefined,
-    onUse: a.onUse ? stack => evalExecute(a.onUse, { stack }) : undefined,
+    WHEN: a.WHEN
+      ? (ctx: Record<string, Frame>, stack: Frame[]) => evalCondition(a.WHEN, { ctx, stack })
+      : undefined,
+    execute: a.execute ? (stack: Frame[]) => evalExecute(a.execute, { stack }) : undefined,
+    onUse: a.onUse ? (stack: Frame[]) => evalExecute(a.onUse, { stack }) : undefined,
     executed: false,
-    retryCount: 0
+    retryCount: 0,
+    cooldown: a.cooldown ?? 1
   }))
 
-  const engine = new Engine({ context, graph, actions: wrappedActions })
+  // Crée l’engine avec stack initial
+  const engine = new Engine({ actions: wrappedActions, stack: context })
 
   console.log('===================================')
   console.log(`SCENARIO: ${scenario}`)
   console.log('===================================')
 
-  const steps: EngineStepResult[] = await engine.run(8)
+  const steps = await engine.run(8)
 
   steps.forEach((step, idx) => {
     console.log('\n-----------------------------------')
@@ -52,20 +54,15 @@ async function runScenario(scenario: Scenario) {
     console.log(`TIME: ${step.time}`)
     console.log(`RETRY COUNT: ${step.retryCount}`)
 
-    // Affiche les actions DEFER avec cooldown restant
-    if (step.deferredJobs.length > 0) {
-      const deferredStatus = step.deferredJobs.map(d => {
-        const remaining = d.cooldownUntil ? d.cooldownUntil - step.time : 0
-        return `${d.name} (cooldown: ${remaining})`
-      })
-      console.log(`DEFERRED JOBS: ${deferredStatus.join(', ')}`)
+    if (step.deferredJobs && step.deferredJobs.length > 0) {
+      console.log(`DEFERRED JOBS: ${step.deferredJobs.join(', ')}`)
     } else {
       console.log(`DEFERRED JOBS: none`)
     }
 
     console.log('STACK:', JSON.stringify(engine.getStack(), null, 2))
-    console.log(step.executedAction ? `→ SELECTED: ${step.executedAction}` : 'NO ACTION AVAILABLE')
-    console.log('RESULT:', step.executedAction ? 'SUCCESS / FAIL / DEFER handled' : 'N/A')
+    console.log(step.selectedAction ? `→ SELECTED: ${step.selectedAction}` : 'NO ACTION AVAILABLE')
+    console.log('RESULT:', step.selectedAction ? 'SUCCESS / FAIL / DEFER handled' : 'N/A')
   })
 
   console.log('\n=========== END ===========')

@@ -16,7 +16,7 @@ describe('Scenario 1 - Test moteur CLI', () => {
     const graph = loadJson('graph.json')
 
     const engine = new Engine({ context, actions, graph })
-    const result = await engine.run()
+    const result = await engine.run(50)
 
     const expectedPath = path.join(scenarioPath, 'expected.json')
     if (!fs.existsSync(expectedPath)) {

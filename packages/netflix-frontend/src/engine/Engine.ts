@@ -1,91 +1,136 @@
-// engine/Engine.ts
+// Engine.ts
+import type { Action } from './stores/types'
 
-import type { Action, Frame, EngineResult, EngineStepResult } from './stores/types'
+export type Frame = {
+  entity: string
+  id: number
+  state: string
+  purpose?: string
+  intent?: Record<string, any>
+}
+
+export type EngineResultType = 'SUCCESS' | 'DEFER' | 'FAIL'
+
+export type EngineResult = {
+  type: EngineResultType
+  [key: string]: any
+}
+
+export type EngineStepResult = {
+  time: number
+  selectedAction?: string
+  result?: EngineResult
+  retryCount: number
+  deferredJobs: string[]
+}
+
+type EngineConfig = {
+  actions: Action[]
+  stack?: Frame[]
+}
 
 export class Engine {
-  private stack: Frame[]
   private actions: Action[]
   private time = 0
+  private stack: Frame[]
   private retryCount = 0
-  private deferredJobs: Action[] = []
 
-  constructor(params: { context: Frame[]; actions: Action[]; graph?: any }) {
-    this.stack = params.context
-    this.actions = params.actions
+  constructor(config: EngineConfig) {
+    this.actions = config.actions
+    this.stack = config.stack ?? []
   }
 
-  async run(maxSteps = 50): Promise<EngineStepResult[]> {
+  getStack() {
+    return this.stack
+  }
+
+  async run(steps: number): Promise<EngineStepResult[]> {
     const results: EngineStepResult[] = []
-
-    for (let i = 0; i < maxSteps; i++) {
-      const step = await this.step()
-      results.push(step)
-
-      // Stop si aucune action dispo et pas de deferred
-      if (!step.executedAction && this.deferredJobs.length === 0) {
-        break
-      }
+    for (let i = 0; i < steps; i++) {
+      const res = await this.step()
+      results.push(res)
     }
-
     return results
   }
 
   private async step(): Promise<EngineStepResult> {
     this.time++
 
-    const available = this.actions
-      .filter(a => !a.executed)
-      .filter(a => {
-        if (!a.WHEN) return true
-
-        if (typeof a.WHEN === 'function') {
-          return a.WHEN({}, this.stack)
-        }
-
-        // Si WHEN est string
-        return Function('stack', `return (${a.WHEN})`)(this.stack)
-      })
-      .filter(a => {
-        if (!a.cooldownUntil) return true
-        return this.time >= a.cooldownUntil
-      })
-      .sort((a, b) => (b.weight ?? 0) - (a.weight ?? 0))
+    const available = this.getAvailableActions()
 
     if (available.length === 0) {
+      this.retryCount++
       return {
         time: this.time,
         retryCount: this.retryCount,
-        deferredJobs: this.deferredJobs
+        deferredJobs: this.getDeferredNames()
       }
     }
 
-    const selected = available[0]
+    this.retryCount = 0
 
-    let result: EngineResult = { type: 'SUCCESS' }
+    const selected = this.weightedPick(available)!
+    let result: EngineResult = { type: 'FAIL' }
 
     if (selected.execute) {
-      result = await selected.execute(this.stack)
+      try {
+        result = await selected.execute(this.stack)
+      } catch {
+        result = { type: 'FAIL' }
+      }
     }
 
-    if (result.type === 'SUCCESS') {
-      selected.executed = true
-      selected.onUse?.(this.stack)
+    if (selected.onUse) {
+      try {
+        selected.onUse(this.stack)
+      } catch (_err) {
+        // Ignore
+      }
     }
 
     if (result.type === 'DEFER') {
       selected.cooldownUntil = this.time + (selected.cooldown ?? 1)
-      this.deferredJobs.push(selected)
+    } else if (result.type === 'SUCCESS') {
+      selected.cooldownUntil = undefined
     }
 
     return {
       time: this.time,
+      selectedAction: selected.name,
+      result,
       retryCount: this.retryCount,
-      deferredJobs: this.deferredJobs,
-      executedAction: selected.name
+      deferredJobs: this.getDeferredNames()
     }
   }
 
-  public getStack() {
-    return this.stack
+  private getAvailableActions(): Action[] {
+    return this.actions.filter(a => {
+      const notInCooldown = !a.cooldownUntil || a.cooldownUntil <= this.time
+
+      let whenOk = true
+      if (typeof a.WHEN === 'function') {
+        whenOk = a.WHEN({}, this.stack) // ctx vide si tu n’as pas besoin d’un vrai ctx
+      } else if (typeof a.WHEN === 'string') {
+        // Optionnel : tu peux ajouter un eval ici si tu veux supporter string
+        whenOk = true
+      }
+
+      return notInCooldown && whenOk
+    })
+  }
+
+  private getDeferredNames(): string[] {
+    return this.actions.filter(a => a.cooldownUntil && a.cooldownUntil > this.time).map(a => a.name)
+  }
+
+  private weightedPick(actions: Action[]): Action {
+    const totalWeight = actions.reduce((sum, a) => sum + (a.weight ?? 1), 0)
+    const r = Math.random() * totalWeight
+    let acc = 0
+    for (const a of actions) {
+      acc += a.weight ?? 1
+      if (r <= acc) return a
+    }
+    return actions[actions.length - 1]
   }
 }
