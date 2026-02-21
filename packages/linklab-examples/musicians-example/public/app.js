@@ -1,5 +1,4 @@
 // public/app.js
-import
 import { Engine } from 'linklab'
 
 // ==================== LOGGER ====================
@@ -72,20 +71,24 @@ class DataLoader {
       logger.info(`Relations: ${graph.relations.length}`)
 
       logger.section('ARTISTS OVERVIEW')
-      logger.table(artists.map(a => ({
-        Name: a.name,
-        Era: a.era,
-        Genre: a.genre,
-        Country: a.country
-      })))
+      logger.table(
+        artists.map(a => ({
+          Name: a.name,
+          Era: a.era,
+          Genre: a.genre,
+          Country: a.country
+        }))
+      )
 
       logger.section('TRACKS OVERVIEW')
-      logger.table(tracks.map(t => ({
-        Title: t.title,
-        Artist: artists.find(a => a.id === t.artist)?.name || t.artist,
-        Year: t.year,
-        Samples: t.samples?.length || 0
-      })))
+      logger.table(
+        tracks.map(t => ({
+          Title: t.title,
+          Artist: artists.find(a => a.id === t.artist)?.name || t.artist,
+          Year: t.year,
+          Samples: t.samples?.length || 0
+        }))
+      )
 
       return { artists, tracks, graph }
     } catch (error) {
@@ -151,6 +154,7 @@ class MusiciansNavigator {
     // Run pathfinding
     logger.section('RUNNING PATHFINDING')
     return engine.run().then(results => {
+      console.log('🔍 DEBUG: results =', results) // ✅ AJOUTER
       if (results.length === 0 || !results[0].path) {
         console.log('❌ No path found')
         return null
@@ -185,12 +189,7 @@ class MusiciansNavigator {
         // Show relation
         if (i < path.relations.length) {
           const rel = path.relations[i]
-          logger.connection(
-            rel.fromEntity,
-            rel.toEntity,
-            rel.via,
-            rel.weight
-          )
+          logger.connection(rel.fromEntity, rel.toEntity, rel.via, rel.weight)
         }
       })
 
@@ -270,10 +269,11 @@ class CanvasVisualizer {
     })
 
     // Tracks in the center (simplified - just a few key ones)
-    const keyTracks = this.data.tracks.filter(t =>
-      t.id === 'soul-makossa' ||
-      t.id === 'wanna-be-startin-somethin' ||
-      t.id === 'gettin-jiggy-wit-it'
+    const keyTracks = this.data.tracks.filter(
+      t =>
+        t.id === 'soul-makossa' ||
+        t.id === 'wanna-be-startin-somethin' ||
+        t.id === 'gettin-jiggy-wit-it'
     )
 
     keyTracks.forEach((track, i) => {
@@ -298,11 +298,7 @@ class CanvasVisualizer {
     // Paper grain
     for (let i = 0; i < 500; i++) {
       ctx.fillStyle = `rgba(139,90,43,${Math.random() * 0.05})`
-      ctx.fillRect(
-        Math.random() * this.canvas.width,
-        Math.random() * this.canvas.height,
-        1, 1
-      )
+      ctx.fillRect(Math.random() * this.canvas.width, Math.random() * this.canvas.height, 1, 1)
     }
 
     // Draw connections from graph
@@ -367,11 +363,9 @@ class CanvasVisualizer {
     const ctx = this.ctx
 
     this.nodes.forEach(node => {
-      const isInPath = this.currentPath &&
-        this.currentPath.nodes.includes(node.id)
+      const isInPath = this.currentPath && this.currentPath.nodes.includes(node.id)
 
-      const isSelected = node === this.selectedFrom ||
-        node === this.selectedTo
+      const isSelected = node === this.selectedFrom || node === this.selectedTo
 
       // Node circle
       if (node.type === 'artist') {
@@ -449,7 +443,7 @@ class App {
     const canvas = document.getElementById('canvas')
     const resetBtn = document.getElementById('reset-btn')
 
-    canvas.addEventListener('click', (e) => {
+    canvas.addEventListener('click', e => {
       const rect = canvas.getBoundingClientRect()
       const x = e.clientX - rect.left
       const y = e.clientY - rect.top
@@ -460,6 +454,7 @@ class App {
         if (!this.visualizer.selectedFrom) {
           this.visualizer.selectedFrom = clicked
           this.updateUI('from', clicked.label)
+          document.getElementById('reset-btn').disabled = false // ✅ AJOUTER
           logger.info(`Selected FROM: ${clicked.label}`)
         } else if (!this.visualizer.selectedTo && clicked !== this.visualizer.selectedFrom) {
           this.visualizer.selectedTo = clicked
@@ -486,11 +481,15 @@ class App {
 
   async findPath(fromId, toId) {
     const path = await this.navigator.findPath(fromId, toId)
-
+    console.log('🔍 DEBUG: path =', path) // ✅ AJOUTER
     if (path) {
       this.visualizer.setPath(path)
       this.showResult(path)
-      document.getElementById('reset-btn').disabled = false
+    } else {
+      // ✅ AJOUTER : Afficher un message si pas de path
+      console.warn('❌ No path found between these artists')
+      alert('No connection found between these artists!')
+      // Reset button déjà activé, donc on peut recommencer
     }
   }
 

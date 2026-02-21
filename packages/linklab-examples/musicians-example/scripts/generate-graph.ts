@@ -9,6 +9,9 @@ import tracks from '../data/tracks.json'
 
 /**
  * Generate LinkLab graph from musicians dataset
+ *
+ * Relations are naturally bidirectional in PathFinder,
+ * so we only create forward relations.
  */
 function generateGraph(): Graph {
   const relations: Relation[] = []
@@ -49,26 +52,12 @@ function generateGraph(): Graph {
     }
   })
 
-  // 3. Track → Artist (by - reverse)
-  tracks.forEach(track => {
-    relations.push({
-      name: `by-${relationCounter++}`,
-      fromEntity: `track-${track.id}`,
-      toEntity: `artist-${track.artist}`,
-      via: 'by',
-      weight: 1,
-      metadata: {
-        type: 'created_by'
-      }
-    })
-  })
-
   const graph: Graph = {
     relations,
     metadata: {
       source: 'Musicians sampling network',
       date: new Date().toISOString(),
-      description: 'Graph showing sampling relationships in music',
+      description: 'Graph showing sampling relationships in music (bidirectional)',
       stats: {
         artists: artists.length,
         tracks: tracks.length,
@@ -82,11 +71,27 @@ function generateGraph(): Graph {
 
 // Generate and save
 const graph = generateGraph()
-writeFileSync('./data/graph.json', JSON.stringify(graph, null, 2), 'utf-8')
+
+// Ensure public/data directory exists
+import { mkdirSync } from 'fs'
+try {
+  mkdirSync('./public/data', { recursive: true })
+} catch {}
+
+// Save graph
+writeFileSync('./public/data/graph.json', JSON.stringify(graph, null, 2), 'utf-8')
+
+// ✅ Copy source data files to public for web access
+writeFileSync('./public/data/artists.json', JSON.stringify(artists, null, 2), 'utf-8')
+
+writeFileSync('./public/data/tracks.json', JSON.stringify(tracks, null, 2), 'utf-8')
 
 console.log('✅ Graph generated successfully!')
 console.log(`   - ${graph.metadata?.stats.artists} artists`)
 console.log(`   - ${graph.metadata?.stats.tracks} tracks`)
-console.log(`   - ${graph.metadata?.stats.relations} relations`)
+console.log(`   - ${graph.metadata?.stats.relations} relations (bidirectional navigation enabled)`)
 console.log('')
-console.log('📁 Saved to: data/graph.json')
+console.log('📁 Saved to: public/data/')
+console.log('   - graph.json')
+console.log('   - artists.json')
+console.log('   - tracks.json')
