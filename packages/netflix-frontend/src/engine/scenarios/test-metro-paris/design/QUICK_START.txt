@@ -1,0 +1,43 @@
+# 🚇 NYC Subway Navigators - QUICK START
+
+## 📦 What you got
+
+Two vintage-styled subway route finders:
+1. **PILI 1937** (Art Déco, bakelite, phosphor)
+2. **Steampunk** (Victorian, brass, gears)
+
+## ⚡ SUPER QUICK START
+
+```bash
+# 1. Unzip the file
+unzip nyc-subway-navigators.zip
+
+# 2. Open one of these in your browser:
+nyc-subway-navigators/pili-1937/index.html
+nyc-subway-navigators/steampunk/index.html
+```
+
+**OR just double-click the HTML files!**
+
+## 🎮 How to use
+
+1. Click a station (departure)
+2. Click another station (destination)
+3. Watch the path light up!
+4. Click RESET to try again
+
+## 🎨 Which one to try?
+
+**PILI 1937** → Historical, functional, Art Déco
+**Steampunk** → Fantastical, ornate, Victorian
+
+**Try both!** They're fun! 🎪
+
+## ⚠️ Note
+
+This is a **demo** with only 5 stations.
+Full NYC subway version coming soon!
+
+---
+
+**Enjoy your journey through time!** ⚡✨

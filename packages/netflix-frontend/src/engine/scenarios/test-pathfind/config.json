@@ -1,0 +1,8 @@
+{
+  "mode": "PATHFIND",
+  "pathQuery": {
+    "from": "Directors",
+    "to": "Actors",
+    "maxPaths": 3
+  }
+}

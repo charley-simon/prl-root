@@ -1,0 +1,48 @@
+[
+  {
+    "id": "1",
+    "name": "Broadway - 7th Avenue Local",
+    "color": "#EE352E",
+    "stations": [
+      "125th-st",
+      "66th-lincoln",
+      "59th-columbus",
+      "50th-st",
+      "times-square",
+      "34th-herald",
+      "28th-st",
+      "23rd-st",
+      "14th-union",
+      "chambers-st",
+      "fulton-st",
+      "wall-street"
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Lexington Avenue Express",
+    "color": "#00933C",
+    "stations": [
+      "125th-st",
+      "86th-st",
+      "59th-columbus",
+      "grand-central",
+      "union-square",
+      "brooklyn-bridge",
+      "fulton-st",
+      "wall-street"
+    ]
+  },
+  {
+    "id": "7",
+    "name": "Flushing Local",
+    "color": "#B933AD",
+    "stations": [
+      "times-square",
+      "grand-central",
+      "51st-st",
+      "68th-hunter",
+      "77th-st"
+    ]
+  }
+]

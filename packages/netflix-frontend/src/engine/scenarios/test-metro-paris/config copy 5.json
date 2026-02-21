@@ -1,0 +1,5 @@
+{
+  "from": "Station-porte-de-clignancourt",
+  "to": "Station-mairie-de-montrouge",
+  "maxPaths": 3
+}

@@ -1,0 +1,8 @@
+{
+  "mode": "PATHFIND",
+  "pathQuery": {
+    "from": "Station-chatelet",
+    "to": "Station-opera",
+    "maxPaths": 5
+  }
+}

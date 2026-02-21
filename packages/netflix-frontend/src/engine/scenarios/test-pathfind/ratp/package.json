@@ -1,0 +1,21 @@
+{
+  "name": "paris-metro-gtfs",
+  "version": "1.0.0",
+  "description": "Récupère les données du métro parisien depuis le GTFS IDFM",
+  "main": "dist/fetchMetro.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/fetchMetro.js",
+    "dev": "ts-node src/fetchMetro.ts",
+    "fetch": "npm run build && npm start"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "^0.5.7",
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  }
+}

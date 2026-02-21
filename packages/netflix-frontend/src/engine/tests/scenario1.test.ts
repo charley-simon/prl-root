@@ -1,6 +1,6 @@
 // scenario1.test.ts
 import { describe, it, expect } from 'vitest'
-import { Engine } from '../Engine'
+import { Engine } from '../../../../linklab/src/core/Engine'
 import fs from 'fs'
 import path from 'path'
 

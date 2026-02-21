@@ -1,0 +1,24 @@
+[
+  {
+    "name": "fetchMovie",
+    "weight": 10,
+    "WHEN": "stack[0].state === 'UNKNOWN'",
+    "execute": "stack[0].state = 'AVAILABLE'; return { type: 'SUCCESS' }",
+    "onUse": "console.log('fetchMovie executed')"
+  },
+  {
+    "name": "proposeSimilar",
+    "weight": 20,
+    "WHEN": "stack[0].state === 'AVAILABLE'",
+    "execute": "console.log('proposeSimilar executed'); return { type: 'DEFER' }",
+    "onUse": "console.log('onUse proposeSimilar')",
+    "cooldown": 2
+  },
+  {
+    "name": "logPeople",
+    "weight": 5,
+    "WHEN": "stack[1].state === 'UNKNOWN'",
+    "execute": "stack[1].state = 'VIEWED'; return { type: 'SUCCESS' }",
+    "onUse": "console.log('logPeople executed')"
+  }
+]

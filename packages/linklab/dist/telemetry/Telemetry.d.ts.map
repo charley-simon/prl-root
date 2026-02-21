@@ -1,0 +1,1 @@
+{"version":3,"file":"Telemetry.d.ts","sourceRoot":"","sources":["../../src/telemetry/Telemetry.ts"],"names":[],"mappings":"AAGA,OAAO,KAAK,EAAE,UAAU,EAAE,MAAM,SAAS,CAAA;AAKzC,qBAAa,SAAS;IACpB,OAAO,CAAC,MAAM,CAAQ;;IAMtB,KAAK,CAAC,KAAK,EAAE,UAAU,GAAG,IAAI;IAI9B,SAAS,IAAI,UAAU,EAAE;IAIzB,KAAK,IAAI,IAAI;CAGd"}

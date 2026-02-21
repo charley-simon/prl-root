@@ -1,0 +1,120 @@
+[
+  {
+    "id": "soul-makossa",
+    "title": "Soul Makossa",
+    "artist": "manu-dibango",
+    "year": 1972,
+    "genre": "Afrobeat"
+  },
+  {
+    "id": "wanna-be-startin-somethin",
+    "title": "Wanna Be Startin' Somethin'",
+    "artist": "michael-jackson",
+    "year": 1982,
+    "genre": "Pop",
+    "samples": ["soul-makossa"]
+  },
+  {
+    "id": "gettin-jiggy-wit-it",
+    "title": "Gettin' Jiggy wit It",
+    "artist": "will-smith",
+    "year": 1997,
+    "genre": "Hip-Hop",
+    "samples": ["wanna-be-startin-somethin"]
+  },
+  {
+    "id": "lost-in-the-world",
+    "title": "Lost in the World",
+    "artist": "kanye-west",
+    "year": 2010,
+    "genre": "Hip-Hop",
+    "samples": ["woods"]
+  },
+  {
+    "id": "woods",
+    "title": "Woods",
+    "artist": "bon-iver",
+    "year": 2009,
+    "genre": "Indie"
+  },
+  {
+    "id": "dont-stop-the-music",
+    "title": "Don't Stop the Music",
+    "artist": "rihanna",
+    "year": 2007,
+    "genre": "Pop",
+    "samples": ["wanna-be-startin-somethin"]
+  },
+  {
+    "id": "warm-it-up",
+    "title": "Warm It Up",
+    "artist": "kris-kross",
+    "year": 1992,
+    "genre": "Hip-Hop",
+    "samples": ["wanna-be-startin-somethin"]
+  },
+  {
+    "id": "warm-it-up-kane",
+    "title": "Warm It Up Kane",
+    "artist": "big-daddy-kane",
+    "year": 1989,
+    "genre": "Hip-Hop",
+    "samples": ["wanna-be-startin-somethin"]
+  },
+  {
+    "id": "girl-you-know-its-true",
+    "title": "Girl You Know It's True",
+    "artist": "milli-vanilli",
+    "year": 1989,
+    "genre": "Pop",
+    "samples": ["soul-makossa"]
+  },
+  {
+    "id": "pump-your-fist",
+    "title": "Pump Your Fist",
+    "artist": "a-tribe-called-quest",
+    "year": 1990,
+    "genre": "Hip-Hop",
+    "samples": ["soul-makossa"]
+  },
+  {
+    "id": "black-and-proud",
+    "title": "Black and Proud",
+    "artist": "intelligent-hoodlum",
+    "year": 1990,
+    "genre": "Hip-Hop",
+    "samples": ["wanna-be-startin-somethin"]
+  },
+  {
+    "id": "fast-lane",
+    "title": "Fast Lane",
+    "artist": "wyclef-jean",
+    "year": 1997,
+    "genre": "Hip-Hop",
+    "samples": ["soul-makossa"]
+  },
+  {
+    "id": "sup",
+    "title": "Sup",
+    "artist": "pharrell",
+    "year": 2003,
+    "genre": "Hip-Hop",
+    "samples": ["wanna-be-startin-somethin"]
+  },
+  {
+    "id": "mama-say",
+    "title": "Mama Say",
+    "artist": "eminem",
+    "year": 2002,
+    "genre": "Hip-Hop",
+    "samples": ["wanna-be-startin-somethin"]
+  },
+  {
+    "id": "i-go-humble",
+    "title": "I Go Humble",
+    "artist": "bjork",
+    "year": 1995,
+    "genre": "Alternative",
+    "samples": ["wanna-be-startin-somethin"]
+  }
+]

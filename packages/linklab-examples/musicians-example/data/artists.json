@@ -1,0 +1,114 @@
+[
+  {
+    "id": "manu-dibango",
+    "name": "Manu Dibango",
+    "era": "1970s",
+    "genre": "Afrobeat",
+    "country": "Cameroon"
+  },
+  {
+    "id": "michael-jackson",
+    "name": "Michael Jackson",
+    "era": "1980s",
+    "genre": "Pop",
+    "country": "USA"
+  },
+  {
+    "id": "will-smith",
+    "name": "Will Smith",
+    "era": "1990s",
+    "genre": "Hip-Hop",
+    "country": "USA"
+  },
+  {
+    "id": "kanye-west",
+    "name": "Kanye West",
+    "era": "2000s",
+    "genre": "Hip-Hop",
+    "country": "USA"
+  },
+  {
+    "id": "jay-z",
+    "name": "Jay-Z",
+    "era": "1990s",
+    "genre": "Hip-Hop",
+    "country": "USA"
+  },
+  {
+    "id": "rihanna",
+    "name": "Rihanna",
+    "era": "2000s",
+    "genre": "Pop",
+    "country": "Barbados"
+  },
+  {
+    "id": "pharrell",
+    "name": "Pharrell Williams",
+    "era": "2000s",
+    "genre": "Hip-Hop",
+    "country": "USA"
+  },
+  {
+    "id": "kris-kross",
+    "name": "Kris Kross",
+    "era": "1990s",
+    "genre": "Hip-Hop",
+    "country": "USA"
+  },
+  {
+    "id": "big-daddy-kane",
+    "name": "Big Daddy Kane",
+    "era": "1980s",
+    "genre": "Hip-Hop",
+    "country": "USA"
+  },
+  {
+    "id": "milli-vanilli",
+    "name": "Milli Vanilli",
+    "era": "1980s",
+    "genre": "Pop",
+    "country": "Germany"
+  },
+  {
+    "id": "a-tribe-called-quest",
+    "name": "A Tribe Called Quest",
+    "era": "1990s",
+    "genre": "Hip-Hop",
+    "country": "USA"
+  },
+  {
+    "id": "intelligent-hoodlum",
+    "name": "Intelligent Hoodlum",
+    "era": "1990s",
+    "genre": "Hip-Hop",
+    "country": "USA"
+  },
+  {
+    "id": "wyclef-jean",
+    "name": "Wyclef Jean",
+    "era": "1990s",
+    "genre": "Hip-Hop",
+    "country": "Haiti"
+  },
+  {
+    "id": "bon-iver",
+    "name": "Bon Iver",
+    "era": "2000s",
+    "genre": "Indie",
+    "country": "USA"
+  },
+  {
+    "id": "eminem",
+    "name": "Eminem",
+    "era": "1990s",
+    "genre": "Hip-Hop",
+    "country": "USA"
+  },
+  {
+    "id": "bjork",
+    "name": "Björk",
+    "era": "1990s",
+    "genre": "Alternative",
+    "country": "Iceland"
+  }
+]

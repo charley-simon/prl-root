@@ -1,0 +1,14 @@
+[
+  {
+    "name": "people-movies",
+    "fromEntity": "People",
+    "toEntity": "Movie",
+    "via": "Movie-People"
+  },
+  {
+    "name": "movie-people",
+    "fromEntity": "Movie",
+    "toEntity": "People",
+    "via": "Movie-People"
+  }
+]

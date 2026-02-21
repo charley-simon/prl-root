@@ -1,0 +1,24 @@
+{
+  "relations": [
+    {"from": "times-square", "to": "34th-herald", "via": "1", "weight": 2},
+    {"from": "34th-herald", "to": "28th-st", "via": "1", "weight": 1},
+    {"from": "28th-st", "to": "23rd-st", "via": "1", "weight": 1},
+    {"from": "23rd-st", "to": "14th-union", "via": "1", "weight": 2},
+    {"from": "14th-union", "to": "chambers-st", "via": "1", "weight": 3},
+    {"from": "chambers-st", "to": "fulton-st", "via": "1", "weight": 1},
+    {"from": "fulton-st", "to": "wall-street", "via": "1", "weight": 1},
+    
+    {"from": "times-square", "to": "grand-central", "via": "7", "weight": 2},
+    {"from": "grand-central", "to": "51st-st", "via": "7", "weight": 1},
+    {"from": "51st-st", "to": "68th-hunter", "via": "7", "weight": 2},
+    {"from": "68th-hunter", "to": "77th-st", "via": "7", "weight": 1},
+    
+    {"from": "125th-st", "to": "86th-st", "via": "4", "weight": 3},
+    {"from": "86th-st", "to": "59th-columbus", "via": "4", "weight": 2},
+    {"from": "59th-columbus", "to": "grand-central", "via": "4", "weight": 2},
+    {"from": "grand-central", "to": "union-square", "via": "4", "weight": 2},
+    {"from": "union-square", "to": "brooklyn-bridge", "via": "4", "weight": 3},
+    {"from": "brooklyn-bridge", "to": "fulton-st", "via": "4", "weight": 1},
+    {"from": "fulton-st", "to": "wall-street", "via": "4", "weight": 1}
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "relations": [
+    {
+      "name": "dupond-group",
+      "fromEntity": "Dupond",
+      "toEntity": "Group-A",
+      "via": "member_of",
+      "weight": 2
+    },
+    {
+      "name": "group-martin",
+      "fromEntity": "Group-A",
+      "toEntity": "Martin",
+      "via": "member_of",
+      "weight": 2
+    },
+    {
+      "name": "dupond-track-x",
+      "fromEntity": "Dupond",
+      "toEntity": "Track-X",
+      "via": "played_in",
+      "weight": 3
+    },
+    {
+      "name": "track-x-martin",
+      "fromEntity": "Track-X",
+      "toEntity": "Martin",
+      "via": "played_in",
+      "weight": 3
+    },
+    {
+      "name": "dupond-wrote-y",
+      "fromEntity": "Dupond",
+      "toEntity": "Track-Y",
+      "via": "wrote",
+      "weight": 5
+    },
+    {
+      "name": "track-y-martin",
+      "fromEntity": "Track-Y",
+      "toEntity": "Martin",
+      "via": "played_in",
+      "weight": 3
+    }
+  ]
+}

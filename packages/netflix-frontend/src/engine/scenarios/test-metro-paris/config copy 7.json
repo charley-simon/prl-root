@@ -1,0 +1,5 @@
+{
+  "from": "Station-porte-de-clignancourt",
+  "to": "Station-chateau-de-vincennes",
+  "maxPaths": 5
+}

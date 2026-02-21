@@ -1,0 +1,8 @@
+{
+  "mode": "PATHFIND",
+  "pathQuery": {
+    "from": "Station-republique",
+    "to": "Station-bastille",
+    "maxPaths": 5
+  }
+}

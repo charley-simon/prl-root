@@ -1,0 +1,1 @@
+{"version":3,"file":"selectBestRelation.d.ts","sourceRoot":"","sources":["../../src/algorithms/selectBestRelation.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,KAAK,EAAU,QAAQ,EAAE,MAAM,UAAU,CAAA;AAEvD,wBAAgB,kBAAkB,CAChC,KAAK,EAAE,KAAK,EACZ,KAAK,EAAE,KAAK,EAAE,EACd,SAAS,EAAE,QAAQ,EAAE,GACpB;IAAE,QAAQ,EAAE,QAAQ,CAAC;IAAC,WAAW,EAAE,KAAK,CAAA;CAAE,GAAG,IAAI,CAsBnD"}

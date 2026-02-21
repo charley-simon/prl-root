@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indicateur d'Itinéraires - New York Transit - 1937</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #2a2a2a;
+        font-family: 'Crimson Text', serif;
+        overflow: hidden;
+        height: 100vh;
+      }
+
+      /* ===== CADRE BOIS ===== */
+
+      #wooden-frame {
+        position: absolute;
+        inset: 20px;
+        background: linear-gradient(135deg, #c19a6b 0%, #a67c52 100%);
+        border: 15px solid #8b6f47;
+        box-shadow:
+          inset 0 0 50px rgba(0, 0, 0, 0.3),
+          0 20px 60px rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Grain du bois */
+      #wooden-frame::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 0, 0, 0.03) 2px,
+          rgba(0, 0, 0, 0.03) 4px
+        );
+        pointer-events: none;
+      }
+
+      /* ===== HEADER ===== */
+
+      #header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background: linear-gradient(to bottom, #e8dcc0, #d4c4a0);
+        border-bottom: 3px solid #8b6f47;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      #title {
+        flex: 1;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        font-weight: 600;
+        color: #2b2b2b;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.3);
+      }
+
+      #subtitle {
+        font-size: 1.1em;
+        color: #666;
+        margin-top: 5px;
+        letter-spacing: 3px;
+      }
+
+      /* ===== HORLOGE FLIP ===== */
+
+      #flip-clock {
+        width: 140px;
+        height: 70px;
+        background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+        border: 4px solid #000;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow:
+          inset 0 3px 10px rgba(0, 0, 0, 0.8),
+          0 3px 10px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+
+      #flip-clock::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #000;
+      }
+
+      .time-display {
+        font-family: 'Courier New', monospace;
+        font-size: 2.5em;
+        color: #fff;
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      }
+
+      /* ===== LOGO RATP (placeholder) ===== */
+
+      #logo {
+        width: 80px;
+        height: 80px;
+        background: radial-gradient(circle, #003d7a, #002855);
+        border: 3px solid #000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.5em;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      /* ===== CARTE PRINCIPALE ===== */
+
+      #map-section {
+        flex: 1;
+        position: relative;
+        margin: 20px;
+        background: linear-gradient(to bottom, #f5f5dc 0%, #e8dcc0 100%);
+        border: 8px solid #8b6f47;
+        box-shadow:
+          inset 0 0 80px rgba(0, 0, 0, 0.1),
+          0 5px 20px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+      }
+
+      /* Texture papier ancien */
+      #map-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+          radial-gradient(circle at 20% 30%, rgba(210, 180, 140, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(139, 90, 43, 0.05) 0%, transparent 50%);
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      #canvas {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        cursor: crosshair;
+      }
+
+      /* ===== PANNEAU DE BOUTONS ===== */
+
+      #button-panel {
+        background: linear-gradient(to bottom, #d4c4a0, #c19a6b);
+        border-top: 5px solid #8b6f47;
+        padding: 20px;
+        max-height: 180px;
+        overflow-y: auto;
+        box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.3);
+        transition: max-height 0.3s;
+      }
+
+      #button-panel.collapsed {
+        max-height: 50px;
+      }
+
+      .panel-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .panel-title {
+        font-size: 1.3em;
+        font-weight: 600;
+        color: #2b2b2b;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      #toggle-panel {
+        background: linear-gradient(to bottom, #8b6f47, #6b5537);
+        color: #f5f5dc;
+        border: 2px solid #5a4527;
+        padding: 8px 16px;
+        font-family: 'Crimson Text', serif;
+        font-size: 0.9em;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        transition: all 0.2s;
+      }
+
+      #toggle-panel:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      #toggle-panel:active {
+        transform: translateY(0);
+      }
+
+      .button-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 10px;
+      }
+
+      .station-button {
+        background: linear-gradient(to bottom, #f5f5dc, #e8dcc0);
+        color: #2b2b2b;
+        border: 3px solid #8b6f47;
+        padding: 12px 16px;
+        font-family: 'Crimson Text', serif;
+        font-size: 1em;
+        font-weight: 600;
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow:
+          inset 0 2px 5px rgba(255, 255, 255, 0.5),
+          0 3px 8px rgba(0, 0, 0, 0.3);
+        transition: all 0.2s;
+        position: relative;
+      }
+
+      .station-button:hover {
+        background: linear-gradient(to bottom, #fff, #f5f5dc);
+        transform: translateY(-2px);
+        box-shadow:
+          inset 0 2px 5px rgba(255, 255, 255, 0.7),
+          0 5px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .station-button:active {
+        transform: translateY(0);
+        box-shadow: inset 0 3px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .station-button.selected-departure {
+        background: linear-gradient(to bottom, #90ee90, #7fd87f);
+        border-color: #228b22;
+        box-shadow:
+          inset 0 0 15px rgba(34, 139, 34, 0.3),
+          0 0 20px rgba(34, 139, 34, 0.5);
+      }
+
+      .station-button.selected-arrival {
+        background: linear-gradient(to bottom, #ffb6c1, #ffa0b0);
+        border-color: #dc143c;
+        box-shadow:
+          inset 0 0 15px rgba(220, 20, 60, 0.3),
+          0 0 20px rgba(220, 20, 60, 0.5);
+      }
+
+      /* ===== INDICATEUR DE RÉSULTAT ===== */
+
+      #result-indicator {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.9);
+        color: #7fff00;
+        padding: 20px 40px;
+        border: 4px solid #2a2a2a;
+        border-radius: 10px;
+        box-shadow:
+          inset 0 0 30px rgba(127, 255, 0, 0.2),
+          0 10px 30px rgba(0, 0, 0, 0.8);
+        font-family: 'Courier New', monospace;
+        z-index: 10;
+        display: none;
+      }
+
+      #result-indicator.active {
+        display: block;
+        animation: glow 2s ease-in-out infinite;
+      }
+
+      @keyframes glow {
+        0%,
+        100% {
+          box-shadow:
+            inset 0 0 30px rgba(127, 255, 0, 0.2),
+            0 10px 30px rgba(0, 0, 0, 0.8),
+            0 0 20px rgba(127, 255, 0, 0.3);
+        }
+        50% {
+          box-shadow:
+            inset 0 0 40px rgba(127, 255, 0, 0.3),
+            0 10px 30px rgba(0, 0, 0, 0.8),
+            0 0 40px rgba(127, 255, 0, 0.5);
+        }
+      }
+
+      .result-text {
+        font-size: 1.2em;
+        text-shadow: 0 0 10px rgba(127, 255, 0, 0.8);
+        margin: 5px 0;
+      }
+
+      /* Scanlines effet */
+      #result-indicator::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(0, 0, 0, 0.1) 2px,
+          rgba(0, 0, 0, 0.1) 4px
+        );
+        pointer-events: none;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wooden-frame">
+      <!-- Header -->
+      <div id="header">
+        <div id="flip-clock">
+          <div class="time-display" id="clock">10:15</div>
+        </div>
+
+        <div id="title">
+          <h1>Indicateur d'Itinéraires</h1>
+          <div id="subtitle">New York City Transit System</div>
+        </div>
+
+        <div id="logo">NYC</div>
+      </div>
+
+      <!-- Carte principale -->
+      <div id="map-section">
+        <canvas id="canvas"></canvas>
+
+        <!-- Résultat -->
+        <div id="result-indicator">
+          <div class="result-text">⏱ DURÉE: <span id="duration">-</span> MINUTES</div>
+          <div class="result-text">● STATIONS: <span id="stations-count">-</span></div>
+        </div>
+      </div>
+
+      <!-- Panneau de boutons -->
+      <div id="button-panel">
+        <div class="panel-header">
+          <div class="panel-title">Sélection des Stations</div>
+          <button id="toggle-panel">Réduire ▲</button>
+        </div>
+        <div class="button-grid" id="station-buttons"></div>
+      </div>
+    </div>
+
+    <script>
+      // ===== DONNÉES =====
+
+      const stations = [
+        { id: 'times-square', name: 'Times Square', x: 300, y: 250 },
+        { id: 'grand-central', name: 'Grand Central', x: 500, y: 250 },
+        { id: '34th-herald', name: '34th Street', x: 300, y: 350 },
+        { id: 'union-square', name: 'Union Square', x: 400, y: 450 },
+        { id: 'brooklyn-bridge', name: 'Brooklyn Bridge', x: 450, y: 550 }
+      ]
+
+      const lines = [
+        { from: 'times-square', to: '34th-herald', color: '#EE352E', weight: 2 },
+        { from: '34th-herald', to: 'union-square', color: '#EE352E', weight: 2 },
+        { from: 'union-square', to: 'brooklyn-bridge', color: '#00933C', weight: 3 },
+        { from: 'times-square', to: 'grand-central', color: '#B933AD', weight: 2 },
+        { from: 'grand-central', to: 'union-square', color: '#00933C', weight: 2 }
+      ]
+
+      // ===== STATE =====
+
+      let departure = null
+      let arrival = null
+      let path = null
+      let litStations = new Set()
+
+      // ===== CANVAS =====
+
+      const canvas = document.getElementById('canvas')
+      const ctx = canvas.getContext('2d')
+
+      function resize() {
+        canvas.width = canvas.offsetWidth
+        canvas.height = canvas.offsetHeight
+        render()
+      }
+
+      function render() {
+        // Fond beige papier
+        ctx.fillStyle = '#f5f5dc'
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+        // Texture papier (grain)
+        for (let i = 0; i < 800; i++) {
+          const alpha = Math.random() * 0.05
+          ctx.fillStyle = `rgba(139,90,43,${alpha})`
+          ctx.fillRect(Math.random() * canvas.width, Math.random() * canvas.height, 1, 1)
+        }
+
+        // Grille style carte ancienne
+        ctx.strokeStyle = 'rgba(139,90,43,0.15)'
+        ctx.lineWidth = 0.5
+        for (let x = 0; x < canvas.width; x += 40) {
+          ctx.beginPath()
+          ctx.moveTo(x, 0)
+          ctx.lineTo(x, canvas.height)
+          ctx.stroke()
+        }
+        for (let y = 0; y < canvas.height; y += 40) {
+          ctx.beginPath()
+          ctx.moveTo(0, y)
+          ctx.lineTo(canvas.width, y)
+          ctx.stroke()
+        }
+
+        // Dessiner les lignes du métro
+        lines.forEach(line => {
+          const from = stations.find(s => s.id === line.from)
+          const to = stations.find(s => s.id === line.to)
+          if (!from || !to) return
+
+          const isInPath = path && path.includes(from.id) && path.includes(to.id)
+
+          ctx.strokeStyle = isInPath ? line.color : `${line.color}80`
+          ctx.lineWidth = isInPath ? 6 : 3
+          ctx.lineCap = 'round'
+
+          if (isInPath) {
+            ctx.shadowBlur = 10
+            ctx.shadowColor = line.color
+          }
+
+          ctx.beginPath()
+          ctx.moveTo(from.x, from.y)
+          ctx.lineTo(to.x, to.y)
+          ctx.stroke()
+
+          ctx.shadowBlur = 0
+        })
+
+        // Dessiner les ampoules (stations)
+        stations.forEach(station => {
+          const lit = litStations.has(station.id)
+          const x = station.x
+          const y = station.y
+
+          // Halo si allumé
+          if (lit) {
+            const gradient = ctx.createRadialGradient(x, y, 0, x, y, 30)
+            gradient.addColorStop(0, 'rgba(255,220,100,0.8)')
+            gradient.addColorStop(0.5, 'rgba(255,220,100,0.4)')
+            gradient.addColorStop(1, 'transparent')
+            ctx.fillStyle = gradient
+            ctx.fillRect(x - 30, y - 30, 60, 60)
+          }
+
+          // Ampoule (corps noir)
+          ctx.fillStyle = lit ? '#ffd27f' : '#1a1a1a'
+          ctx.beginPath()
+          ctx.arc(x, y, 10, 0, Math.PI * 2)
+          ctx.fill()
+
+          // Reflet sur l'ampoule
+          if (!lit) {
+            ctx.fillStyle = 'rgba(255,255,255,0.2)'
+            ctx.beginPath()
+            ctx.arc(x - 3, y - 3, 4, 0, Math.PI * 2)
+            ctx.fill()
+          }
+
+          // Contour
+          ctx.strokeStyle =
+            station === departure ? '#00ff00' : station === arrival ? '#ff0000' : '#666'
+          ctx.lineWidth = station === departure || station === arrival ? 3 : 2
+          ctx.stroke()
+
+          // Nom de la station
+          ctx.fillStyle = '#2b2b2b'
+          ctx.font = 'bold 13px "Crimson Text"'
+          ctx.textAlign = 'center'
+          ctx.fillText(station.name, x, y + 28)
+        })
+      }
+
+      // ===== PATHFINDING =====
+
+      function findPath(start, end) {
+        const graph = {}
+        lines.forEach(l => {
+          if (!graph[l.from]) graph[l.from] = []
+          graph[l.from].push({ to: l.to, weight: l.weight })
+        })
+
+        const queue = [[start]]
+        const visited = new Set([start])
+
+        while (queue.length > 0) {
+          const path = queue.shift()
+          const node = path[path.length - 1]
+
+          if (node === end) return path
+
+          const neighbors = graph[node] || []
+          neighbors.forEach(n => {
+            if (!visited.has(n.to)) {
+              visited.add(n.to)
+              queue.push([...path, n.to])
+            }
+          })
+        }
+
+        return null
+      }
+
+      // ===== ANIMATION LUMINEUSE =====
+
+      async function animatePath(pathIds) {
+        litStations.clear()
+
+        for (let i = 0; i < pathIds.length; i++) {
+          litStations.add(pathIds[i])
+          render()
+          await sleep(300)
+        }
+
+        showResult()
+      }
+
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms))
+      }
+
+      function showResult() {
+        const totalWeight = path.length - 1
+        document.getElementById('duration').textContent = totalWeight * 2
+        document.getElementById('stations-count').textContent = path.length
+        document.getElementById('result-indicator').classList.add('active')
+      }
+
+      // ===== INTERACTIONS =====
+
+      canvas.addEventListener('click', e => {
+        const rect = canvas.getBoundingClientRect()
+        const x = e.clientX - rect.left
+        const y = e.clientY - rect.top
+
+        const clicked = stations.find(st => {
+          const dist = Math.sqrt((x - st.x) ** 2 + (y - st.y) ** 2)
+          return dist < 15
+        })
+
+        if (clicked) selectStation(clicked)
+      })
+
+      function selectStation(station) {
+        if (!departure) {
+          departure = station
+          litStations.add(station.id)
+          updateButtonState()
+          render()
+        } else if (!arrival && station !== departure) {
+          arrival = station
+          path = findPath(departure.id, arrival.id)
+
+          if (path) {
+            animatePath(path)
+          }
+
+          updateButtonState()
+        } else {
+          reset()
+        }
+      }
+
+      function reset() {
+        departure = null
+        arrival = null
+        path = null
+        litStations.clear()
+        document.getElementById('result-indicator').classList.remove('active')
+        updateButtonState()
+        render()
+      }
+
+      // ===== BOUTONS =====
+
+      function createButtons() {
+        const grid = document.getElementById('station-buttons')
+        stations.forEach(station => {
+          const btn = document.createElement('button')
+          btn.className = 'station-button'
+          btn.textContent = station.name
+          btn.dataset.id = station.id
+          btn.addEventListener('click', () => selectStation(station))
+          grid.appendChild(btn)
+        })
+      }
+
+      function updateButtonState() {
+        document.querySelectorAll('.station-button').forEach(btn => {
+          btn.classList.remove('selected-departure', 'selected-arrival')
+
+          if (departure && btn.dataset.id === departure.id) {
+            btn.classList.add('selected-departure')
+          }
+          if (arrival && btn.dataset.id === arrival.id) {
+            btn.classList.add('selected-arrival')
+          }
+        })
+      }
+
+      // ===== TOGGLE PANEL =====
+
+      document.getElementById('toggle-panel').addEventListener('click', () => {
+        const panel = document.getElementById('button-panel')
+        const btn = document.getElementById('toggle-panel')
+
+        panel.classList.toggle('collapsed')
+        btn.textContent = panel.classList.contains('collapsed') ? 'Afficher ▼' : 'Réduire ▲'
+      })
+
+      // ===== HORLOGE =====
+
+      function updateClock() {
+        const now = new Date()
+        const hours = String(now.getHours()).padStart(2, '0')
+        const minutes = String(now.getMinutes()).padStart(2, '0')
+        document.getElementById('clock').textContent = `${hours}:${minutes}`
+      }
+
+      setInterval(updateClock, 1000)
+      updateClock()
+
+      // ===== INIT =====
+
+      window.addEventListener('resize', resize)
+      createButtons()
+      resize()
+    </script>
+  </body>
+</html>

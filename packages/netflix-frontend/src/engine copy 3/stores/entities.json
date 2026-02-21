@@ -1,0 +1,6 @@
+{
+  "entities": [
+    { "name": "People", "key": "peopleId" },
+    { "name": "Movie", "key": "movieId" }
+  ]
+}

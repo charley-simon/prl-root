@@ -1,0 +1,5 @@
+{
+  "from": "Station-saint-denis-universite",
+  "to": "Station-chatillon-montrouge",
+  "maxPaths": 3
+}

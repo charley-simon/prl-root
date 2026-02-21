@@ -1,22 +1,75 @@
-// engine/index.ts
-import { StackStore } from './stores/stackStore'
-import { Resolver } from './resolver/resolveContext'
-import { precompiledGraph } from './graph/precompiledGraph'
-import type { Frame } from './stores/types'
+// index.ts
 
-import stackJson from './stores/volumetric_stack.json'
+/**
+ * LinkLab - Universal Graph Navigation Engine
+ *
+ * Light. Orthogonal. Composable.
+ *
+ * @example
+ * ```typescript
+ * import { Engine, GraphBuilder, templates } from 'linklab'
+ *
+ * // Create a graph
+ * const graph = new GraphBuilder()
+ *   .addEntity('Users')
+ *   .addEntity('Products')
+ *   .connect('Users', 'Products', { weight: 5 })
+ *   .build()
+ *
+ * // Or use a template
+ * const graph = templates.recommendations({
+ *   entities: ['Users', 'Products']
+ * })
+ *
+ * // Create an engine for pathfinding
+ * const engine = Engine.forPathfinding(graph, {
+ *   from: 'user-123',
+ *   to: 'product-456'
+ * })
+ *
+ * // Run it
+ * const results = await engine.run()
+ * console.log(results[0].path)
+ * ```
+ */
 
-export { Engine } from './Engine'
+// Core
+export { Engine } from '../../../linklab/src/core/Engine'
+export { PathFinder } from '../../../linklab/src/core/PathFinder'
+export { Resolver } from '../../../linklab/src/core/Resolver'
+export { Scheduler } from '../../../linklab/src/core/Scheduler'
+export { AdaptiveGraph } from './core/Graph'
 
-const initialStack: Frame[] = stackJson.map((f: any) => ({
-  ...f,
-  state: f.state === 'RESOLVED' ? 'RESOLVED' : 'UNRESOLVED'
-}))
+// Builders
+export { GraphBuilder } from './builders/GraphBuilder'
 
-const stackStore = new StackStore(initialStack)
-const resolver = new Resolver(stackStore, precompiledGraph)
+// Templates
+export { templates } from '../../../linklab/src/templates'
 
-resolver.resolveContext()
+// Types
+export type {
+  Graph,
+  Relation,
+  RelationMetadata,
+  GraphMetadata,
+  Filter,
+  Frame,
+  Path,
+  EngineMode,
+  PathQuery,
+  PathPreferences,
+  ActionDefinition,
+  EngineConfig,
+  EngineStepResult
+} from './types'
 
-console.log('--- FINAL STACK ---')
-console.log(JSON.stringify(stackStore.getFrames(), null, 2))
+export type { DatabaseConfig, TableConfig, CSVConfig, JSONConfig } from './builders/GraphBuilder'
+
+export type {
+  RecommendationConfig,
+  SocialConfig,
+  OrgChartConfig,
+  TransportConfig,
+  KnowledgeConfig,
+  MusiciansConfig
+} from '../../../linklab/src/templates'

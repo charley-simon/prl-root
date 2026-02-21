@@ -1,0 +1,8 @@
+{
+  "mode": "PATHFIND",
+  "pathQuery": {
+    "from": "Dupond",
+    "to": "Martin",
+    "maxPaths": 5
+  }
+}

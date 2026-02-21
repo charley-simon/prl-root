@@ -1,0 +1,5 @@
+[
+  { "id": "Director", "department": "Directing" },
+  { "id": "Actor", "department": "Acting" },
+  { "id": "Writer", "department": "Writing" }
+]

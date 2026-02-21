@@ -1,0 +1,43 @@
+{
+  "relations": [
+    {
+      "name": "directors-movies",
+      "fromEntity": "Directors",
+      "toEntity": "Movies",
+      "via": "Movie-People",
+      "weight": 5,
+      "constraintFilters": [
+        {
+          "field": "roleId",
+          "value": "Director"
+        }
+      ]
+    },
+    {
+      "name": "movies-actors",
+      "fromEntity": "Movies",
+      "toEntity": "Actors",
+      "via": "Movie-People",
+      "weight": 3,
+      "constraintFilters": [
+        {
+          "field": "roleId",
+          "value": "Actor"
+        }
+      ]
+    },
+    {
+      "name": "actors-movies",
+      "fromEntity": "Actors",
+      "toEntity": "Movies",
+      "via": "Movie-People",
+      "weight": 4,
+      "constraintFilters": [
+        {
+          "field": "roleId",
+          "value": "Actor"
+        }
+      ]
+    }
+  ]
+}

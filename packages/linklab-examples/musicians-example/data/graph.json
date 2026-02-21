@@ -1,0 +1,485 @@
+{
+  "relations": [
+    {
+      "name": "created-0",
+      "fromEntity": "artist-manu-dibango",
+      "toEntity": "track-soul-makossa",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1972
+      }
+    },
+    {
+      "name": "created-1",
+      "fromEntity": "artist-michael-jackson",
+      "toEntity": "track-wanna-be-startin-somethin",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1982
+      }
+    },
+    {
+      "name": "created-2",
+      "fromEntity": "artist-will-smith",
+      "toEntity": "track-gettin-jiggy-wit-it",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1997
+      }
+    },
+    {
+      "name": "created-3",
+      "fromEntity": "artist-kanye-west",
+      "toEntity": "track-lost-in-the-world",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 2010
+      }
+    },
+    {
+      "name": "created-4",
+      "fromEntity": "artist-bon-iver",
+      "toEntity": "track-woods",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 2009
+      }
+    },
+    {
+      "name": "created-5",
+      "fromEntity": "artist-rihanna",
+      "toEntity": "track-dont-stop-the-music",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 2007
+      }
+    },
+    {
+      "name": "created-6",
+      "fromEntity": "artist-kris-kross",
+      "toEntity": "track-warm-it-up",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1992
+      }
+    },
+    {
+      "name": "created-7",
+      "fromEntity": "artist-big-daddy-kane",
+      "toEntity": "track-warm-it-up-kane",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1989
+      }
+    },
+    {
+      "name": "created-8",
+      "fromEntity": "artist-milli-vanilli",
+      "toEntity": "track-girl-you-know-its-true",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1989
+      }
+    },
+    {
+      "name": "created-9",
+      "fromEntity": "artist-a-tribe-called-quest",
+      "toEntity": "track-pump-your-fist",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1990
+      }
+    },
+    {
+      "name": "created-10",
+      "fromEntity": "artist-intelligent-hoodlum",
+      "toEntity": "track-black-and-proud",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1990
+      }
+    },
+    {
+      "name": "created-11",
+      "fromEntity": "artist-wyclef-jean",
+      "toEntity": "track-fast-lane",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1997
+      }
+    },
+    {
+      "name": "created-12",
+      "fromEntity": "artist-pharrell",
+      "toEntity": "track-sup",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 2003
+      }
+    },
+    {
+      "name": "created-13",
+      "fromEntity": "artist-eminem",
+      "toEntity": "track-mama-say",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 2002
+      }
+    },
+    {
+      "name": "created-14",
+      "fromEntity": "artist-bjork",
+      "toEntity": "track-i-go-humble",
+      "via": "created",
+      "weight": 2,
+      "metadata": {
+        "type": "created",
+        "year": 1995
+      }
+    },
+    {
+      "name": "sample-15",
+      "fromEntity": "track-wanna-be-startin-somethin",
+      "toEntity": "track-soul-makossa",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1972,
+        "samplerYear": 1982
+      }
+    },
+    {
+      "name": "sample-16",
+      "fromEntity": "track-gettin-jiggy-wit-it",
+      "toEntity": "track-wanna-be-startin-somethin",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1982,
+        "samplerYear": 1997
+      }
+    },
+    {
+      "name": "sample-17",
+      "fromEntity": "track-lost-in-the-world",
+      "toEntity": "track-woods",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 2009,
+        "samplerYear": 2010
+      }
+    },
+    {
+      "name": "sample-18",
+      "fromEntity": "track-dont-stop-the-music",
+      "toEntity": "track-wanna-be-startin-somethin",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1982,
+        "samplerYear": 2007
+      }
+    },
+    {
+      "name": "sample-19",
+      "fromEntity": "track-warm-it-up",
+      "toEntity": "track-wanna-be-startin-somethin",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1982,
+        "samplerYear": 1992
+      }
+    },
+    {
+      "name": "sample-20",
+      "fromEntity": "track-warm-it-up-kane",
+      "toEntity": "track-wanna-be-startin-somethin",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1982,
+        "samplerYear": 1989
+      }
+    },
+    {
+      "name": "sample-21",
+      "fromEntity": "track-girl-you-know-its-true",
+      "toEntity": "track-soul-makossa",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1972,
+        "samplerYear": 1989
+      }
+    },
+    {
+      "name": "sample-22",
+      "fromEntity": "track-pump-your-fist",
+      "toEntity": "track-soul-makossa",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1972,
+        "samplerYear": 1990
+      }
+    },
+    {
+      "name": "sample-23",
+      "fromEntity": "track-black-and-proud",
+      "toEntity": "track-wanna-be-startin-somethin",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1982,
+        "samplerYear": 1990
+      }
+    },
+    {
+      "name": "sample-24",
+      "fromEntity": "track-fast-lane",
+      "toEntity": "track-soul-makossa",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1972,
+        "samplerYear": 1997
+      }
+    },
+    {
+      "name": "sample-25",
+      "fromEntity": "track-sup",
+      "toEntity": "track-wanna-be-startin-somethin",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1982,
+        "samplerYear": 2003
+      }
+    },
+    {
+      "name": "sample-26",
+      "fromEntity": "track-mama-say",
+      "toEntity": "track-wanna-be-startin-somethin",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1982,
+        "samplerYear": 2002
+      }
+    },
+    {
+      "name": "sample-27",
+      "fromEntity": "track-i-go-humble",
+      "toEntity": "track-wanna-be-startin-somethin",
+      "via": "samples",
+      "weight": 5,
+      "metadata": {
+        "type": "sample",
+        "sampledYear": 1982,
+        "samplerYear": 1995
+      }
+    },
+    {
+      "name": "by-28",
+      "fromEntity": "track-soul-makossa",
+      "toEntity": "artist-manu-dibango",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-29",
+      "fromEntity": "track-wanna-be-startin-somethin",
+      "toEntity": "artist-michael-jackson",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-30",
+      "fromEntity": "track-gettin-jiggy-wit-it",
+      "toEntity": "artist-will-smith",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-31",
+      "fromEntity": "track-lost-in-the-world",
+      "toEntity": "artist-kanye-west",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-32",
+      "fromEntity": "track-woods",
+      "toEntity": "artist-bon-iver",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-33",
+      "fromEntity": "track-dont-stop-the-music",
+      "toEntity": "artist-rihanna",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-34",
+      "fromEntity": "track-warm-it-up",
+      "toEntity": "artist-kris-kross",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-35",
+      "fromEntity": "track-warm-it-up-kane",
+      "toEntity": "artist-big-daddy-kane",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-36",
+      "fromEntity": "track-girl-you-know-its-true",
+      "toEntity": "artist-milli-vanilli",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-37",
+      "fromEntity": "track-pump-your-fist",
+      "toEntity": "artist-a-tribe-called-quest",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-38",
+      "fromEntity": "track-black-and-proud",
+      "toEntity": "artist-intelligent-hoodlum",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-39",
+      "fromEntity": "track-fast-lane",
+      "toEntity": "artist-wyclef-jean",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-40",
+      "fromEntity": "track-sup",
+      "toEntity": "artist-pharrell",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-41",
+      "fromEntity": "track-mama-say",
+      "toEntity": "artist-eminem",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    },
+    {
+      "name": "by-42",
+      "fromEntity": "track-i-go-humble",
+      "toEntity": "artist-bjork",
+      "via": "by",
+      "weight": 1,
+      "metadata": {
+        "type": "created_by"
+      }
+    }
+  ],
+  "metadata": {
+    "source": "Musicians sampling network",
+    "date": "2026-02-21T19:32:52.317Z",
+    "description": "Graph showing sampling relationships in music",
+    "stats": {
+      "artists": 16,
+      "tracks": 15,
+      "relations": 43
+    }
+  }
+}

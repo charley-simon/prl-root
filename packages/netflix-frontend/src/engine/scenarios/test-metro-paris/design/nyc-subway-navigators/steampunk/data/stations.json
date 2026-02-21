@@ -1,0 +1,142 @@
+[
+  {
+    "id": "times-square",
+    "name": "Times Square - 42nd St",
+    "lat": 40.7589,
+    "lon": -73.9851,
+    "lines": ["1", "2", "3", "7", "N", "Q", "R", "S"]
+  },
+  {
+    "id": "grand-central",
+    "name": "Grand Central - 42nd St",
+    "lat": 40.7527,
+    "lon": -73.9772,
+    "lines": ["4", "5", "6", "7", "S"]
+  },
+  {
+    "id": "34th-herald",
+    "name": "34th St - Herald Square",
+    "lat": 40.7506,
+    "lon": -73.9885,
+    "lines": ["B", "D", "F", "M", "N", "Q", "R"]
+  },
+  {
+    "id": "union-square",
+    "name": "Union Square - 14th St",
+    "lat": 40.7347,
+    "lon": -73.9906,
+    "lines": ["4", "5", "6", "L", "N", "Q", "R"]
+  },
+  {
+    "id": "brooklyn-bridge",
+    "name": "Brooklyn Bridge - City Hall",
+    "lat": 40.7127,
+    "lon": -74.0048,
+    "lines": ["4", "5", "6"]
+  },
+  {
+    "id": "wall-street",
+    "name": "Wall St",
+    "lat": 40.7074,
+    "lon": -74.0116,
+    "lines": ["2", "3"]
+  },
+  {
+    "id": "fulton-st",
+    "name": "Fulton St",
+    "lat": 40.7105,
+    "lon": -74.0094,
+    "lines": ["2", "3", "4", "5", "A", "C", "J", "Z"]
+  },
+  {
+    "id": "14th-union",
+    "name": "14th St - Union Square",
+    "lat": 40.7347,
+    "lon": -73.9906,
+    "lines": ["4", "5", "6", "L", "N", "Q", "R", "W"]
+  },
+  {
+    "id": "chambers-st",
+    "name": "Chambers St",
+    "lat": 40.7150,
+    "lon": -74.0038,
+    "lines": ["1", "2", "3"]
+  },
+  {
+    "id": "canal-st",
+    "name": "Canal St",
+    "lat": 40.7190,
+    "lon": -74.0006,
+    "lines": ["1", "6", "N", "Q", "R", "W", "J", "Z"]
+  },
+  {
+    "id": "23rd-st",
+    "name": "23rd St",
+    "lat": 40.7429,
+    "lon": -73.9880,
+    "lines": ["1", "F", "M"]
+  },
+  {
+    "id": "28th-st",
+    "name": "28th St",
+    "lat": 40.7454,
+    "lon": -73.9863,
+    "lines": ["1"]
+  },
+  {
+    "id": "50th-st",
+    "name": "50th St",
+    "lat": 40.7619,
+    "lon": -73.9838,
+    "lines": ["1"]
+  },
+  {
+    "id": "59th-columbus",
+    "name": "59th St - Columbus Circle",
+    "lat": 40.7681,
+    "lon": -73.9819,
+    "lines": ["1", "A", "B", "C", "D"]
+  },
+  {
+    "id": "66th-lincoln",
+    "name": "66th St - Lincoln Center",
+    "lat": 40.7732,
+    "lon": -73.9826,
+    "lines": ["1"]
+  },
+  {
+    "id": "125th-st",
+    "name": "125th St",
+    "lat": 40.8075,
+    "lon": -73.9539,
+    "lines": ["1", "2", "3", "4", "5", "6"]
+  },
+  {
+    "id": "86th-st",
+    "name": "86th St",
+    "lat": 40.7785,
+    "lon": -73.9759,
+    "lines": ["4", "5", "6"]
+  },
+  {
+    "id": "77th-st",
+    "name": "77th St",
+    "lat": 40.7737,
+    "lon": -73.9595,
+    "lines": ["6"]
+  },
+  {
+    "id": "68th-hunter",
+    "name": "68th St - Hunter College",
+    "lat": 40.7680,
+    "lon": -73.9644,
+    "lines": ["6"]
+  },
+  {
+    "id": "51st-st",
+    "name": "51st St",
+    "lat": 40.7572,
+    "lon": -73.9718,
+    "lines": ["6"]
+  }
+]

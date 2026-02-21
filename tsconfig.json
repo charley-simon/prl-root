@@ -26,7 +26,8 @@
     "packages/**/*.ts",
     "packages/**/*.tsx",
     "packages/**/*.js",
-    "packages/**/*.jsx"
+    "packages/**/*.jsx",
+    "packages/linklab/src/telemetry/Logger.ts.old"
   ],
   "exclude": ["node_modules", "dist"]
 }

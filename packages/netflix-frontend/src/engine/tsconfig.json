@@ -1,11 +1,27 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
   "compilerOptions": {
-    "resolveJsonModule": true,
-    "esModuleInterop": true
-  }
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "declaration": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true
+  },
+  "include": [
+    "**/*.ts",
+    "../../../linklab/src/core/Engine.ts",
+    "../../../linklab/src/core/PathFinder.ts",
+    "../../../linklab/src/core/Resolver.ts",
+    "../../../linklab/src/core/Scheduler.ts",
+    "../../../linklab/src/index.ts",
+    "../../../linklab/src/templates/index.ts",
+    "../../../linklab/examples/usage-example.ts"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }

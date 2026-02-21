@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎵 Musicians Knowledge Graph - Steampunk Edition</title>
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <!-- Brass Frame -->
+  <div id="brass-frame">
+    <!-- Header -->
+    <header id="header">
+      <div class="gear gear-left">⚙</div>
+      <div class="title-section">
+        <h1>⚙ Musical Genealogy Apparatus ⚙</h1>
+        <p class="subtitle">~ Electro-Mechanical Sample Navigator ~</p>
+        <p class="est">Est. MDCCCLXXII (1872)</p>
+      </div>
+      <div class="gear gear-right">⚙</div>
+    </header>
+
+    <!-- Main Canvas Area -->
+    <main id="main-area">
+      <canvas id="canvas"></canvas>
+      
+      <!-- Control Panel (floating) -->
+      <aside id="control-panel">
+        <div class="panel-header">
+          <h2>⚙ Navigation Console ⚙</h2>
+        </div>
+
+        <div class="control-section">
+          <label class="brass-label">⚡ Origin Artist</label>
+          <div id="artist-from" class="phosphor-display">
+            ~ AWAIT SELECTION ~
+          </div>
+        </div>
+
+        <div class="control-section">
+          <label class="brass-label">⚡ Destination Artist</label>
+          <div id="artist-to" class="phosphor-display">
+            ~ SELECT ORIGIN ~
+          </div>
+        </div>
+
+        <button id="reset-btn" class="brass-button" disabled>
+          ⟲ RESET APPARATUS ⟳
+        </button>
+
+        <!-- Result Display -->
+        <div id="result-panel">
+          <div class="result-header">═══ CONNECTION FOUND ═══</div>
+          
+          <div class="result-row">
+            <strong>⏱ Degrees:</strong>
+            <span id="degrees">-</span>
+          </div>
+          
+          <div class="result-row">
+            <strong>🎵 Path:</strong>
+            <div id="path-display"></div>
+          </div>
+
+          <div class="result-row">
+            <strong>📅 Era Span:</strong>
+            <span id="era-span">-</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Legend -->
+      <div id="legend">
+        <div class="legend-header">⚙ Legend ⚙</div>
+        <div class="legend-item">
+          <div class="legend-dot artist"></div>
+          <span>Artist</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot track"></div>
+          <span>Track</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-line created"></div>
+          <span>Created</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-line sampled"></div>
+          <span>Sampled</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <p>Powered by LinkLab Engine • Data from "Hereditary Units in Music" (Ethan Hein)</p>
+    </footer>
+  </div>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

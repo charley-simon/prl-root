@@ -1,0 +1,61 @@
+QUICK START - Métro Parisien avec LinkLab
+==========================================
+
+FICHIERS NÉCESSAIRES (minimum) :
+---------------------------------
+1. graph.json (votre fichier original - 452Ko)
+2. config.json (voir ci-dessous)
+3. stack.json (voir ci-dessous)
+
+STRUCTURE :
+-----------
+engine/
+  scenarios/
+    test-metro-paris/
+      ├── graph.json
+      ├── config.json
+      └── stack.json
+
+CONTENU config.json :
+---------------------
+{
+  "mode": "PATHFIND",
+  "pathQuery": {
+    "from": "Station-chatelet",
+    "to": "Station-opera",
+    "maxPaths": 5
+  }
+}
+
+CONTENU stack.json :
+--------------------
+[]
+
+LANCER :
+--------
+tsx cli/run-scenario.ts scenarios/test-metro-paris
+
+RÉSULTAT ATTENDU :
+------------------
+Path: Station-chatelet → Station-pyramides → Station-opera (weight: 3)
+
+STATIONS POPULAIRES :
+---------------------
+Station-chatelet
+Station-republique
+Station-bastille
+Station-gare-du-nord
+Station-montparnasse-bienvenue
+Station-opera
+Station-champs-elysees-clemenceau
+Station-louvre-rivoli
+Station-trocadero
+
+IMPORTANT :
+-----------
+- Les noms sont en minuscules
+- Les espaces sont des tirets
+- Préfixe "Station-"
+- Exemple : "Gare du Nord" → "Station-gare-du-nord"
+
+C'EST TOUT ! 🎯

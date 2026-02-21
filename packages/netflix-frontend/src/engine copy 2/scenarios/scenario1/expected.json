@@ -1,0 +1,9 @@
+{
+  "state": "AVAILABLE",
+  "executedActions": [
+    "fetchMovie",
+    "proposeSimilar"
+  ],
+  "retryCount": 1,
+  "deferredJobs": []
+}

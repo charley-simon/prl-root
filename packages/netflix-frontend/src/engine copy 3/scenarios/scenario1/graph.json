@@ -1,0 +1,18 @@
+{
+  "relations": [
+    {
+      "name": "movie-actors",
+      "fromEntity": "Movie",
+      "toEntity": "People",
+      "via": "Movie-People",
+      "weight": 10
+    },
+    {
+      "name": "people-director-movies",
+      "fromEntity": "People",
+      "toEntity": "Movie",
+      "via": "Movie-People",
+      "weight": 10
+    }
+  ]
+}

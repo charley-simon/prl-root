@@ -1,0 +1,1 @@
+{"version":3,"file":"dijkstra.d.ts","sourceRoot":"","sources":["../../src/algorithms/dijkstra.ts"],"names":[],"mappings":"AAEA,OAAO,KAAK,EAAE,KAAK,EAAE,QAAQ,EAAE,MAAM,UAAU,CAAA;AAM/C,wBAAgB,QAAQ,CAAC,KAAK,EAAE,KAAK,EAAE,IAAI,EAAE,MAAM,EAAE,EAAE,EAAE,MAAM,GAAG,QAAQ,EAAE,GAAG,IAAI,CA8DlF"}

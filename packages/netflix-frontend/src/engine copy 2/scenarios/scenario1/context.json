@@ -1,0 +1,16 @@
+[
+  {
+    "entity": "Movie",
+    "id": 42,
+    "state": "UNKNOWN",
+    "purpose": "watch",
+    "intent": {}
+  },
+  {
+    "entity": "People",
+    "id": 10,
+    "state": "UNKNOWN",
+    "purpose": "view",
+    "intent": {}
+  }
+]

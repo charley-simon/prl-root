@@ -1,0 +1,17 @@
+[
+  {
+    "from": "Movie",
+    "to": "People",
+    "via": "Movie-People",
+    "weight": 5,
+    "WHEN": "alert.level !== 'critical'"
+  },
+  {
+    "from": "Movie",
+    "to": "People",
+    "via": "Movie-People",
+    "weight": 0,
+    "WHEN": "alert.level === 'critical'",
+    "onUse": "emitAlert('Critical path used')"
+  }
+]
